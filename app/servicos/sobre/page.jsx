@@ -1,3 +1,4 @@
+import Script from "next/script";
 export const metadata = {
   title: "Fisioterapia Cardiorrespiratória E Do Sono: Transforme Sua Saúde - Tratamento De Ronco E Apneia Do Sono | CPAP – Lajeado E Vale Do Taquari",
   description: "Olá! Sou Dra. Alessandra Cristina Kerkhoff, fisioterapeuta com especialização em Fisioterapia Cardiorrespiratória e Fisioterapia do Sono com mais de 17 anos",
@@ -6,11 +7,7 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `document.body.className = "wp-singular page-template-default page page-id-15 page-child parent-pageid-14 wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1";`
-        }}
-      />
+      <Script id="body-class-app-servicos-sobre-page-jsx" strategy="beforeInteractive">{`document.body.className = "wp-singular page-template-default page page-id-15 page-child parent-pageid-14 wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1";`}</Script>
       <div dangerouslySetInnerHTML={{ __html: `
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFHZBLMD"
@@ -301,18 +298,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script id="wp-emoji-settings" type="application/json">
 {"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://draalessandrakerkhoff.com.br/wp-includes/js/wp-emoji-release.min.js?ver=7.0.2"}}
 </script>
-<script type="module">
-/*! This file is auto-generated */
-const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\\ud83c\\udff3\\ufe0f\\u200d\\u26a7\\ufe0f","\\ud83c\\udff3\\ufe0f\\u200b\\u26a7\\ufe0f")?!1:!n(e,"\\ud83c\\udde8\\ud83c\\uddf6","\\ud83c\\udde8\\u200b\\ud83c\\uddf6")&&!n(e,"\\ud83c\\udff4\\udb40\\udc67\\udb40\\udc62\\udb40\\udc65\\udb40\\udc6e\\udb40\\udc67\\udb40\\udc7f","\\ud83c\\udff4\\u200b\\udb40\\udc67\\u200b\\udb40\\udc62\\u200b\\udb40\\udc65\\u200b\\udb40\\udc6e\\u200b\\udb40\\udc67\\u200b\\udb40\\udc7f");case"emoji":return!a(e,"\\ud83e\\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
-//# sourceURL=https://draalessandrakerkhoff.com.br/wp-includes/js/wp-emoji-loader.min.js
-</script>
+
 <script id="optimization-detective-detect-args" type="application/json">
 ["https://draalessandrakerkhoff.com.br/wp-content/plugins/optimization-detective/detect.min.js?ver=1.0.0-beta5",{"minViewportAspectRatio":0.40000000000000002,"maxViewportAspectRatio":2.5,"isDebug":false,"extensionModuleUrls":["https://draalessandrakerkhoff.com.br/wp-content/plugins/image-prioritizer/detect.min.js?ver=1.0.0-beta3"],"restApiEndpoint":"https://draalessandrakerkhoff.com.br/wp-json/optimization-detective/v1/url-metrics:store","currentETag":"ab9ff0d5ef8bcac252b0fcf232c6ac02","currentUrl":"/servicos/sobre","urlMetricSlug":"ef95b2222e1d654dfa9ad49d8e8996dc","cachePurgePostId":15,"urlMetricHMAC":"6900e60f395c04f8f8ddccc07d205afb","urlMetricGroupStatuses":[{"minimumViewportWidth":0,"maximumViewportWidth":480,"complete":false},{"minimumViewportWidth":480,"maximumViewportWidth":600,"complete":false},{"minimumViewportWidth":600,"maximumViewportWidth":782,"complete":false},{"minimumViewportWidth":782,"maximumViewportWidth":null,"complete":false}],"storageLockTTL":60,"freshnessTTL":604800,"webVitalsLibrarySrc":"https://draalessandrakerkhoff.com.br/wp-content/plugins/optimization-detective/build/web-vitals.js?ver=5.1.0","gzdecodeAvailable":true,"maxUrlMetricSize":1048576}]
 </script>
-<script type="module">
-async function load(){await new Promise((e=>{"complete"===document.readyState?e():window.addEventListener("load",e,{once:!0})})),"function"==typeof requestIdleCallback&&await new Promise((e=>{requestIdleCallback(e)}));const e=JSON.parse(document.getElementById("optimization-detective-detect-args").textContent),t=e[0],a=e[1],n=(await import(t)).default;await n(a)}load();
-//# sourceURL=https://draalessandrakerkhoff.com.br/wp-content/plugins/optimization-detective/detect-loader.min.js?ver=1.0.0-beta5
-</script>
+
 ` }} />
     </>
   );
