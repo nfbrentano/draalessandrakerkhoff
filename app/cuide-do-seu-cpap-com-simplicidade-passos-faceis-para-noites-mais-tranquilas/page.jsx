@@ -1,3 +1,4 @@
+import { fixPaths } from "@/app/utils/fixPaths";
 import Script from "next/script";
 export const metadata = {
   title: "Cuide Do Seu CPAP Com Simplicidade: Passos Fáceis Para Noites Mais Tranquilas - Tratamento De Ronco E Apneia Do Sono | CPAP – Lajeado E Vale Do Taquari",
@@ -8,7 +9,7 @@ export default function Page() {
   return (
     <>
       <Script id="body-class-app-cuide-do-seu-cpap-com-simplicidade-passos-faceis-para-noites-mais-tranquilas-page-jsx" strategy="afterInteractive">{`document.body.className = "wp-singular post-template-default single single-post postid-197 single-format-standard wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1";`}</Script>
-      <div dangerouslySetInnerHTML={{ __html: `
+      <div dangerouslySetInnerHTML={{ __html: fixPaths(`
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFHZBLMD"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -212,7 +213,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </footer></div>
 
 
-` }} />
+`) }} />
     </>
   );
 }
