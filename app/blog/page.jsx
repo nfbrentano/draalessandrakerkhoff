@@ -63,14 +63,162 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 <main id="wp--skip-link--target" class="wp-block-group is-layout-flow wp-container-core-group-is-layout-36bb09e9 wp-block-group-is-layout-flow" style="margin-top:0">
-    <div class="entry-content wp-block-post-content has-global-padding is-layout-constrained wp-block-post-content-is-layout-constrained">
-<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-3b811c60 wp-block-columns-is-layout-flex">
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:100%"></div>
-</div>
+    <div class="entry-content wp-block-post-content has-global-padding is-layout-constrained wp-block-post-content-is-layout-constrained" style="max-width: 1200px; margin: 0 auto; padding-top: 2rem; padding-bottom: 3rem;">
+        
+        <!-- Hero Header -->
+        <section class="blog-hero">
+            <span class="blog-hero-badge">Artigos & Orientações</span>
+            <h1 class="blog-hero-title">Blog de Fisioterapia & Saúde do Sono</h1>
+            <p class="blog-hero-desc">Conteúdos práticos e científicos sobre Fisioterapia Cardiorrespiratória, Higiene do Sono e Adaptação ao CPAP para transformar a sua qualidade de vida.</p>
+        </section>
 
+        <!-- Featured Article -->
+        <article class="blog-featured-card">
+            <div class="blog-featured-img-wrap">
+                <a href="/cuide-do-seu-cpap-com-simplicidade-passos-faceis-para-noites-mais-tranquilas">
+                    <img class="blog-featured-img" src="/wp-content/uploads/2025/09/cuide-cpap.avif" alt="Cuide do Seu CPAP com Simplicidade: Passos Fáceis para Noites Mais Tranquilas" />
+                </a>
+            </div>
+            <div class="blog-featured-content">
+                <span class="blog-badge badge-cpap">★ Destaque • CPAP & Apneia</span>
+                <h2 style="margin: 0 0 0.85rem 0;">
+                    <a class="blog-post-title" href="/cuide-do-seu-cpap-com-simplicidade-passos-faceis-para-noites-mais-tranquilas">
+                        Cuide do Seu CPAP com Simplicidade: Passos Fáceis para Noites Mais Tranquilas
+                    </a>
+                </h2>
+                <p class="blog-post-excerpt">
+                    Confira orientações fundamentais para manter a higienização do seu CPAP em dia, evitar vazamentos na máscara e garantir um sono verdadeiramente reparador e sem complicações.
+                </p>
+                <div class="blog-post-meta">
+                    <span>⏱️ 4 min de leitura</span>
+                    <a class="blog-read-btn" href="/cuide-do-seu-cpap-com-simplicidade-passos-faceis-para-noites-mais-tranquilas">
+                        Ler artigo completo ➔
+                    </a>
+                </div>
+            </div>
+        </article>
 
-<div class="jetpack-top-posts wp-block-jetpack-top-posts is-grid-layout"data-item-count="5"><div class="jetpack-top-posts-wrapper"><div class="jetpack-top-posts-item"><a class="jetpack-top-posts-thumbnail-link" href="/cuide-do-seu-cpap-com-simplicidade-passos-faceis-para-noites-mais-tranquilas"><img data-od-unknown-tag data-od-xpath="/HTML/BODY/DIV[@class=&apos;wp-site-blocks&apos;]/*[2][self::MAIN]/*[1][self::DIV]/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::A]/*[1][self::IMG]" decoding="async" class="jetpack-top-posts-thumbnail" src="/wp-content/uploads/2025/09/cuide-cpap.avif" alt="Cuide do Seu CPAP com Simplicidade: Passos Fáceis para Noites Mais Tranquilas" title="Conheça mais sobre fisioterapia cardiorrespiratória e do sono 1"></a><span class="jetpack-top-posts-title"><a href="/cuide-do-seu-cpap-com-simplicidade-passos-faceis-para-noites-mais-tranquilas">Cuide do Seu CPAP com Simplicidade: Passos Fáceis para Noites Mais Tranquilas</a></span></div><div class="jetpack-top-posts-item"><a class="jetpack-top-posts-thumbnail-link" href="/fisioterapia-respiratoria-melhora-na-qualidade-de-vida-de-pacientes"><img data-od-unknown-tag data-od-xpath="/HTML/BODY/DIV[@class=&apos;wp-site-blocks&apos;]/*[2][self::MAIN]/*[1][self::DIV]/*[2][self::DIV]/*[1][self::DIV]/*[2][self::DIV]/*[1][self::A]/*[1][self::IMG]" decoding="async" class="jetpack-top-posts-thumbnail" src="/wp-content/uploads/2025/11/Post-fisio-respiratoria.avif" alt="Fisioterapia Respiratória: Melhora na Qualidade de Vida de Pacientes" title="Conheça mais sobre fisioterapia cardiorrespiratória e do sono 2"></a><span class="jetpack-top-posts-title"><a href="/fisioterapia-respiratoria-melhora-na-qualidade-de-vida-de-pacientes">Fisioterapia Respiratória: Melhora na Qualidade de Vida de Pacientes</a></span></div><div class="jetpack-top-posts-item"><a class="jetpack-top-posts-thumbnail-link" href="/durma-bem-viva-melhor-transforme-sua-noite-com-o-cpap"><img data-od-unknown-tag data-od-xpath="/HTML/BODY/DIV[@class=&apos;wp-site-blocks&apos;]/*[2][self::MAIN]/*[1][self::DIV]/*[2][self::DIV]/*[1][self::DIV]/*[3][self::DIV]/*[1][self::A]/*[1][self::IMG]" decoding="async" class="jetpack-top-posts-thumbnail" src="/wp-content/uploads/2025/09/drmir-bem.avif" alt="Durma Bem, Viva Melhor: Transforme Sua Noite com o CPAP" title="Conheça mais sobre fisioterapia cardiorrespiratória e do sono 3"></a><span class="jetpack-top-posts-title"><a href="/durma-bem-viva-melhor-transforme-sua-noite-com-o-cpap">Durma Bem, Viva Melhor: Transforme Sua Noite com o CPAP</a></span></div><div class="jetpack-top-posts-item"><a class="jetpack-top-posts-thumbnail-link" href="/como-a-caminhada-melhora-seu-sono-e-bem-estar"><img data-od-unknown-tag data-od-xpath="/HTML/BODY/DIV[@class=&apos;wp-site-blocks&apos;]/*[2][self::MAIN]/*[1][self::DIV]/*[2][self::DIV]/*[1][self::DIV]/*[4][self::DIV]/*[1][self::A]/*[1][self::IMG]" decoding="async" class="jetpack-top-posts-thumbnail" src="/wp-content/uploads/2025/11/caminhada.avif" alt="Como a Caminhada Melhora Seu Sono e Bem-Estar" title="Conheça mais sobre fisioterapia cardiorrespiratória e do sono 4"></a><span class="jetpack-top-posts-title"><a href="/como-a-caminhada-melhora-seu-sono-e-bem-estar">Como a Caminhada Melhora Seu Sono e Bem-Estar</a></span></div><div class="jetpack-top-posts-item"><a class="jetpack-top-posts-thumbnail-link" href="/melhore-seu-sono-beneficios-da-fisioterapia-respiratoria"><img data-od-unknown-tag data-od-xpath="/HTML/BODY/DIV[@class=&apos;wp-site-blocks&apos;]/*[2][self::MAIN]/*[1][self::DIV]/*[2][self::DIV]/*[1][self::DIV]/*[5][self::DIV]/*[1][self::A]/*[1][self::IMG]" decoding="async" class="jetpack-top-posts-thumbnail" src="/wp-content/uploads/2025/08/1-1.avif" alt="Melhore Seu Sono: Fisioterapia e Apneia do Sono" title="Conheça mais sobre fisioterapia cardiorrespiratória e do sono 5"></a><span class="jetpack-top-posts-title"><a href="/melhore-seu-sono-beneficios-da-fisioterapia-respiratoria">Melhore Seu Sono: Fisioterapia e Apneia do Sono</a></span></div></div></div></div>
+        <!-- Articles Grid -->
+        <div class="blog-grid">
+            
+            <!-- Article 1 -->
+            <article class="blog-grid-card">
+                <div class="blog-grid-img-wrap">
+                    <a href="/fisioterapia-respiratoria-melhora-na-qualidade-de-vida-de-pacientes">
+                        <img class="blog-grid-img" src="/wp-content/uploads/2025/11/Post-fisio-respiratoria.avif" alt="Fisioterapia Respiratória: Melhora na Qualidade de Vida de Pacientes" />
+                    </a>
+                </div>
+                <div class="blog-grid-content">
+                    <span class="blog-badge badge-fisio">Fisioterapia Respiratória</span>
+                    <h3 style="margin: 0 0 0.75rem 0;">
+                        <a class="blog-post-title" style="font-size: 1.3rem;" href="/fisioterapia-respiratoria-melhora-na-qualidade-de-vida-de-pacientes">
+                            Fisioterapia Respiratória: Melhora na Qualidade de Vida de Pacientes
+                        </a>
+                    </h3>
+                    <p class="blog-post-excerpt">
+                        Entenda como o recondicionamento físico e exercícios pulmonares reduzem a falta de ar, aumentam a disposição e promovem a reabilitação funcional.
+                    </p>
+                    <div class="blog-post-meta">
+                        <span>⏱️ 5 min de leitura</span>
+                        <a class="blog-read-btn" href="/fisioterapia-respiratoria-melhora-na-qualidade-de-vida-de-pacientes">
+                            Continuar lendo ➔
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Article 2 -->
+            <article class="blog-grid-card">
+                <div class="blog-grid-img-wrap">
+                    <a href="/durma-bem-viva-melhor-transforme-sua-noite-com-o-cpap">
+                        <img class="blog-grid-img" src="/wp-content/uploads/2025/09/drmir-bem.avif" alt="Durma Bem, Viva Melhor: Transforme Sua Noite com o CPAP" />
+                    </a>
+                </div>
+                <div class="blog-grid-content">
+                    <span class="blog-badge badge-sono">Qualidade do Sono</span>
+                    <h3 style="margin: 0 0 0.75rem 0;">
+                        <a class="blog-post-title" style="font-size: 1.3rem;" href="/durma-bem-viva-melhor-transforme-sua-noite-com-o-cpap">
+                            Durma Bem, Viva Melhor: Transforme Sua Noite com o CPAP
+                        </a>
+                    </h3>
+                    <p class="blog-post-excerpt">
+                        Descubra os benefícios diretos do tratamento correto da apneia do sono para a prevenção de problemas cardiovasculares e recuperação de energia diária.
+                    </p>
+                    <div class="blog-post-meta">
+                        <span>⏱️ 3 min de leitura</span>
+                        <a class="blog-read-btn" href="/durma-bem-viva-melhor-transforme-sua-noite-com-o-cpap">
+                            Continuar lendo ➔
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Article 3 -->
+            <article class="blog-grid-card">
+                <div class="blog-grid-img-wrap">
+                    <a href="/como-a-caminhada-melhora-seu-sono-e-bem-estar">
+                        <img class="blog-grid-img" src="/wp-content/uploads/2025/11/caminhada.avif" alt="Como a Caminhada Melhora Seu Sono e Bem-Estar" />
+                    </a>
+                </div>
+                <div class="blog-grid-content">
+                    <span class="blog-badge badge-bemestar">Saúde & Bem-Estar</span>
+                    <h3 style="margin: 0 0 0.75rem 0;">
+                        <a class="blog-post-title" style="font-size: 1.3rem;" href="/como-a-caminhada-melhora-seu-sono-e-bem-estar">
+                            Como a Caminhada Melhora Seu Sono e Bem-Estar
+                        </a>
+                    </h3>
+                    <p class="blog-post-excerpt">
+                        Entenda o impacto dos exercícios aeróbicos leves na regulação do ciclo sono-vigília, na diminuição do estresse e no combate à insônia.
+                    </p>
+                    <div class="blog-post-meta">
+                        <span>⏱️ 4 min de leitura</span>
+                        <a class="blog-read-btn" href="/como-a-caminhada-melhora-seu-sono-e-bem-estar">
+                            Continuar lendo ➔
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Article 4 -->
+            <article class="blog-grid-card">
+                <div class="blog-grid-img-wrap">
+                    <a href="/melhore-seu-sono-beneficios-da-fisioterapia-respiratoria">
+                        <img class="blog-grid-img" src="/wp-content/uploads/2025/08/1-1.avif" alt="Melhore Seu Sono: Fisioterapia e Apneia do Sono" />
+                    </a>
+                </div>
+                <div class="blog-grid-content">
+                    <span class="blog-badge badge-sono">Fisioterapia do Sono</span>
+                    <h3 style="margin: 0 0 0.75rem 0;">
+                        <a class="blog-post-title" style="font-size: 1.3rem;" href="/melhore-seu-sono-beneficios-da-fisioterapia-respiratoria">
+                            Melhore Seu Sono: Fisioterapia e Apneia do Sono
+                        </a>
+                    </h3>
+                    <p class="blog-post-excerpt">
+                        Saiba como a consulta com fisioterapeuta especialista pode diagnosticar alterações respiratórias no sono e otimizar a adaptação com equipamentos.
+                    </p>
+                    <div class="blog-post-meta">
+                        <span>⏱️ 5 min de leitura</span>
+                        <a class="blog-read-btn" href="/melhore-seu-sono-beneficios-da-fisioterapia-respiratoria">
+                            Continuar lendo ➔
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- Contact CTA Section -->
+        <section class="blog-cta-box">
+            <h2 class="blog-cta-title">Precisa de Ajuda com Apneia do Sono ou Fisioterapia Respiratória?</h2>
+            <p class="blog-cta-desc">Agende uma consulta ou tire suas dúvidas diretamente sobre titulação de CPAP e tratamento personalizado para a sua saúde.</p>
+            <a class="blog-cta-button" href="https://wa.me/5551996145583" target="_blank" rel="noopener noreferrer">
+                💬 Conversar pelo WhatsApp
+            </a>
+        </section>
+
+    </div>
 </main>
+
 
 
 <footer class="wp-block-template-part">
