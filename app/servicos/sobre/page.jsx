@@ -7,7 +7,7 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-      <Script id="body-class-app-servicos-sobre-page-jsx" strategy="beforeInteractive">{`document.body.className = "wp-singular page-template-default page page-id-15 page-child parent-pageid-14 wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1";`}</Script>
+      <Script id="body-class-app-servicos-sobre-page-jsx" strategy="afterInteractive">{`document.body.className = "wp-singular page-template-default page page-id-15 page-child parent-pageid-14 wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1";`}</Script>
       <div dangerouslySetInnerHTML={{ __html: `
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFHZBLMD"

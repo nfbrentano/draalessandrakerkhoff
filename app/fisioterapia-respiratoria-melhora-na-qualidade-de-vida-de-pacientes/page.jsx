@@ -7,7 +7,7 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-      <Script id="body-class-app-fisioterapia-respiratoria-melhora-na-qualidade-de-vida-de-pacientes-page-jsx" strategy="beforeInteractive">{`document.body.className = "wp-singular post-template-default single single-post postid-341 single-format-standard wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1";`}</Script>
+      <Script id="body-class-app-fisioterapia-respiratoria-melhora-na-qualidade-de-vida-de-pacientes-page-jsx" strategy="afterInteractive">{`document.body.className = "wp-singular post-template-default single single-post postid-341 single-format-standard wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1";`}</Script>
       <div dangerouslySetInnerHTML={{ __html: `
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFHZBLMD"

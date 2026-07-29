@@ -8,7 +8,7 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-      <Script id="body-class-app-page-jsx" strategy="beforeInteractive">{`document.body.className = "home blog wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1";`}</Script>
+      <Script id="body-class-app-page-jsx" strategy="afterInteractive">{`document.body.className = "home blog wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1";`}</Script>
       <div dangerouslySetInnerHTML={{ __html: `
 <a class="skip-link screen-reader-text" id="wp-skip-link" href="#wp--skip-link--target">Pular para o conteúdo</a><div class="wp-site-blocks"><header class="wp-block-template-part">
 <div class="wp-block-group alignfull is-style-undefined has-theme-11-color has-theme-10-background-color has-text-color has-background has-global-padding is-layout-constrained wp-block-group-is-layout-constrained" id="header-section" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--20)">
@@ -48,7 +48,7 @@ export default function Page() {
 							<div class="wp-block-navigation__responsive-container-content" 
 				data-wp-watch="callbacks.focusFirstElement"
 			 id="modal-1-content">
-								<ul class="wp-block-navigation__container is-responsive items-justified-right wp-block-navigation"><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="https://draalessandrakerkhoff.com.br"><span class="wp-block-navigation-item__label">Home</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="/fisioterapia-cardiorrespiratoria/"><span class="wp-block-navigation-item__label">Fisioterapia Cardiorrespiratória</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="/fisioterapia-do-sono/"><span class="wp-block-navigation-item__label">Fisioterapia do Sono</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="/?page_id=15"><span class="wp-block-navigation-item__label">Sobre</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="/blog/"><span class="wp-block-navigation-item__label">Blog</span></a></li></ul>
+								<ul class="wp-block-navigation__container is-responsive items-justified-right wp-block-navigation"><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="/"><span class="wp-block-navigation-item__label">Home</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="/fisioterapia-cardiorrespiratoria"><span class="wp-block-navigation-item__label">Fisioterapia Cardiorrespiratória</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="/fisioterapia-do-sono"><span class="wp-block-navigation-item__label">Fisioterapia do Sono</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="/servicos/sobre"><span class="wp-block-navigation-item__label">Sobre</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="/blog"><span class="wp-block-navigation-item__label">Blog</span></a></li></ul>
 								
 							</div>
 						</div>
@@ -65,7 +65,7 @@ export default function Page() {
   "name": "Dra. Alessandra Kerkhoff",
   "image": "/wp-content/uploads/2025/08/DSC_4875-scaled.avif",
   "@id": "/#physician",
-  "url": "https://draalessandrakerkhoff.com.br",
+  "url": "",
   "telephone": "+55 51 99614-5583",
   "address": {
     "@type": "PostalAddress",
@@ -146,7 +146,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 <div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/?page_id=15">Saiba Mais</a></div>
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/servicos/sobre">Saiba Mais</a></div>
 </div>
 </div>
 </div>
@@ -186,7 +186,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 <div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
-<div class="wp-block-button is-service-link"><a class="wp-block-button__link has-theme-13-color has-theme-12-background-color has-text-color has-background wp-element-button" href="/fisioterapia-cardiorrespiratoria/">Saiba Mais</a></div>
+<div class="wp-block-button is-service-link"><a class="wp-block-button__link has-theme-13-color has-theme-12-background-color has-text-color has-background wp-element-button" href="/fisioterapia-cardiorrespiratoria">Saiba Mais</a></div>
 </div>
 
 
@@ -222,7 +222,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 <div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
-<div class="wp-block-button is-service-link"><a class="wp-block-button__link has-theme-13-color has-theme-12-background-color has-text-color has-background wp-element-button" href="/fisioterapia-do-sono/">Saiba Mais</a></div>
+<div class="wp-block-button is-service-link"><a class="wp-block-button__link has-theme-13-color has-theme-12-background-color has-text-color has-background wp-element-button" href="/fisioterapia-do-sono">Saiba Mais</a></div>
 </div>
 </div>
 </div>
