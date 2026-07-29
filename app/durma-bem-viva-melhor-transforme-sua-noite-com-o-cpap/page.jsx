@@ -134,14 +134,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </footer></div>
 
 
-<script id="wp-emoji-settings" type="application/json">
-{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://draalessandrakerkhoff.com.br/wp-includes/js/wp-emoji-release.min.js?ver=7.0.2"}}
-</script>
-
-<script id="optimization-detective-detect-args" type="application/json">
-["https://draalessandrakerkhoff.com.br/wp-content/plugins/optimization-detective/detect.min.js?ver=1.0.0-beta5",{"minViewportAspectRatio":0.40000000000000002,"maxViewportAspectRatio":2.5,"isDebug":false,"extensionModuleUrls":["https://draalessandrakerkhoff.com.br/wp-content/plugins/image-prioritizer/detect.min.js?ver=1.0.0-beta3"],"restApiEndpoint":"https://draalessandrakerkhoff.com.br/wp-json/optimization-detective/v1/url-metrics:store","currentETag":"bc2beb81c4754a17f600738fd3fefbf0","currentUrl":"/durma-bem-viva-melhor-transforme-sua-noite-com-o-cpap","urlMetricSlug":"9a7b83d52b362e7188a003da8e1804a1","cachePurgePostId":161,"urlMetricHMAC":"2bdd3a53bfcee294e5e11284e092db76","urlMetricGroupStatuses":[{"minimumViewportWidth":0,"maximumViewportWidth":480,"complete":false},{"minimumViewportWidth":480,"maximumViewportWidth":600,"complete":false},{"minimumViewportWidth":600,"maximumViewportWidth":782,"complete":false},{"minimumViewportWidth":782,"maximumViewportWidth":null,"complete":false}],"storageLockTTL":60,"freshnessTTL":604800,"webVitalsLibrarySrc":"https://draalessandrakerkhoff.com.br/wp-content/plugins/optimization-detective/build/web-vitals.js?ver=5.1.0","gzdecodeAvailable":true,"maxUrlMetricSize":1048576}]
-</script>
-
 ` }} />
     </>
   );
