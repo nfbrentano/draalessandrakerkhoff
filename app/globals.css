@@ -1,1 +1,35 @@
 /* Globals cleared to avoid conflicting with original site styles */
+
+#gallery-section {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+#gallery-section > figure {
+  flex: 1 1 25% !important;
+  max-width: 25% !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+}
+#gallery-section > figure img {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 1 / 1 !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+@media (max-width: 768px) {
+  #gallery-section > figure {
+    flex: 1 1 50% !important;
+    max-width: 50% !important;
+  }
+}
+@media (max-width: 480px) {
+  #gallery-section > figure {
+    flex: 1 1 100% !important;
+    max-width: 100% !important;
+  }
+}
