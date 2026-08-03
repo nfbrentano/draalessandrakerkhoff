@@ -111,7 +111,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className="wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1">
         {children}
-        <Script id="menu-script" strategy="lazyOnload">
+        <Script id="menu-script" strategy="afterInteractive">
           {deferredMenuScript}
         </Script>
       </body>
