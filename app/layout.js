@@ -3,6 +3,7 @@ import "./styles/inline-styles.css";
 import "./styles/style-0.css";
 import "./styles/style-1.css";
 import Script from "next/script";
+import RegisterSW from "./scripts/registerSW";
 
 const bodyClassByPath = {
   "/": "home blog wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1",
@@ -95,7 +96,7 @@ const deferredMenuScript = `
     document.addEventListener("click", handleDocumentClick);
     document.addEventListener("keydown", handleDocumentKeyDown);
     document.addEventListener("focusout", handleDocumentFocusOut);
-  })();
+    })();
 `;
 
 export const metadata = {
@@ -114,6 +115,7 @@ export default function RootLayout({ children }) {
         <Script id="menu-script" strategy="afterInteractive">
           {deferredMenuScript}
         </Script>
+        <RegisterSW />
       </body>
     </html>
   );
