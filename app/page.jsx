@@ -1,5 +1,4 @@
 import { fixPaths } from "@/app/utils/fixPaths";
-import Script from "next/script";
 
 export const metadata = {
   title: "Tratamento De Ronco E Apneia Do Sono | CPAP – Lajeado E Vale Do Taquari - Tem Ronco Ou Apneia Do Sono? A Dra. Alessandra Kerkhoff Realiza Acompanhamento E Titulação De CPAP Em Lajeado, Estrela, Arroio Do Meio E Região. Agende Sua Consulta!",
@@ -8,9 +7,7 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <>
-      <Script id="body-class-app-page-jsx" strategy="afterInteractive">{`document.body.className = "home blog wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1";`}</Script>
-      <div dangerouslySetInnerHTML={{ __html: fixPaths(`
+    <>      <div dangerouslySetInnerHTML={{ __html: fixPaths(`
 <a class="skip-link screen-reader-text" id="wp-skip-link" href="#wp--skip-link--target">Pular para o conteúdo</a><div class="wp-site-blocks"><header class="wp-block-template-part">
 <div class="wp-block-group alignfull is-style-undefined has-theme-11-color has-theme-10-background-color has-text-color has-background has-global-padding is-layout-constrained wp-block-group-is-layout-constrained" id="header-section" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--20)">
 <header class="wp-block-group alignwide is-content-justification-center is-nowrap is-layout-flex wp-container-core-group-is-layout-c163a845 wp-block-group-is-layout-flex" style="margin-top:0;margin-bottom:0">

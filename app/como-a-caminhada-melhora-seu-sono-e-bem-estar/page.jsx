@@ -1,5 +1,4 @@
 import { fixPaths } from "@/app/utils/fixPaths";
-import Script from "next/script";
 export const metadata = {
   title: "Como A Caminhada Melhora Seu Sono E Bem-Estar - Tratamento De Ronco E Apneia Do Sono | CPAP – Lajeado E Vale Do Taquari",
   description: "A prática regular de atividade física, especialmente caminhadas, tem sido amplamente estudada pela ciência como um fator relacionado à melhora da qualidade do",
@@ -7,9 +6,7 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <>
-      <Script id="body-class-app-como-a-caminhada-melhora-seu-sono-e-bem-estar-page-jsx" strategy="afterInteractive">{`document.body.className = "wp-singular post-template-default single single-post postid-320 single-format-standard wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1";`}</Script>
-      <div dangerouslySetInnerHTML={{ __html: fixPaths(`
+    <>      <div dangerouslySetInnerHTML={{ __html: fixPaths(`
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFHZBLMD"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
