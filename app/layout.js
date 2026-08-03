@@ -3,6 +3,7 @@ import "./styles/inline-styles.css";
 import "./styles/style-0.css";
 import "./styles/style-1.css";
 import MenuScript from "./scripts/menu";
+import RegisterSW from "./scripts/registerSW";
 
 export const metadata = {
   title: "Dra. Alessandra Kerkhoff",
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
       <body className="home blog wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1">
         {children}
         <MenuScript />
+        <RegisterSW />
       </body>
     </html>
   );
