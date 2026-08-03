@@ -1,5 +1,4 @@
 import { fixPaths } from "@/app/utils/fixPaths";
-import Script from "next/script";
 export const metadata = {
   title: "Melhore Seu Sono: Fisioterapia E Apneia Do Sono - Tratamento De Ronco E Apneia Do Sono | CPAP – Lajeado E Vale Do Taquari",
   description: "O estudo de Duan et al. (2022) ressalta que um estilo de vida saudável pode melhorar a qualidade do sono e a saúde respiratória, reduzindo a apneia do sono. A fisioterapia especializada contribui com técnicas que fortalecem a musculatura respiratória e ajudam na adaptação ao CPAP, promovendo noites mais tranquilas e qualidade de vida.",
@@ -7,9 +6,7 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <>
-      <Script id="body-class-app-melhore-seu-sono-beneficios-da-fisioterapia-respiratoria-page-jsx" strategy="afterInteractive">{`document.body.className = "wp-singular post-template-default single single-post postid-154 single-format-standard wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1";`}</Script>
-      <div dangerouslySetInnerHTML={{ __html: fixPaths(`
+    <>      <div dangerouslySetInnerHTML={{ __html: fixPaths(`
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFHZBLMD"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

@@ -1,5 +1,4 @@
 import { fixPaths } from "@/app/utils/fixPaths";
-import Script from "next/script";
 export const metadata = {
   title: "Fisioterapia Cardiorrespiratória E Do Sono: Transforme Sua Saúde - Tratamento De Ronco E Apneia Do Sono | CPAP – Lajeado E Vale Do Taquari",
   description: "Olá! Sou Dra. Alessandra Cristina Kerkhoff, fisioterapeuta com especialização em Fisioterapia Cardiorrespiratória e Fisioterapia do Sono com mais de 17 anos",
@@ -7,9 +6,7 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <>
-      <Script id="body-class-app-servicos-sobre-page-jsx" strategy="afterInteractive">{`document.body.className = "wp-singular page-template-default page page-id-15 page-child parent-pageid-14 wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1";`}</Script>
-      <div dangerouslySetInnerHTML={{ __html: fixPaths(`
+    <>      <div dangerouslySetInnerHTML={{ __html: fixPaths(`
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFHZBLMD"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

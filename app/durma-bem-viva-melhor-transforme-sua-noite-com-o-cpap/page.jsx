@@ -1,5 +1,4 @@
 import { fixPaths } from "@/app/utils/fixPaths";
-import Script from "next/script";
 export const metadata = {
   title: "Durma Bem, Viva Melhor: Transforme Sua Noite Com O CPAP - Tratamento De Ronco E Apneia Do Sono | CPAP – Lajeado E Vale Do Taquari",
   description: "A adaptação ao uso do CPAP é facilitada por estratégias graduais e orientação profissional. Começar com pequenas sessões diárias e escolher a máscara adequada são essenciais para o conforto. O uso de um umidificador ajuda a prevenir a secura nasal. Com persistência, os usuários conseguem melhorar a qualidade do sono e a disposição.",
@@ -7,9 +6,7 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <>
-      <Script id="body-class-app-durma-bem-viva-melhor-transforme-sua-noite-com-o-cpap-page-jsx" strategy="afterInteractive">{`document.body.className = "wp-singular post-template-default single single-post postid-161 single-format-standard wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1";`}</Script>
-      <div dangerouslySetInnerHTML={{ __html: fixPaths(`
+    <>      <div dangerouslySetInnerHTML={{ __html: fixPaths(`
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFHZBLMD"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
