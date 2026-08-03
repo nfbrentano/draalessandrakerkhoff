@@ -37,8 +37,14 @@ self.addEventListener('activate', (event) => {
 // - HTML: network-first (garante conteúdo atualizado)
 // - JS/CSS/Images/Chunks: cache-first com fallback de rede e revalidação em background
 
+const IGNORED_PATHS = ['/fisioterapia-do-sono', '/sw.js'];
+
 function isStaticAsset(url) {
   return STATIC_ASSET_EXTENSIONS.some((ext) => url.pathname.endsWith(ext)) || /chunks|wp-content|_next|static|assets/.test(url.pathname);
+}
+
+function isIgnoredRequest(url) {
+  return IGNORED_PATHS.some((path) => url.pathname === path || url.pathname.startsWith(`${path}/`));
 }
 
 self.addEventListener('fetch', (event) => {
@@ -50,6 +56,9 @@ self.addEventListener('fetch', (event) => {
 
   // Ignore requests to other origins (optional: allow CDNs)
   if (url.origin !== self.location.origin) return;
+
+  // Ignore specific routes that should bypass the service worker entirely.
+  if (isIgnoredRequest(url)) return;
 
   if (request.headers.get('Accept')?.includes('text/html')) {
     // Network-first for HTML
