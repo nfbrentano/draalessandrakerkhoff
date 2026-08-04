@@ -11,7 +11,6 @@ const bodyClassByPath = {
   "/servicos/sobre": "wp-singular page-template-default page page-id-15 page-child parent-pageid-14 wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1",
   "/blog": "wp-singular page-template-default page page-id-232 wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1",
   "/apneia-e-ronco": "wp-singular page-template-default page page-id-384 wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1",
-  "/fisioterapia-do-sono": "wp-singular page-template-default page page-id-384 wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1",
   "/fisioterapia-cardiorrespiratoria": "wp-singular page-template-default page page-id-390 wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1",
   "/como-a-caminhada-melhora-seu-sono-e-bem-estar": "wp-singular post-template-default single single-post postid-320 single-format-standard wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1",
   "/melhore-seu-sono-beneficios-da-fisioterapia-respiratoria": "wp-singular post-template-default single single-post postid-154 single-format-standard wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1",
@@ -23,7 +22,7 @@ const deferredMenuScript = `
   (function () {
     var bodyClassByPath = ${JSON.stringify(bodyClassByPath)};
     function setBodyClass() {
-      var path = window.location.pathname.replace(/\/$/, "") || "/";
+      var path = window.location.pathname.replace(/\\/$/, "") || "/";
       document.body.className = bodyClassByPath[path] || "wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1";
     }
 

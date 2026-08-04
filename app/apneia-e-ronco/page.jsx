@@ -1,12 +1,15 @@
 import { fixPaths } from "@/app/utils/fixPaths";
+import Script from "next/script";
 export const metadata = {
-  title: "Apenia e Ronco - Tratamento De Ronco E Apneia Do Sono | CPAP – Lajeado E Vale Do Taquari",
+  title: "Apneia e Ronco - Tratamento De Ronco E Apneia Do Sono | CPAP – Lajeado E Vale Do Taquari",
   description: "Supere o ronco e a apneia em Lajeado! Oferecemos tratamento especializado com CPAP e fisioterapia do sono no Vale do Taquari. Recupere sua energia e saúde.",
 };
 
 export default function Page() {
   return (
-    <>      <div dangerouslySetInnerHTML={{ __html: fixPaths(`
+    <>
+      <Script id="body-class-app-apneia-e-ronco-page-jsx" strategy="afterInteractive">{`document.body.className = "wp-singular page-template-default page page-id-384 wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1";`}</Script>
+      <div dangerouslySetInnerHTML={{ __html: fixPaths(`
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFHZBLMD"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -26,34 +29,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <nav class="is-responsive items-justified-right wp-block-navigation is-horizontal is-content-justification-right is-layout-flex wp-container-core-navigation-is-layout-500a3abb wp-block-navigation-is-layout-flex" aria-label="Menu (Copia)" 
 		 data-wp-interactive="core/navigation" data-wp-context='{"overlayOpenedBy":{"click":false,"hover":false,"focus":false},"type":"overlay","roleAttribute":"","ariaLabel":"Menu"}'><button aria-haspopup="dialog" aria-label="Abrir menu" class="wp-block-navigation__responsive-container-open" 
-			data-wp-on--click="actions.openMenuOnClick"
-			data-wp-on--keydown="actions.handleMenuKeydown"
-		>
-			<div class="wp-block-navigation__responsive-container"  id="modal-1" 
-			data-wp-class--has-modal-open="state.isMenuOpen"
-			data-wp-class--is-menu-open="state.isMenuOpen"
-			data-wp-watch="callbacks.initMenu"
-			data-wp-on--keydown="actions.handleMenuKeydown"
-			data-wp-on--focusout="actions.handleMenuFocusout"
-			tabindex="-1"
-		>
-				<div class="wp-block-navigation__responsive-close" tabindex="-1">
-					<div class="wp-block-navigation__responsive-dialog" 
+				data-wp-on--click="actions.openMenuOnClick"
+				data-wp-on--keydown="actions.handleMenuKeydown"
+			><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 5v1.5h14V5H5z"></path><path d="M5 12.8h14v-1.5H5v1.5z"></path><path d="M5 19h14v-1.5H5V19z"></path></svg></button>
+				<div class="wp-block-navigation__responsive-container"  id="modal-1" 
+				data-wp-class--has-modal-open="state.isMenuOpen"
+				data-wp-class--is-menu-open="state.isMenuOpen"
+				data-wp-watch="callbacks.initMenu"
+				data-wp-on--keydown="actions.handleMenuKeydown"
+				data-wp-on--focusout="actions.handleMenuFocusout"
+				tabindex="-1"
+			>
+					<div class="wp-block-navigation__responsive-close" tabindex="-1">
+						<div class="wp-block-navigation__responsive-dialog" 
 				data-wp-bind--aria-modal="state.ariaModal"
 				data-wp-bind--aria-label="state.ariaLabel"
 				data-wp-bind--role="state.roleAttribute"
 			>
-						<button aria-label="Fechar menu" class="wp-block-navigation__responsive-container-close" 
-					data-wp-on--click="actions.closeMenuOnClick"
-				>
+							<button aria-label="Fechar menu" class="wp-block-navigation__responsive-container-close" 
+				data-wp-on--click="actions.closeMenuOnClick"
+			><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="m13.06 12 6.47-6.47-1.06-1.06L12 10.94 5.53 4.47 4.47 5.53 10.94 12l-6.47 6.47 1.06 1.06L12 13.06l6.47 6.47 1.06-1.06L13.06 12Z"></path></svg></button>
 							<div class="wp-block-navigation__responsive-container-content" 
-					data-wp-watch="callbacks.focusFirstElement"
-					 id="modal-1-content">
-								<ul class="wp-block-navigation__container is-responsive items-justified-right wp-block-navigation"><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="/"><span class="wp-block-navigation-item__label">Home</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="/fisioterapia-cardiorrespiratoria"><span class="wp-block-navigation-item__label">Fisioterapia Cardiorrespiratória</span></a></li><li class="wp-block-navigation-item current-menu-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="/apneia-e-ronco" aria-current="page"><span class="wp-block-navigation-item__label">Apenia e Ronco</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="/servicos/sobre"><span class="wp-block-navigation-item__label">Sobre</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="/blog"><span class="wp-block-navigation-item__label">Blog</span></a></li></ul>
+				data-wp-watch="callbacks.focusFirstElement"
+			 id="modal-1-content">
+								<ul class="wp-block-navigation__container is-responsive items-justified-right wp-block-navigation"><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="/"><span class="wp-block-navigation-item__label">Home</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="/fisioterapia-cardiorrespiratoria"><span class="wp-block-navigation-item__label">Fisioterapia Cardiorrespiratória</span></a></li><li class="wp-block-navigation-item current-menu-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="/apneia-e-ronco" aria-current="page"><span class="wp-block-navigation-item__label">Apneia e Ronco</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="/servicos/sobre"><span class="wp-block-navigation-item__label">Sobre</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="/blog"><span class="wp-block-navigation-item__label">Blog</span></a></li></ul>
+								
 							</div>
+						</div>
 					</div>
-				</div>
-			</div></nav></div>
+				</div></nav></div>
 </header>
 </div>
 </header>
@@ -63,12 +67,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="entry-content wp-block-post-content has-global-padding is-layout-constrained wp-block-post-content-is-layout-constrained">
 <div class="wp-block-columns alignwide are-vertically-aligned-center is-style-default is-layout-flex wp-container-core-columns-is-layout-3b811c60 wp-block-columns-is-layout-flex">
 <div class="wp-block-column is-vertically-aligned-center is-layout-flow wp-block-column-is-layout-flow" style="padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px">
-<figure class="wp-block-image size-full"><img data-od-unknown-tag data-od-xpath="/HTML/BODY/DIV[@class=&apos;wp-site-blocks&apos;]/*[2][self::MAIN]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::FIGURE]/*[1][self::IMG]" data-dominant-color="987f77" data-has-transparency="false" fetchpriority="high" decoding="async" width="1440" height="2560" sizes="(max-width: 310px) 100vw, 310px" src="/wp-content/uploads/2025/08/DSC_4829-edited-scaled.avif" alt="DSC 4829 edited scaled - Tratamento de Ronco e Apneia do Sono | CPAP – Lajeado e Vale do Taquari" class="wp-image-97 not-transparent" style="--dominant-color: #987f77; aspect-ratio:3/4;object-fit:cover" title="Apenia e Ronco 1" srcset="/wp-content/uploads/2025/08/DSC_4829-edited-scaled.avif 1440w, /wp-content/uploads/2025/08/DSC_4829-edited-169x300.avif 169w, /wp-content/uploads/2025/08/DSC_4829-edited-576x1024.avif 576w, /wp-content/uploads/2025/08/DSC_4829-edited-768x1365.avif 768w, /wp-content/uploads/2025/08/DSC_4829-edited-864x1536.avif 864w, /wp-content/uploads/2025/08/DSC_4829-edited-1152x2048.avif 1152w" /></figure>
+<figure class="wp-block-image size-full"><img data-od-unknown-tag data-od-xpath="/HTML/BODY/DIV[@class=&apos;wp-site-blocks&apos;]/*[2][self::MAIN]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::FIGURE]/*[1][self::IMG]" data-dominant-color="987f77" data-has-transparency="false" fetchpriority="high" decoding="async" width="1440" height="2560" sizes="(max-width: 310px) 100vw, 310px" src="/wp-content/uploads/2025/08/DSC_4829-edited-scaled.avif" alt="DSC 4829 edited scaled - Tratamento de Ronco e Apneia do Sono | CPAP – Lajeado e Vale do Taquari" class="wp-image-97 not-transparent" style="--dominant-color: #987f77; aspect-ratio:3/4;object-fit:cover" title="Apneia e Ronco 1" srcset="/wp-content/uploads/2025/08/DSC_4829-edited-scaled.avif 1440w, /wp-content/uploads/2025/08/DSC_4829-edited-169x300.avif 169w, /wp-content/uploads/2025/08/DSC_4829-edited-576x1024.avif 576w, /wp-content/uploads/2025/08/DSC_4829-edited-768x1365.avif 768w, /wp-content/uploads/2025/08/DSC_4829-edited-864x1536.avif 864w, /wp-content/uploads/2025/08/DSC_4829-edited-1152x2048.avif 1152w" /></figure>
 
 
 
 <div class="wp-block-column is-vertically-aligned-center is-style-default has-global-padding is-content-justification-center is-layout-constrained wp-container-core-column-is-layout-db5259ab wp-block-column-is-layout-constrained" style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px">
-<h1 class="wp-block-heading alignfull has-large-font-size"><strong><strong>Apenia e Ronco</strong></strong></h1>
+<h1 class="wp-block-heading alignfull has-large-font-size"><strong><strong>Apneia e Ronco</strong></strong></h1>
 
 
 

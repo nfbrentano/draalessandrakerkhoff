@@ -49,7 +49,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 							<div class="wp-block-navigation__responsive-container-content" 
 				data-wp-watch="callbacks.focusFirstElement"
 			 id="modal-1-content">
-								<ul class="wp-block-navigation__container is-responsive items-justified-right wp-block-navigation"><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="/"><span class="wp-block-navigation-item__label">Home</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="/fisioterapia-cardiorrespiratoria"><span class="wp-block-navigation-item__label">Fisioterapia Cardiorrespiratória</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="/fisioterapia-do-sono"><span class="wp-block-navigation-item__label">Fisioterapia do Sono</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="/servicos/sobre"><span class="wp-block-navigation-item__label">Sobre</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="/blog"><span class="wp-block-navigation-item__label">Blog</span></a></li></ul>
+								<ul class="wp-block-navigation__container is-responsive items-justified-right wp-block-navigation"><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="/"><span class="wp-block-navigation-item__label">Home</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="/fisioterapia-cardiorrespiratoria"><span class="wp-block-navigation-item__label">Fisioterapia Cardiorrespiratória</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="/apneia-e-ronco"><span class="wp-block-navigation-item__label">Apneia e Ronco</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="/servicos/sobre"><span class="wp-block-navigation-item__label">Sobre</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="/blog"><span class="wp-block-navigation-item__label">Blog</span></a></li></ul>
 								
 							</div>
 						</div>
@@ -79,14 +79,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         
         <div class="wp-block-column has-border-color has-theme-12-border-color is-layout-flow wp-block-column-is-layout-flow" style="border-style:solid;border-width:1px;border-radius:8px;padding-top:20px;padding-right:20px;padding-bottom:20px;padding-left:20px">
             
-            <h3 class="wp-block-heading has-text-align-center">💤 Fisioterapia do Sono</h3>
+            <h3 class="wp-block-heading has-text-align-center">💤 Apneia e Ronco</h3>
             
             
             <p class="has-text-align-center wp-block-paragraph">Tratamento de ronco, apneia do sono (SAOS) e adaptação ao CPAP.</p>
             
             
             <div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-69bbf988 wp-block-buttons-is-layout-flex">
-            <div class="wp-block-button"><a class="wp-block-button__link has-background has-theme-12-background-color wp-element-button" href="/fisioterapia-do-sono">Saiba Mais</a></div>
+            <div class="wp-block-button"><a class="wp-block-button__link has-background has-theme-12-background-color wp-element-button" href="/apneia-e-ronco">Saiba Mais</a></div>
             </div>
             
         </div>
