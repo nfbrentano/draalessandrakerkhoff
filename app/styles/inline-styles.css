@@ -106,23 +106,23 @@ img[data-dominant-color]:not(.has-transparency) { background-color: var(--domina
 
 img#wpstats{display:none}
 
-@font-face{font-family:Manrope;font-style:normal;font-weight:200;font-display:fallback;src:url('https://fonts.wp.com/s/manrope/v15/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk59FO_A87jxeN7B.woff2') format('woff2');}
-@font-face{font-family:Manrope;font-style:normal;font-weight:300;font-display:fallback;src:url('https://fonts.wp.com/s/manrope/v15/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk6jFO_A87jxeN7B.woff2') format('woff2');}
-@font-face{font-family:Manrope;font-style:normal;font-weight:400;font-display:fallback;src:url('https://fonts.wp.com/s/manrope/v15/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk79FO_A87jxeN7B.woff2') format('woff2');}
-@font-face{font-family:Manrope;font-style:normal;font-weight:500;font-display:fallback;src:url('https://fonts.wp.com/s/manrope/v15/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk7PFO_A87jxeN7B.woff2') format('woff2');}
-@font-face{font-family:Manrope;font-style:normal;font-weight:600;font-display:fallback;src:url('https://fonts.wp.com/s/manrope/v15/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4jE-_A87jxeN7B.woff2') format('woff2');}
-@font-face{font-family:Manrope;font-style:normal;font-weight:700;font-display:fallback;src:url('https://fonts.wp.com/s/manrope/v15/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4aE-_A87jxeN7B.woff2') format('woff2');}
-@font-face{font-family:Manrope;font-style:normal;font-weight:800;font-display:fallback;src:url('https://fonts.wp.com/s/manrope/v15/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk59E-_A87jxeN7B.woff2') format('woff2');}
-@font-face{font-family:Poppins;font-style:normal;font-weight:300;font-display:fallback;src:url('https://fonts.wp.com/s/poppins/v23/pxiByp8kv8JHgFVrLDz8V15vFP-KUEg.woff2') format('woff2');}
-@font-face{font-family:Poppins;font-style:italic;font-weight:300;font-display:fallback;src:url('https://fonts.wp.com/s/poppins/v23/pxiDyp8kv8JHgFVrJJLm21llFd2PQEhcqw.woff2') format('woff2');}
-@font-face{font-family:Poppins;font-style:normal;font-weight:400;font-display:fallback;src:url('https://fonts.wp.com/s/poppins/v23/pxiEyp8kv8JHgFVrFJXUc1NECPY.woff2') format('woff2');}
-@font-face{font-family:Poppins;font-style:italic;font-weight:400;font-display:fallback;src:url('https://fonts.wp.com/s/poppins/v23/pxiGyp8kv8JHgFVrJJLecnFBGPaTSQ.woff2') format('woff2');}
-@font-face{font-family:Poppins;font-style:normal;font-weight:500;font-display:fallback;src:url('https://fonts.wp.com/s/poppins/v23/pxiByp8kv8JHgFVrLGT9V15vFP-KUEg.woff2') format('woff2');}
-@font-face{font-family:Poppins;font-style:italic;font-weight:500;font-display:fallback;src:url('https://fonts.wp.com/s/poppins/v23/pxiDyp8kv8JHgFVrJJLmg1hlFd2PQEhcqw.woff2') format('woff2');}
-@font-face{font-family:Poppins;font-style:normal;font-weight:600;font-display:fallback;src:url('https://fonts.wp.com/s/poppins/v23/pxiByp8kv8JHgFVrLEj6V15vFP-KUEg.woff2') format('woff2');}
-@font-face{font-family:Poppins;font-style:italic;font-weight:600;font-display:fallback;src:url('https://fonts.wp.com/s/poppins/v23/pxiDyp8kv8JHgFVrJJLmr19lFd2PQEhcqw.woff2') format('woff2');}
-@font-face{font-family:"AR One Sans";font-style:normal;font-weight:400;font-display:fallback;src:url('https://draalessandrakerkhoff.com.br/wp-content/uploads/fonts/TUZezwhrmbFp0Srr_tH6fv6RcUejHO_u7GF5aXfv-U2QzBLF6gslWn_9DWg3no5mBF4.woff2') format('woff2');}
-@font-face{font-family:"AR One Sans";font-style:normal;font-weight:500;font-display:fallback;src:url('https://draalessandrakerkhoff.com.br/wp-content/uploads/fonts/TUZezwhrmbFp0Srr_tH6fv6RcUejHO_u7GF5aXfv-U2QzBLF6gslWk39DWg3no5mBF4.woff2') format('woff2');}
-@font-face{font-family:"AR One Sans";font-style:normal;font-weight:600;font-display:fallback;src:url('https://draalessandrakerkhoff.com.br/wp-content/uploads/fonts/TUZezwhrmbFp0Srr_tH6fv6RcUejHO_u7GF5aXfv-U2QzBLF6gslWqH6DWg3no5mBF4.woff2') format('woff2');}
-@font-face{font-family:"AR One Sans";font-style:normal;font-weight:700;font-display:fallback;src:url('https://draalessandrakerkhoff.com.br/wp-content/uploads/fonts/TUZezwhrmbFp0Srr_tH6fv6RcUejHO_u7GF5aXfv-U2QzBLF6gslWpj6DWg3no5mBF4.woff2') format('woff2');}
+@font-face{font-family:Manrope;font-style:normal;font-weight:200;font-display:swap;src:url('https://fonts.wp.com/s/manrope/v15/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk59FO_A87jxeN7B.woff2') format('woff2');}
+@font-face{font-family:Manrope;font-style:normal;font-weight:300;font-display:swap;src:url('https://fonts.wp.com/s/manrope/v15/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk6jFO_A87jxeN7B.woff2') format('woff2');}
+@font-face{font-family:Manrope;font-style:normal;font-weight:400;font-display:swap;src:url('https://fonts.wp.com/s/manrope/v15/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk79FO_A87jxeN7B.woff2') format('woff2');}
+@font-face{font-family:Manrope;font-style:normal;font-weight:500;font-display:swap;src:url('https://fonts.wp.com/s/manrope/v15/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk7PFO_A87jxeN7B.woff2') format('woff2');}
+@font-face{font-family:Manrope;font-style:normal;font-weight:600;font-display:swap;src:url('https://fonts.wp.com/s/manrope/v15/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4jE-_A87jxeN7B.woff2') format('woff2');}
+@font-face{font-family:Manrope;font-style:normal;font-weight:700;font-display:swap;src:url('https://fonts.wp.com/s/manrope/v15/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4aE-_A87jxeN7B.woff2') format('woff2');}
+@font-face{font-family:Manrope;font-style:normal;font-weight:800;font-display:swap;src:url('https://fonts.wp.com/s/manrope/v15/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk59E-_A87jxeN7B.woff2') format('woff2');}
+@font-face{font-family:Poppins;font-style:normal;font-weight:300;font-display:swap;src:url('https://fonts.wp.com/s/poppins/v23/pxiByp8kv8JHgFVrLDz8V15vFP-KUEg.woff2') format('woff2');}
+@font-face{font-family:Poppins;font-style:italic;font-weight:300;font-display:swap;src:url('https://fonts.wp.com/s/poppins/v23/pxiDyp8kv8JHgFVrJJLm21llFd2PQEhcqw.woff2') format('woff2');}
+@font-face{font-family:Poppins;font-style:normal;font-weight:400;font-display:swap;src:url('https://fonts.wp.com/s/poppins/v23/pxiEyp8kv8JHgFVrFJXUc1NECPY.woff2') format('woff2');}
+@font-face{font-family:Poppins;font-style:italic;font-weight:400;font-display:swap;src:url('https://fonts.wp.com/s/poppins/v23/pxiGyp8kv8JHgFVrJJLecnFBGPaTSQ.woff2') format('woff2');}
+@font-face{font-family:Poppins;font-style:normal;font-weight:500;font-display:swap;src:url('https://fonts.wp.com/s/poppins/v23/pxiByp8kv8JHgFVrLGT9V15vFP-KUEg.woff2') format('woff2');}
+@font-face{font-family:Poppins;font-style:italic;font-weight:500;font-display:swap;src:url('https://fonts.wp.com/s/poppins/v23/pxiDyp8kv8JHgFVrJJLmg1hlFd2PQEhcqw.woff2') format('woff2');}
+@font-face{font-family:Poppins;font-style:normal;font-weight:600;font-display:swap;src:url('https://fonts.wp.com/s/poppins/v23/pxiByp8kv8JHgFVrLEj6V15vFP-KUEg.woff2') format('woff2');}
+@font-face{font-family:Poppins;font-style:italic;font-weight:600;font-display:swap;src:url('https://fonts.wp.com/s/poppins/v23/pxiDyp8kv8JHgFVrJJLmr19lFd2PQEhcqw.woff2') format('woff2');}
+@font-face{font-family:"AR One Sans";font-style:normal;font-weight:400;font-display:swap;src:url('https://draalessandrakerkhoff.com.br/wp-content/uploads/fonts/TUZezwhrmbFp0Srr_tH6fv6RcUejHO_u7GF5aXfv-U2QzBLF6gslWn_9DWg3no5mBF4.woff2') format('woff2');}
+@font-face{font-family:"AR One Sans";font-style:normal;font-weight:500;font-display:swap;src:url('https://draalessandrakerkhoff.com.br/wp-content/uploads/fonts/TUZezwhrmbFp0Srr_tH6fv6RcUejHO_u7GF5aXfv-U2QzBLF6gslWk39DWg3no5mBF4.woff2') format('woff2');}
+@font-face{font-family:"AR One Sans";font-style:normal;font-weight:600;font-display:swap;src:url('https://draalessandrakerkhoff.com.br/wp-content/uploads/fonts/TUZezwhrmbFp0Srr_tH6fv6RcUejHO_u7GF5aXfv-U2QzBLF6gslWqH6DWg3no5mBF4.woff2') format('woff2');}
+@font-face{font-family:"AR One Sans";font-style:normal;font-weight:700;font-display:swap;src:url('https://draalessandrakerkhoff.com.br/wp-content/uploads/fonts/TUZezwhrmbFp0Srr_tH6fv6RcUejHO_u7GF5aXfv-U2QzBLF6gslWpj6DWg3no5mBF4.woff2') format('woff2');}
 
