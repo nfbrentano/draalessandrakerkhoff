@@ -3,7 +3,6 @@ import "./styles/inline-styles.css";
 import "./styles/style-0.css";
 import "./styles/style-1.css";
 import Script from "next/script";
-import RegisterSW from "./scripts/registerSW";
 
 const bodyClassByPath = {
   "/": "home blog wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1",
@@ -98,6 +97,32 @@ const deferredMenuScript = `
     })();
 `;
 
+const registerSWScript = `
+  if ('serviceWorker' in navigator && window.location.protocol !== 'file:') {
+    navigator.serviceWorker
+      .register('/sw.js')
+      .then(function(reg) {
+        reg.onupdatefound = function() {
+          var installing = reg.installing;
+          if (installing) {
+            installing.onstatechange = function() {
+              if (installing.state === 'installed') {
+                if (navigator.serviceWorker.controller) {
+                  console.log('Nova versão instalada do service worker.');
+                } else {
+                  console.log('Conteúdo em cache para uso offline.');
+                }
+              }
+            };
+          }
+        };
+      })
+      .catch(function(err) {
+        console.error('Falha ao registrar service worker:', err);
+      });
+  }
+`;
+
 export const metadata = {
   metadataBase: new URL('https://draalessandrakerkhoff.com.br'),
   title: "Dra. Alessandra Kerkhoff",
@@ -118,7 +143,9 @@ export default function RootLayout({ children }) {
         <Script id="menu-script" strategy="afterInteractive">
           {deferredMenuScript}
         </Script>
-        <RegisterSW />
+        <Script id="register-sw" strategy="afterInteractive">
+          {registerSWScript}
+        </Script>
       </body>
     </html>
   );
