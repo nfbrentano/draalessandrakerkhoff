@@ -99,8 +99,12 @@ const deferredMenuScript = `
 `;
 
 export const metadata = {
+  metadataBase: new URL('https://draalessandrakerkhoff.com.br'),
   title: "Dra. Alessandra Kerkhoff",
   description: "Fisioterapeuta Cardiorrespiratória e do Sono",
+  alternates: {
+    canonical: './',
+  },
 };
 
 export default function RootLayout({ children }) {
