@@ -61,7 +61,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 <main id="wp--skip-link--target" class="wp-block-group is-layout-flow wp-container-core-group-is-layout-36bb09e9 wp-block-group-is-layout-flow" style="margin-top:0">
-    <div class="entry-content wp-block-post-content has-global-padding is-layout-constrained wp-block-post-content-is-layout-constrained" style="max-width: 1200px; margin: 0 auto; padding-top: 2rem; padding-bottom: 3rem;">
+    <div class="entry-content wp-block-post-content has-global-padding is-layout-constrained wp-block-post-content-is-layout-constrained" style="width: 100%; max-width: 100%; margin: 0 auto; padding-top: 2rem; padding-bottom: 3rem;">
         
         <!-- Hero Header -->
         <section class="blog-hero">

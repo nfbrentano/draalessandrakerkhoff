@@ -328,3 +328,602 @@
   color: #ffffff;
 }
 
+/* ==========================================================================
+   Services Page Styles - Dra. Alessandra Kerkhoff
+   ========================================================================== */
+.services-hero {
+  background: linear-gradient(135deg, #1b365d 0%, #0f2546 100%);
+  color: #ffffff;
+  padding: 4.5rem 1.5rem;
+  border-radius: 1.5rem;
+  margin-bottom: 3.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 12px 35px rgba(27, 54, 93, 0.18);
+}
+
+.services-hero::before {
+  content: '';
+  position: absolute;
+  top: -40%;
+  right: -15%;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.services-hero-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  color: #e2e8f0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 0.45rem 1.1rem;
+  border-radius: 50px;
+  margin-bottom: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.services-hero-title {
+  font-size: 2.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+  color: #ffffff;
+}
+
+.services-hero-desc {
+  font-size: 1.15rem;
+  color: #cbd5e1;
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Main Services Grid */
+.services-main-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 992px) {
+  .services-main-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.services-main-card {
+  background: #ffffff;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services-main-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(27, 54, 93, 0.12);
+}
+
+.services-card-img-wrap {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.services-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.services-main-card:hover .services-card-img {
+  transform: scale(1.05);
+}
+
+.services-card-body {
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.services-card-title {
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.75rem;
+}
+
+.services-card-desc {
+  color: #64748b;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.services-card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.services-card-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #334155;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.services-card-list li span {
+  color: #0284c7;
+  font-weight: 700;
+}
+
+.services-card-btn {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: #1b365d;
+  color: #ffffff;
+  padding: 0.85rem 1.75rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.services-card-btn:hover {
+  background: #0f2546;
+  transform: translateY(-2px);
+  color: #ffffff;
+}
+
+/* Section Header Titles */
+.services-section-title-wrap {
+  text-align: center;
+  margin-bottom: 3rem;
+  margin-top: 4rem;
+}
+
+.services-section-tag {
+  color: #0284c7;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.services-section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+}
+
+.services-section-subtitle {
+  color: #64748b;
+  font-size: 1.05rem;
+  max-width: 640px;
+  margin: 0.75rem auto 0 auto;
+  line-height: 1.6;
+}
+
+/* Detailed Services 6-Grid */
+.services-grid-6 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 640px) {
+  .services-grid-6 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .services-grid-6 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.services-item-card {
+  background: #ffffff;
+  border-radius: 1.1rem;
+  padding: 1.75rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services-item-card:hover {
+  transform: translateY(-4px);
+  border-color: #cbd5e1;
+  box-shadow: 0 10px 25px rgba(27, 54, 93, 0.08);
+}
+
+.services-item-icon {
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: 0.75rem;
+  background: #e0f2fe;
+  color: #0369a1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.services-item-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.6rem;
+}
+
+.services-item-desc {
+  color: #64748b;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Differentials Box */
+.services-differentials-box {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 1px solid #e2e8f0;
+  border-radius: 1.5rem;
+  padding: 3.5rem 2rem;
+  margin-bottom: 4rem;
+}
+
+.services-diff-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .services-diff-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.services-diff-item {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.services-diff-icon-wrap {
+  width: 3rem;
+  height: 3rem;
+  min-width: 3rem;
+  border-radius: 50%;
+  background: #1b365d;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.services-diff-content h4 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 0.4rem 0;
+}
+
+.services-diff-content p {
+  color: #64748b;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Process Steps Section */
+.services-steps-wrap {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .services-steps-wrap {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.services-step-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1.25rem;
+  padding: 1.75rem 1.25rem;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+  transition: transform 0.3s ease;
+}
+
+.services-step-card:hover {
+  transform: translateY(-4px);
+}
+
+.services-step-num {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: #0284c7;
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem auto;
+  font-size: 1.1rem;
+}
+
+.services-step-card h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 0.5rem 0;
+}
+
+.services-step-card p {
+  color: #64748b;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* FAQ Accordion Section */
+.services-faq-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 840px;
+  margin: 0 auto 4rem auto;
+}
+
+.services-faq-item {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.services-faq-item h4 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1b365d;
+  margin: 0 0 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.services-faq-item p {
+  color: #475569;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* CTA Banner */
+.services-cta-banner {
+  background: linear-gradient(135deg, #1b365d 0%, #0f2546 100%);
+  border-radius: 1.5rem;
+  padding: 3.5rem 2rem;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 3.5rem;
+  box-shadow: 0 10px 30px rgba(27, 54, 93, 0.15);
+}
+
+.services-cta-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+}
+
+.services-cta-desc {
+  font-size: 1.1rem;
+  color: #cbd5e1;
+  max-width: 620px;
+  margin: 0 auto 2rem auto;
+  line-height: 1.6;
+}
+
+.services-cta-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.services-cta-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background-color: #25d366;
+  color: #ffffff;
+  font-size: 1.05rem;
+  font-weight: 600;
+  padding: 0.9rem 2.25rem;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.35);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.services-cta-btn-primary:hover {
+  background-color: #1eb854;
+  transform: translateY(-2px);
+  color: #ffffff;
+}
+
+.services-cta-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.9rem 1.75rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.services-cta-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   Full Width Device & Mobile Responsiveness Overrides
+   ========================================================================== */
+
+:root {
+  --wp--style--global--content-size: 100% !important;
+  --wp--style--global--wide-size: 100% !important;
+}
+
+/* Force main content containers to full 100% device width */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.wp-site-blocks,
+main#wp--skip-link--target,
+.entry-content,
+.wp-block-post-content,
+.is-layout-constrained,
+.wp-block-group.is-layout-constrained {
+  max-width: 100% !important;
+  width: 100% !important;
+  box-sizing: border-box;
+}
+
+/* Override WordPress default 620px constraint on child elements */
+.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+  max-width: 100% !important;
+  width: 100% !important;
+  box-sizing: border-box;
+}
+
+.is-layout-constrained > .alignwide {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+/* Article content elements full width */
+.entry-content > *,
+.wp-block-post-content > * {
+  max-width: 100% !important;
+  box-sizing: border-box;
+}
+
+/* Images & Media responsive scaling */
+.entry-content img,
+.wp-block-post-content img,
+.wp-block-image img,
+.wp-block-gallery img,
+.wp-block-cover img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* Fluid, responsive global side padding for all device screen sizes */
+.has-global-padding {
+  padding-left: clamp(1rem, 3.5vw, 3rem) !important;
+  padding-right: clamp(1rem, 3.5vw, 3rem) !important;
+}
+
+/* Multi-column grid layouts for wide & ultra-wide screens */
+@media (min-width: 1200px) {
+  .blog-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+  .services-main-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .services-grid-6 {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+/* Mobile typography & word wrap safety */
+.entry-content p,
+.entry-content ul,
+.entry-content ol,
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6,
+.wp-block-post-title {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 640px) {
+  .blog-hero-title,
+  .services-hero-title {
+    font-size: 1.85rem !important;
+  }
+  .blog-hero,
+  .services-hero {
+    padding: 2.5rem 1.25rem !important;
+    border-radius: 1rem !important;
+  }
+  .blog-featured-content,
+  .services-card-body {
+    padding: 1.5rem !important;
+  }
+  .blog-cta-box,
+  .services-differentials-box,
+  .services-cta-banner {
+    padding: 2rem 1.25rem !important;
+    border-radius: 1rem !important;
+  }
+}
+
+
+
