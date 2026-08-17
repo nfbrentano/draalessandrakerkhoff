@@ -859,12 +859,27 @@ main#wp--skip-link--target,
   box-sizing: border-box;
 }
 
-/* Images & Media responsive scaling */
+/* Images & Media responsive scaling & auto-centering */
+.entry-content .wp-block-image,
+.wp-block-post-content .wp-block-image,
+.entry-content figure,
+.wp-block-post-content figure,
+.entry-content .wp-block-gallery,
+.wp-block-post-content .wp-block-gallery {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
+  justify-content: center !important;
+}
+
 .entry-content img,
 .wp-block-post-content img,
 .wp-block-image img,
 .wp-block-gallery img,
 .wp-block-cover img {
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
   max-width: 100% !important;
   height: auto !important;
 }
