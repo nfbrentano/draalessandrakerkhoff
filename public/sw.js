@@ -6,6 +6,8 @@ const RUNTIME_CACHE = 'runtime-cache';
 const STATIC_ASSET_EXTENSIONS = [
   '.js',
   '.css',
+  '.woff2',
+  '.woff',
   '.avif',
   '.png',
   '.jpg',
