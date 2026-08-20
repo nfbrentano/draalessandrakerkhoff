@@ -2,7 +2,6 @@ import "./globals.css";
 import "./styles/inline-styles.css";
 import "./styles/style-0.css";
 import "./styles/style-1.css";
-import Script from "next/script";
 
 const bodyClassByPath = {
   "/": "home blog wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1",
@@ -172,14 +171,12 @@ export default function RootLayout({ children }) {
       </head>
       <body className="wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1">
         {children}
-        <Script
+        <script
           id="menu-script"
-          strategy="afterInteractive"
           dangerouslySetInnerHTML={{ __html: deferredMenuScript }}
         />
-        <Script
+        <script
           id="register-sw"
-          strategy="afterInteractive"
           dangerouslySetInnerHTML={{ __html: registerSWScript }}
         />
       </body>

@@ -52,11 +52,16 @@ function optimizeHtml(html) {
     const isChunkScript = tag.startsWith('<script') && tag.includes('/_next/static/chunks/');
     const isScriptPreload = tag.startsWith('<link') && tag.includes('as="script"');
     const isStylesheetLink = tag.startsWith('<link') && tag.includes('rel="stylesheet"');
+    const isNextFScript = tag.startsWith('<script') && (
+      html.startsWith('(self.__next_f', tagEnd + 1) ||
+      html.startsWith('self.__next_f', tagEnd + 1)
+    );
 
-    if (isChunkScript) {
+    if (isChunkScript || isNextFScript) {
       const closeTag = '</script>';
-      if (html.startsWith(closeTag, tagEnd + 1)) {
-        i = tagEnd + 1 + closeTag.length;
+      const closeIdx = html.indexOf(closeTag, tagEnd + 1);
+      if (closeIdx !== -1) {
+        i = closeIdx + closeTag.length;
         continue;
       }
       i = tagEnd + 1;
@@ -97,7 +102,7 @@ if (fs.existsSync(outDir)) {
       }
     }
   });
-  console.log(`Post-build: Optimized ${count} HTML files (CSS inlined, render-blocking eliminated).`);
+  console.log(`Post-build: Optimized ${count} HTML files (CSS inlined, legacy JS and render-blocking eliminated).`);
 } else {
   console.error('Post-build error: "out" directory not found.');
 }
