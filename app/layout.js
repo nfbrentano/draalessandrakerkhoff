@@ -132,20 +132,28 @@ export const metadata = {
   },
 };
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR">
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body className="wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1">
         {children}
-        <Script id="menu-script" strategy="afterInteractive">
-          {deferredMenuScript}
-        </Script>
-        <Script id="register-sw" strategy="afterInteractive">
-          {registerSWScript}
-        </Script>
+        <Script
+          id="menu-script"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{ __html: deferredMenuScript }}
+        />
+        <Script
+          id="register-sw"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{ __html: registerSWScript }}
+        />
       </body>
     </html>
   );
