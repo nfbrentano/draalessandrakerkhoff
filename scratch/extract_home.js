@@ -17,7 +17,10 @@ bodyHtml = bodyHtml.replace(/https?:\/\/i0\.wp\.com\/draalessandrakerkhoff\.com\
 bodyHtml = bodyHtml.replace(/\/wp-content\/uploads\/([^"'\s]+?)(\.(?:avif|png|jpg|jpeg|webp|gif))\?[^"'\s\)]*/g, '/wp-content/uploads/$1$2');
 
 // Convert string template literal backticks escaping if needed for JSX
-const safeHtml = bodyHtml.replace(/`/g, '\\`').replace(/\${/g, '\\${');
+const safeHtml = bodyHtml
+  .replace(/\\/g, '\\\\')
+  .replace(/`/g, '\\`')
+  .replace(/\${/g, '\\${');
 
 const pageComponent = `import Script from "next/script";
 
