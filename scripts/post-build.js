@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { PurgeCSS } = require('purgecss');
 
 const outDir = path.join(__dirname, '../out');
 
@@ -32,9 +33,11 @@ function getCssContent(href) {
   return null;
 }
 
-function optimizeHtml(html) {
+function cleanHtmlTags(html) {
   let result = '';
   let i = 0;
+  const stylesheetHrefs = [];
+
   while (i < html.length) {
     const tagStart = html.indexOf('<', i);
     if (tagStart === -1) {
@@ -72,37 +75,123 @@ function optimizeHtml(html) {
     } else if (isStylesheetLink) {
       const hrefMatch = tag.match(/href="([^"]+)"/);
       if (hrefMatch && hrefMatch[1]) {
-        const href = hrefMatch[1];
-        const cssContent = getCssContent(href);
-        if (cssContent !== null) {
-          result += `<style>${cssContent}</style>`;
-          i = tagEnd + 1;
-          continue;
-        }
+        stylesheetHrefs.push(hrefMatch[1]);
       }
+      i = tagEnd + 1;
+      continue;
     }
 
     result += tag;
     i = tagEnd + 1;
   }
-  return result;
+  return { cleanedHtml: result, stylesheetHrefs };
 }
 
-if (fs.existsSync(outDir)) {
-  console.log('Post-build: Inlining CSS and cleaning unused Next.js JavaScript chunks from HTML files...');
-  let count = 0;
-  walk(outDir, (filepath) => {
-    if (filepath.endsWith('.html')) {
-      const content = fs.readFileSync(filepath, 'utf8');
-      const newContent = optimizeHtml(content);
-      
-      if (newContent !== content) {
-        fs.writeFileSync(filepath, newContent, 'utf8');
-        count++;
-      }
+async function purgeCssForPage(pageHtml, rawCss) {
+  const purgeResult = await new PurgeCSS().purge({
+    content: [
+      { raw: pageHtml, extension: 'html' },
+      path.join(__dirname, '../app/layout.js')
+    ],
+    css: [{ raw: rawCss }],
+    safelist: {
+      standard: [
+        'has-modal-open',
+        'is-menu-open',
+        'home',
+        'blog',
+        'page',
+        'single',
+        'single-post',
+        'wp-singular',
+        'page-template-default',
+        'post-template-default',
+        'single-format-standard',
+        'page-parent',
+        'page-child',
+        /^page-id-/,
+        /^parent-pageid-/,
+        /^postid-/,
+        /^wp-theme-/,
+        /^jps-theme-/
+      ],
+      deep: [
+        /^wp-block-navigation__responsive/,
+        /:root/,
+        /body/,
+        /html/
+      ],
+      greedy: []
     }
   });
-  console.log(`Post-build: Optimized ${count} HTML files (CSS inlined, legacy JS and render-blocking eliminated).`);
-} else {
-  console.error('Post-build error: "out" directory not found.');
+
+  return purgeResult[0] ? purgeResult[0].css : rawCss;
 }
+
+async function run() {
+  if (!fs.existsSync(outDir)) {
+    console.error('Post-build error: "out" directory not found.');
+    return;
+  }
+
+  console.log('Post-build: Purging unused CSS, inlining critical styles, and removing unused Next.js chunks...');
+
+  const htmlFiles = [];
+  walk(outDir, (filepath) => {
+    if (filepath.endsWith('.html')) {
+      htmlFiles.push(filepath);
+    }
+  });
+
+  // Collect all CSS chunk files as fallback if needed
+  const chunksDir = path.join(outDir, '_next/static/chunks');
+  let allChunksCss = '';
+  if (fs.existsSync(chunksDir)) {
+    const chunkFiles = fs.readdirSync(chunksDir).filter(f => f.endsWith('.css'));
+    allChunksCss = chunkFiles.map(f => fs.readFileSync(path.join(chunksDir, f), 'utf8')).join('\n');
+  }
+
+  let count = 0;
+  for (const filepath of htmlFiles) {
+    const originalContent = fs.readFileSync(filepath, 'utf8');
+    const { cleanedHtml, stylesheetHrefs } = cleanHtmlTags(originalContent);
+
+    // Combine CSS from page stylesheet links or all chunk styles
+    let combinedCss = '';
+    for (const href of stylesheetHrefs) {
+      const css = getCssContent(href);
+      if (css) combinedCss += css + '\n';
+    }
+    if (!combinedCss.trim()) {
+      combinedCss = allChunksCss;
+    }
+
+    if (combinedCss.trim()) {
+      const purgedCss = await purgeCssForPage(cleanedHtml, combinedCss);
+      
+      // Inject purged CSS inside <head>
+      const headCloseIdx = cleanedHtml.indexOf('</head>');
+      let finalHtml;
+      if (headCloseIdx !== -1) {
+        finalHtml = cleanedHtml.slice(0, headCloseIdx) +
+          `<style>${purgedCss}</style>` +
+          cleanedHtml.slice(headCloseIdx);
+      } else {
+        finalHtml = `<style>${purgedCss}</style>` + cleanedHtml;
+      }
+
+      fs.writeFileSync(filepath, finalHtml, 'utf8');
+      count++;
+    } else {
+      fs.writeFileSync(filepath, cleanedHtml, 'utf8');
+      count++;
+    }
+  }
+
+  console.log(`Post-build: Successfully optimized and purged CSS for ${count} HTML files.`);
+}
+
+run().catch((err) => {
+  console.error('Post-build optimization error:', err);
+  process.exit(1);
+});
