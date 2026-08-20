@@ -129,6 +129,17 @@ export const metadata = {
   alternates: {
     canonical: './',
   },
+  icons: {
+    icon: [
+      { url: '/wp-content/uploads/2025/08/cropped-ALESSANDRA_SIMBOLO-2-1-1-scaled-1-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/wp-content/uploads/2025/08/cropped-ALESSANDRA_SIMBOLO-2-1-1-scaled-1-192x192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/wp-content/uploads/2025/08/cropped-ALESSANDRA_SIMBOLO-2-1-1-scaled-1.png', sizes: '512x512', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/wp-content/uploads/2025/08/cropped-ALESSANDRA_SIMBOLO-2-1-1-scaled-1-180x180.png', sizes: '180x180', type: 'image/png' },
+    ],
+    shortcut: '/wp-content/uploads/2025/08/cropped-ALESSANDRA_SIMBOLO-2-1-1-scaled-1-32x32.png',
+  },
 };
 
 export const viewport = {
