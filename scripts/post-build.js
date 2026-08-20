@@ -16,8 +16,23 @@ function walk(dir, callback) {
   }
 }
 
+const cssCache = new Map();
 
-function cleanHtml(html) {
+function getCssContent(href) {
+  const cleanHref = href.split('?')[0].replace(/^\//, '');
+  if (cssCache.has(cleanHref)) {
+    return cssCache.get(cleanHref);
+  }
+  const cssPath = path.join(outDir, cleanHref);
+  if (fs.existsSync(cssPath)) {
+    const css = fs.readFileSync(cssPath, 'utf8');
+    cssCache.set(cleanHref, css);
+    return css;
+  }
+  return null;
+}
+
+function optimizeHtml(html) {
   let result = '';
   let i = 0;
   while (i < html.length) {
@@ -36,6 +51,7 @@ function cleanHtml(html) {
     const tag = html.slice(tagStart, tagEnd + 1);
     const isChunkScript = tag.startsWith('<script') && tag.includes('/_next/static/chunks/');
     const isScriptPreload = tag.startsWith('<link') && tag.includes('as="script"');
+    const isStylesheetLink = tag.startsWith('<link') && tag.includes('rel="stylesheet"');
 
     if (isChunkScript) {
       const closeTag = '</script>';
@@ -48,6 +64,17 @@ function cleanHtml(html) {
     } else if (isScriptPreload) {
       i = tagEnd + 1;
       continue;
+    } else if (isStylesheetLink) {
+      const hrefMatch = tag.match(/href="([^"]+)"/);
+      if (hrefMatch && hrefMatch[1]) {
+        const href = hrefMatch[1];
+        const cssContent = getCssContent(href);
+        if (cssContent !== null) {
+          result += `<style>${cssContent}</style>`;
+          i = tagEnd + 1;
+          continue;
+        }
+      }
     }
 
     result += tag;
@@ -57,12 +84,12 @@ function cleanHtml(html) {
 }
 
 if (fs.existsSync(outDir)) {
-  console.log('Post-build: Cleaning unused Next.js JavaScript chunks from HTML files...');
+  console.log('Post-build: Inlining CSS and cleaning unused Next.js JavaScript chunks from HTML files...');
   let count = 0;
   walk(outDir, (filepath) => {
     if (filepath.endsWith('.html')) {
       const content = fs.readFileSync(filepath, 'utf8');
-      const newContent = cleanHtml(content);
+      const newContent = optimizeHtml(content);
       
       if (newContent !== content) {
         fs.writeFileSync(filepath, newContent, 'utf8');
@@ -70,7 +97,7 @@ if (fs.existsSync(outDir)) {
       }
     }
   });
-  console.log(`Post-build: Cleaned script tags from ${count} HTML files.`);
+  console.log(`Post-build: Optimized ${count} HTML files (CSS inlined, render-blocking eliminated).`);
 } else {
   console.error('Post-build error: "out" directory not found.');
 }
