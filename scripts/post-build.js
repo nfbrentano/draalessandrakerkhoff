@@ -16,21 +16,25 @@ function walk(dir, callback) {
   }
 }
 
+
 if (fs.existsSync(outDir)) {
   console.log('Post-build: Cleaning unused Next.js JavaScript chunks from HTML files...');
   let count = 0;
   walk(outDir, (filepath) => {
     if (filepath.endsWith('.html')) {
-      let content = fs.readFileSync(filepath, 'utf8');
+      const content = fs.readFileSync(filepath, 'utf8');
       
       // Match and remove Next.js script chunks
       const scriptRegex = /<script[^>]+src="\/_next\/static\/chunks\/[^>]+><\/script>/g;
       // Match and remove Next.js preload script link tags
       const preloadRegex = /<link[^>]+as="script"[^>]*>/g;
       
-      const newContent = content
-        .replace(scriptRegex, '')
-        .replace(preloadRegex, '');
+      let newContent = content;
+      let previous;
+      do {
+        previous = newContent;
+        newContent = newContent.replace(scriptRegex, '').replace(preloadRegex, '');
+      } while (newContent !== previous);
       
       if (newContent !== content) {
         fs.writeFileSync(filepath, newContent, 'utf8');
