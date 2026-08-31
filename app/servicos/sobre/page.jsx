@@ -202,30 +202,92 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <style>
 #gallery-section {
   display: grid !important;
-  gap: 16px;
+  gap: 24px;
   width: 100%;
-  margin: 0;
+  margin: 2rem 0;
   box-sizing: border-box;
   grid-template-columns: repeat(1, 1fr); 
+  padding: 1rem;
 }
+
 #gallery-section .wp-block-image {
   margin: 0;
   width: 100%;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px -10px rgba(0,0,0,0.15);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  background: #f8f9fa;
+  cursor: pointer;
 }
+
+#gallery-section .wp-block-image:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px -15px rgba(0,0,0,0.25);
+}
+
 #gallery-section .wp-block-image img {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
-  border-radius: 8px;
+  transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+  display: block;
 }
+
+#gallery-section .wp-block-image:hover img {
+  transform: scale(1.05);
+}
+
+/* Premium Lightbox Button Styling */
+#gallery-section .wp-block-image .lightbox-trigger {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  opacity: 0;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  z-index: 10;
+}
+
+#gallery-section .wp-block-image:hover .lightbox-trigger {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+#gallery-section .wp-block-image .lightbox-trigger svg {
+  width: 24px;
+  height: 24px;
+  fill: #fff;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+}
+
+#gallery-section .wp-block-image .lightbox-trigger:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Responsividade refinada */
 @media (min-width: 600px) {
   #gallery-section {
     grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
   }
 }
 @media (min-width: 1024px) {
   #gallery-section {
     grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
   }
 }
 </style>
