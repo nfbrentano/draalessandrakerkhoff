@@ -148,6 +148,9 @@ export const metadata = {
   description: "Fisioterapeuta Cardiorrespiratória e do Sono",
   alternates: {
     canonical: './',
+    languages: {
+      'pt-BR': 'https://draalessandrakerkhoff.com.br',
+    },
   },
   openGraph: {
     title: "Dra. Alessandra Kerkhoff",
@@ -183,7 +186,7 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR" className={`${poppins.variable} ${manrope.variable}`}>
-      <body className="wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1">
+      <body suppressHydrationWarning className="wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1">
         {children}
         <script
           id="menu-script"

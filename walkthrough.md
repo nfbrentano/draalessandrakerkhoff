@@ -26,10 +26,16 @@ As 5 etapas identificadas no [implementation_plan.md](file:///Users/natanaelfern
 
 ## 🟢 5. Menu Responsivo (Hambúrguer) & Classes Globais do `<body>`
 - **Ação:** O componente `MenuScript` em `app/scripts/menu.js` já gerencia eventos de clique, fechar com ESC e controle de acessibilidade (`aria-modal`) para telas mobile.
-- **Modificação:** Adicionadas as classes padrão do WordPress no elemento `<body>` em `app/layout.js`:
-  ```js
-  <body className="home blog wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1">
-  ```
+- **Modificação:**
+  - Adicionada propriedade `suppressHydrationWarning` na tag `<body>` em `app/layout.js`.
+- Isso evita que o React/Next.js exiba o erro no console de "Hydration Mismatch" quando o script manipula a classe do body dinamicamente (como acontece com `wp-site-blocks`).
+- O erro é silenciado no ambiente de desenvolvimento, e o build não falhará mais por conta disso.
+
+## Ajuste de Imagens no Mobile
+
+- Adicionada regra CSS global avançada usando `:has()` em `app/globals.css`.
+- Garante que no mobile (telas `< 781px`), as seções que seguem o padrão *Imagem (Coluna 1)* e *Texto (Coluna 2)* sejam invertidas (`flex-direction: column-reverse`).
+- Dessa forma, evita-se que duas imagens fiquem empilhadas consecutivamente. O layout no celular sempre intercalará Texto e Imagem de maneira elegante e fluida.
 
 ---
 

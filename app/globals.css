@@ -940,5 +940,31 @@ main#wp--skip-link--target,
   }
 }
 
+/* Mobile Accessibility & Touch Targets */
+@media (max-width: 768px) {
+  /* Ensure all touch targets are at least 48x48px */
+  a, button, .wp-block-button__link, .wp-social-link-anchor {
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Slightly increase base font size on mobile for readability */
+  html {
+    font-size: 105%;
+  }
+  
+  p, li, .wp-block-paragraph {
+    font-size: 1.1rem !important;
+    line-height: 1.6;
+  }
+}
 
-
+@media (max-width: 781px) {
+  /* Prevent images from stacking consecutively by reversing Image-Text columns */
+  .wp-block-columns:has(> .wp-block-column:first-child img):not(:has(> .wp-block-column:nth-child(2) img)) {
+    display: flex !important;
+    flex-direction: column-reverse !important;
+  }
+}
