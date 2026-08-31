@@ -1,7 +1,22 @@
 import { fixPaths } from "@/app/utils/fixPaths";
 export const metadata = {
-  title: "Cuide Do Seu CPAP Com Simplicidade: Passos Fáceis Para Noites Mais Tranquilas - Tratamento De Ronco E Apneia Do Sono | CPAP – Lajeado E Vale Do Taquari",
-  description: "Cuide do seu CPAP com carinho e viva todas as fases do sono com prazer, energia e segurança. O segredo está em manter práticas de limpeza fáceis e confiáveis",
+  title: "Cuidados com o CPAP | Dicas para noites mais tranquilas",
+  description: "Aprenda passos fáceis para cuidar do seu CPAP e ter noites de sono tranquilas. Tratamento de apneia e ronco no Vale do Taquari.",
+  keywords: [
+    "cuidados com cpap",
+    "limpeza de cpap",
+    "apneia e ronco lajeado",
+    "tratamento cpap vale do taquari",
+    "fisioterapia do sono"
+  ],
+  openGraph: {
+    title: "Como cuidar do seu CPAP para um sono melhor",
+    description: "Dicas de manutenção e uso do CPAP no tratamento de apneia.",
+    url: "https://draalessandrakerkhoff.com.br/cuide-do-seu-cpap-com-simplicidade-passos-faceis-para-noites-mais-tranquilas",
+    siteName: "Dra. Alessandra Kerkhoff",
+    locale: "pt_BR",
+    type: "article",
+  },
 };
 
 export default function Page() {

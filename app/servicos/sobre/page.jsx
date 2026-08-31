@@ -1,7 +1,22 @@
 import { fixPaths } from "@/app/utils/fixPaths";
 export const metadata = {
-  title: "Fisioterapia Cardiorrespiratória E Do Sono: Transforme Sua Saúde - Tratamento De Ronco E Apneia Do Sono | CPAP – Lajeado E Vale Do Taquari",
-  description: "Olá! Sou Dra. Alessandra Cristina Kerkhoff, fisioterapeuta com especialização em Fisioterapia Cardiorrespiratória e Fisioterapia do Sono com mais de 17 anos",
+  title: "Sobre a Dra. Alessandra Kerkhoff | Fisioterapia em Lajeado",
+  description: "Conheça a Dra. Alessandra Cristina Kerkhoff, fisioterapeuta especialista em Fisioterapia Cardiorrespiratória e do Sono, atuando em Lajeado e Vale do Taquari.",
+  keywords: [
+    "dra alessandra kerkhoff",
+    "fisioterapia do sono lajeado",
+    "tratamento de apneia e ronco",
+    "vale do taquari",
+    "cpap"
+  ],
+  openGraph: {
+    title: "Sobre a Dra. Alessandra Kerkhoff",
+    description: "Especialista em fisioterapia do sono e cardiorrespiratória no Vale do Taquari.",
+    url: "https://draalessandrakerkhoff.com.br/servicos/sobre",
+    siteName: "Dra. Alessandra Kerkhoff",
+    locale: "pt_BR",
+    type: "article",
+  },
 };
 
 export default function Page() {

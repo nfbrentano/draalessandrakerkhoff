@@ -1,7 +1,22 @@
 import { fixPaths } from "@/app/utils/fixPaths";
 export const metadata = {
-  title: "Fisioterapia Cardiorrespiratória - Tratamento De Ronco E Apneia Do Sono | CPAP – Lajeado E Vale Do Taquari",
-  description: "Reabilitação cardíaca e pulmonar em Lajeado com a Dra. Alessandra. Atendimento especializado pós-cirurgia cardíaca, infarto, DPOC e pneumonias. Saiba mais!",
+  title: "Fisioterapia Cardiorrespiratória em Lajeado e Vale do Taquari | Dra. Alessandra",
+  description: "Reabilitação cardíaca e pulmonar em Lajeado com a Dra. Alessandra. Atendimento especializado pós-cirurgia cardíaca, infarto, DPOC e pneumonias no Vale do Taquari.",
+  keywords: [
+    "fisioterapia cardiorrespiratória",
+    "reabilitação pulmonar lajeado",
+    "apneia e ronco",
+    "vale do taquari",
+    "fisioterapia respiratória"
+  ],
+  openGraph: {
+    title: "Fisioterapia Cardiorrespiratória no Vale do Taquari",
+    description: "Atendimento especializado em reabilitação cardíaca e pulmonar em Lajeado.",
+    url: "https://draalessandrakerkhoff.com.br/fisioterapia-cardiorrespiratoria",
+    siteName: "Dra. Alessandra Kerkhoff",
+    locale: "pt_BR",
+    type: "article",
+  },
 };
 
 export default function Page() {

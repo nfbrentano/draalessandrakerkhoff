@@ -1,8 +1,24 @@
 import { fixPaths } from "@/app/utils/fixPaths";
 
 export const metadata = {
-  title: "Tratamento De Ronco E Apneia Do Sono | CPAP – Lajeado E Vale Do Taquari - Tem Ronco Ou Apneia Do Sono? A Dra. Alessandra Kerkhoff Realiza Acompanhamento E Titulação De CPAP Em Lajeado, Estrela, Arroio Do Meio E Região. Agende Sua Consulta!",
-  description: "Sofre com ronco ou apneia? Precisa de reabilitação cardíaca? A Dra. Alessandra Kerkhoff é referência em fisioterapia cardiorrespiratória e do sono em Lajeado.",
+  title: "Tratamento de Ronco e Apneia do Sono | CPAP em Lajeado e Vale do Taquari",
+  description: "Sofre com ronco ou apneia? Precisa de reabilitação cardíaca? A Dra. Alessandra Kerkhoff é referência em fisioterapia cardiorrespiratória e do sono em Lajeado e Vale do Taquari.",
+  keywords: [
+    "tratamento de ronco",
+    "apneia do sono",
+    "cpap lajeado",
+    "vale do taquari",
+    "fisioterapia do sono",
+    "dra alessandra kerkhoff"
+  ],
+  openGraph: {
+    title: "Tratamento de Ronco e Apneia do Sono em Lajeado",
+    description: "Referência em fisioterapia cardiorrespiratória e do sono no Vale do Taquari.",
+    url: "https://draalessandrakerkhoff.com.br",
+    siteName: "Dra. Alessandra Kerkhoff",
+    locale: "pt_BR",
+    type: "website",
+  },
 };
 
 export default function Page() {

@@ -1,7 +1,22 @@
 import { fixPaths } from "@/app/utils/fixPaths";
 export const metadata = {
-  title: "Conheça Mais Sobre Fisioterapia Cardiorrespiratória E Do Sono - Tratamento De Ronco E Apneia Do Sono | CPAP – Lajeado E Vale Do Taquari",
-  description: "",
+  title: "Blog | Dicas sobre Ronco, Apneia e Fisioterapia no Vale do Taquari",
+  description: "Acompanhe nosso blog e saiba tudo sobre tratamentos para ronco, apneia do sono e dicas de fisioterapia cardiorrespiratória em Lajeado e Vale do Taquari.",
+  keywords: [
+    "blog fisioterapia do sono",
+    "dicas apneia e ronco lajeado",
+    "tratamento de ronco",
+    "cpap vale do taquari",
+    "fisioterapia cardiorrespiratória"
+  ],
+  openGraph: {
+    title: "Blog da Dra. Alessandra Kerkhoff | Fisioterapia e Bem-Estar",
+    description: "Dicas e novidades sobre tratamento de ronco, apneia e qualidade do sono no Vale do Taquari.",
+    url: "https://draalessandrakerkhoff.com.br/blog",
+    siteName: "Dra. Alessandra Kerkhoff",
+    locale: "pt_BR",
+    type: "website",
+  },
 };
 
 export default function Page() {

@@ -1,7 +1,22 @@
 import { fixPaths } from "@/app/utils/fixPaths";
 export const metadata = {
-  title: "Tratamento De Apneia Do Sono: Cuidados Personalizados E Eficazes - Tratamento De Ronco E Apneia Do Sono | CPAP – Lajeado E Vale Do Taquari",
-  description: "Fisioterapia completa e personalizada para melhorar sua saúde e qualidade de vida focando em duas áreas: distúrbios no sono e cardiovascular.",
+  title: "Serviços | Fisioterapia Cardiorrespiratória e do Sono em Lajeado",
+  description: "Fisioterapia completa e personalizada focando em distúrbios do sono, ronco, apneia e reabilitação cardiovascular em Lajeado e Vale do Taquari.",
+  keywords: [
+    "tratamento de apneia do sono lajeado",
+    "ronco",
+    "cpap vale do taquari",
+    "serviços de fisioterapia",
+    "reabilitação cardiovascular"
+  ],
+  openGraph: {
+    title: "Serviços de Fisioterapia em Lajeado e Vale do Taquari",
+    description: "Tratamento de apneia, ronco e reabilitação cardiovascular.",
+    url: "https://draalessandrakerkhoff.com.br/servicos",
+    siteName: "Dra. Alessandra Kerkhoff",
+    locale: "pt_BR",
+    type: "article",
+  },
 };
 
 export default function Page() {

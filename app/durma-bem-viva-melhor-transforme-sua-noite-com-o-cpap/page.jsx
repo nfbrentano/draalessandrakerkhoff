@@ -1,7 +1,22 @@
 import { fixPaths } from "@/app/utils/fixPaths";
 export const metadata = {
-  title: "Durma Bem, Viva Melhor: Transforme Sua Noite Com O CPAP - Tratamento De Ronco E Apneia Do Sono | CPAP – Lajeado E Vale Do Taquari",
-  description: "A adaptação ao uso do CPAP é facilitada por estratégias graduais e orientação profissional. Começar com pequenas sessões diárias e escolher a máscara adequada são essenciais para o conforto. O uso de um umidificador ajuda a prevenir a secura nasal. Com persistência, os usuários conseguem melhorar a qualidade do sono e a disposição.",
+  title: "Adaptação ao CPAP: Transforme sua noite | Lajeado",
+  description: "Dificuldades com o CPAP? A Dra. Alessandra Kerkhoff ajuda você na adaptação para noites de sono perfeitas no Vale do Taquari.",
+  keywords: [
+    "adaptação ao cpap lajeado",
+    "tratamento apneia e ronco",
+    "titulação de cpap vale do taquari",
+    "dormir bem",
+    "fisioterapia do sono"
+  ],
+  openGraph: {
+    title: "Transforme sua noite de sono com o uso correto do CPAP",
+    description: "Aprenda estratégias essenciais para se adaptar ao CPAP com orientação profissional.",
+    url: "https://draalessandrakerkhoff.com.br/durma-bem-viva-melhor-transforme-sua-noite-com-o-cpap",
+    siteName: "Dra. Alessandra Kerkhoff",
+    locale: "pt_BR",
+    type: "article",
+  },
 };
 
 export default function Page() {

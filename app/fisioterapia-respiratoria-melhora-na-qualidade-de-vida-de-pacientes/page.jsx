@@ -1,7 +1,22 @@
 import { fixPaths } from "@/app/utils/fixPaths";
 export const metadata = {
-  title: "Fisioterapia Respiratória: Melhora Na Qualidade De Vida De Pacientes - Tratamento De Ronco E Apneia Do Sono | CPAP – Lajeado E Vale Do Taquari",
-  description: "A fisioterapia respiratória apresenta benefícios cientificamente comprovados no tratamento e na melhora da qualidade de vida de pacientes com doenças",
+  title: "Fisioterapia Respiratória e Qualidade de Vida | Tratamento de Apneia",
+  description: "Descubra como a fisioterapia respiratória melhora a qualidade de vida de pacientes com doenças pulmonares e apneia do sono em Lajeado.",
+  keywords: [
+    "fisioterapia respiratória lajeado",
+    "qualidade de vida",
+    "tratamento apneia e ronco",
+    "cpap vale do taquari",
+    "dra alessandra kerkhoff"
+  ],
+  openGraph: {
+    title: "Fisioterapia Respiratória melhora a Qualidade de Vida",
+    description: "Benefícios comprovados da fisioterapia respiratória para sua saúde.",
+    url: "https://draalessandrakerkhoff.com.br/fisioterapia-respiratoria-melhora-na-qualidade-de-vida-de-pacientes",
+    siteName: "Dra. Alessandra Kerkhoff",
+    locale: "pt_BR",
+    type: "article",
+  },
 };
 
 export default function Page() {

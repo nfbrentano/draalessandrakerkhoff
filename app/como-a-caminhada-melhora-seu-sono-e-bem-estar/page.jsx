@@ -1,7 +1,39 @@
 import { fixPaths } from "@/app/utils/fixPaths";
 export const metadata = {
-  title: "Como A Caminhada Melhora Seu Sono E Bem-Estar - Tratamento De Ronco E Apneia Do Sono | CPAP – Lajeado E Vale Do Taquari",
-  description: "A prática regular de atividade física, especialmente caminhadas, tem sido amplamente estudada pela ciência como um fator relacionado à melhora da qualidade do",
+  title: "Como a Caminhada Melhora Seu Sono e Bem-Estar | Dra. Alessandra Kerkhoff",
+  description: "Descubra como a prática regular da caminhada melhora a qualidade do seu sono, reduz o estresse e contribui para o seu bem-estar geral.",
+  keywords: [
+    "caminhada e sono",
+    "qualidade do sono",
+    "bem-estar",
+    "atividade física e ronco",
+    "fisioterapia respiratória",
+    "apneia do sono",
+    "lajeado",
+    "vale do taquari"
+  ],
+  openGraph: {
+    title: "Como a Caminhada Melhora Seu Sono e Bem-Estar",
+    description: "A prática regular de atividade física, como a caminhada, é fundamental para melhorar a qualidade do sono e diminuir distúrbios como ronco e apneia.",
+    url: "https://draalessandrakerkhoff.com.br/como-a-caminhada-melhora-seu-sono-e-bem-estar",
+    siteName: "Dra. Alessandra Kerkhoff - Fisioterapia",
+    images: [
+      {
+        url: "/wp-content/uploads/2025/11/caminhada-819x1024.avif", 
+        width: 819,
+        height: 1024,
+        alt: "Pessoa caminhando para melhorar o sono e bem-estar",
+      },
+    ],
+    locale: "pt_BR",
+    type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Como a Caminhada Melhora Seu Sono e Bem-Estar",
+    description: "Descubra os benefícios da caminhada para uma noite de sono reparadora.",
+    images: ["/wp-content/uploads/2025/11/caminhada-819x1024.avif"],
+  },
 };
 
 export default function Page() {

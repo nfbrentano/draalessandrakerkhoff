@@ -1,7 +1,22 @@
 import { fixPaths } from "@/app/utils/fixPaths";
 export const metadata = {
-  title: "Melhore Seu Sono: Fisioterapia E Apneia Do Sono - Tratamento De Ronco E Apneia Do Sono | CPAP – Lajeado E Vale Do Taquari",
-  description: "O estudo de Duan et al. (2022) ressalta que um estilo de vida saudável pode melhorar a qualidade do sono e a saúde respiratória, reduzindo a apneia do sono. A fisioterapia especializada contribui com técnicas que fortalecem a musculatura respiratória e ajudam na adaptação ao CPAP, promovendo noites mais tranquilas e qualidade de vida.",
+  title: "Benefícios da Fisioterapia na Apneia do Sono | Lajeado",
+  description: "Veja como a fisioterapia especializada reduz a apneia do sono e melhora sua adaptação ao CPAP, trazendo mais saúde no Vale do Taquari.",
+  keywords: [
+    "fisioterapia e apneia do sono",
+    "tratamento do ronco lajeado",
+    "cpap vale do taquari",
+    "melhorar qualidade do sono",
+    "saúde respiratória"
+  ],
+  openGraph: {
+    title: "Melhore seu sono com a Fisioterapia Respiratória",
+    description: "Tratamento eficaz para apneia do sono e adaptação ao CPAP em Lajeado.",
+    url: "https://draalessandrakerkhoff.com.br/melhore-seu-sono-beneficios-da-fisioterapia-respiratoria",
+    siteName: "Dra. Alessandra Kerkhoff",
+    locale: "pt_BR",
+    type: "article",
+  },
 };
 
 export default function Page() {
