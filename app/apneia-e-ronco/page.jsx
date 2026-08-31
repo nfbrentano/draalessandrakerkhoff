@@ -135,7 +135,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <footer class="wp-block-template-part">
 <footer class="wp-block-group alignfull is-style-default has-theme-11-color has-theme-10-background-color has-text-color has-background has-global-padding is-content-justification-center is-layout-constrained wp-container-core-group-is-layout-452657ba wp-block-group-is-layout-constrained" id="footer-section" style="margin-top:0;margin-bottom:0;padding-top:calc( 0.5 * var(--wp--style--root--padding-right, var(--wp--custom--gap--horizontal)));padding-right:var(--wp--style--root--padding-right, var(--wp--custom--gap--horizontal));padding-bottom:calc( 0.5 * var(--wp--style--root--padding-right, var(--wp--custom--gap--horizontal)));padding-left:var(--wp--style--root--padding-left, var(--wp--custom--gap--horizontal))">
 <div class="wp-block-columns alignwide is-layout-flex wp-container-core-columns-is-layout-f6dc32cc wp-block-columns-is-layout-flex">
-<div class="wp-block-column is-layout-flow wp-container-core-column-is-layout-f96db3f4 wp-block-column-is-layout-flow"><h1 class="wp-block-site-title has-text-color has-theme-11-color">Tratamento de Ronco e Apneia do Sono em Lajeado</h1>
+<div class="wp-block-column is-layout-flow wp-container-core-column-is-layout-f96db3f4 wp-block-column-is-layout-flow"><h1 class="wp-block-site-title has-text-color has-theme-11-color">Tratamento de Ronco e Apneia do Sono em Lajeado e Região</h1>
 
 
 <div style="height:23px" aria-hidden="true" class="wp-block-spacer"></div>
