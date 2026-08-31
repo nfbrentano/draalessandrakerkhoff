@@ -2,6 +2,26 @@ import "./globals.css";
 import "./styles/inline-styles.css";
 import "./styles/style-0.css";
 import "./styles/style-1.css";
+import localFont from 'next/font/local';
+
+const poppins = localFont({
+  src: [
+    { path: '../public/fonts/poppins-400.woff2', weight: '400', style: 'normal' },
+    { path: '../public/fonts/poppins-600.woff2', weight: '600', style: 'normal' }
+  ],
+  display: 'swap',
+  variable: '--font-poppins'
+});
+
+const manrope = localFont({
+  src: [
+    { path: '../public/fonts/manrope-400.woff2', weight: '400', style: 'normal' },
+    { path: '../public/fonts/manrope-500.woff2', weight: '500', style: 'normal' },
+    { path: '../public/fonts/manrope-700.woff2', weight: '700', style: 'normal' }
+  ],
+  display: 'swap',
+  variable: '--font-manrope'
+});
 
 const bodyClassByPath = {
   "/": "home blog wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1",
@@ -129,6 +149,19 @@ export const metadata = {
   alternates: {
     canonical: './',
   },
+  openGraph: {
+    title: "Dra. Alessandra Kerkhoff",
+    description: "Fisioterapeuta Cardiorrespiratória e do Sono",
+    url: "https://draalessandrakerkhoff.com.br",
+    siteName: "Dra. Alessandra Kerkhoff",
+    locale: "pt_BR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dra. Alessandra Kerkhoff",
+    description: "Fisioterapeuta Cardiorrespiratória e do Sono",
+  },
   icons: {
     icon: [
       { url: '/wp-content/uploads/2025/08/cropped-ALESSANDRA_SIMBOLO-2-1-1-scaled-1-32x32.png', sizes: '32x32', type: 'image/png' },
@@ -149,44 +182,7 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="pt-BR">
-      <head>
-        <link
-          rel="preload"
-          href="/fonts/poppins-400.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/fonts/poppins-600.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/fonts/manrope-400.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/fonts/manrope-500.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/fonts/manrope-700.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-      </head>
+    <html lang="pt-BR" className={`${poppins.variable} ${manrope.variable}`}>
       <body className="wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1">
         {children}
         <script

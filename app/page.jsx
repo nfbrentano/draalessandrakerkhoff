@@ -19,11 +19,59 @@ export const metadata = {
     locale: "pt_BR",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tratamento de Ronco e Apneia do Sono em Lajeado",
+    description: "Referência em fisioterapia cardiorrespiratória e do sono no Vale do Taquari.",
+  },
 };
 
 export default function Page() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Physician",
+    "name": "Dra. Alessandra Kerkhoff",
+    "image": "https://draalessandrakerkhoff.com.br/wp-content/uploads/2025/08/DSC_4875-scaled.avif",
+    "@id": "https://draalessandrakerkhoff.com.br/#physician",
+    "url": "https://draalessandrakerkhoff.com.br",
+    "telephone": "+55 51 99614-5583",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua João Abott, 1234, Centro",
+      "addressLocality": "Lajeado",
+      "addressRegion": "RS",
+      "postalCode": "95900-080",
+      "addressCountry": "BR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -29.4673,
+      "longitude": -51.9613
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "14:00",
+      "closes": "18:00"
+    },
+    "sameAs": [
+      "https://www.instagram.com/draalessandrakerkhoff/"
+    ]
+  };
+
   return (
-    <>      <div dangerouslySetInnerHTML={{ __html: fixPaths(`
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <div dangerouslySetInnerHTML={{ __html: fixPaths(`
 <a class="skip-link screen-reader-text" id="wp-skip-link" href="#wp--skip-link--target">Pular para o conteúdo</a><div class="wp-site-blocks"><header class="wp-block-template-part">
 <div class="wp-block-group alignfull is-style-undefined has-theme-11-color has-theme-10-background-color has-text-color has-background has-global-padding is-layout-constrained wp-block-group-is-layout-constrained" id="header-section" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--20)">
 <header class="wp-block-group alignwide is-content-justification-center is-nowrap is-layout-flex wp-container-core-group-is-layout-c163a845 wp-block-group-is-layout-flex" style="margin-top:0;margin-bottom:0">
@@ -71,46 +119,6 @@ export default function Page() {
 </header>
 </div>
 </header>
-
-<script data-jetpack-boost="ignore" type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Physician",
-  "name": "Dra. Alessandra Kerkhoff",
-  "image": "/wp-content/uploads/2025/08/DSC_4875-scaled.avif",
-  "@id": "/#physician",
-  "url": "",
-  "telephone": "+55 51 99614-5583",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Rua João Abott, 1234, Centro",
-    "addressLocality": "Lajeado",
-    "addressRegion": "RS",
-    "postalCode": "95900-080",
-    "addressCountry": "BR"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": -29.4673,
-    "longitude": -51.9613
-  },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday"
-    ],
-    "opens": "14:00",
-    "closes": "18:00"
-  },
-  "sameAs": [
-    "https://www.instagram.com/draalessandrakerkhoff/"
-  ]
-}
-</script>
 
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFHZBLMD"

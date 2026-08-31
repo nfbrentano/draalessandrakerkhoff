@@ -1,26 +1,42 @@
+import fs from 'fs';
+import path from 'path';
+
 export const dynamic = 'force-static';
+
+function getRoutes(dir, basePath = '') {
+  let routes = [];
+  const files = fs.readdirSync(dir);
+
+  for (const file of files) {
+    const fullPath = path.join(dir, file);
+    const stat = fs.statSync(fullPath);
+
+    if (stat.isDirectory()) {
+      // Ignore Next.js internal folders and hidden folders
+      if (file.startsWith('(') || file.startsWith('_') || file.startsWith('.')) {
+        continue;
+      }
+      routes = routes.concat(getRoutes(fullPath, `${basePath}/${file}`));
+    } else if (file === 'page.js' || file === 'page.jsx') {
+      routes.push(basePath === '' ? '/' : basePath + '/');
+    }
+  }
+
+  return routes;
+}
 
 export default function sitemap() {
   const baseUrl = 'https://draalessandrakerkhoff.com.br';
   
-  const routes = [
-    '',
-    '/servicos/',
-    '/servicos/sobre/',
-    '/blog/',
-    '/apneia-e-ronco/',
-    '/fisioterapia-cardiorrespiratoria/',
-    '/como-a-caminhada-melhora-seu-sono-e-bem-estar/',
-    '/melhore-seu-sono-beneficios-da-fisioterapia-respiratoria/',
-    '/durma-bem-viva-melhor-transforme-sua-noite-com-o-cpap/',
-    '/fisioterapia-respiratoria-melhora-na-qualidade-de-vida-de-pacientes/',
-    '/cuide-do-seu-cpap-com-simplicidade-passos-faceis-para-noites-mais-tranquilas/',
-  ];
+  const appDir = path.join(process.cwd(), 'app');
+  let routes = getRoutes(appDir);
+  
+  routes = routes.filter(route => !route.includes('/api/'));
 
   return routes.map((route) => ({
-    url: `${baseUrl}${route}`,
+    url: `${baseUrl}${route === '/' ? '' : route}`,
     lastModified: new Date(),
-    changeFrequency: route === '' ? 'daily' : 'weekly',
-    priority: route === '' ? 1.0 : 0.8,
+    changeFrequency: route === '/' ? 'daily' : 'weekly',
+    priority: route === '/' ? 1.0 : 0.8,
   }));
 }
