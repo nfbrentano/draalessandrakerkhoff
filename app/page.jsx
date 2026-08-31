@@ -189,7 +189,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-<p class="has-text-align-justify has-theme-11-color has-text-color wp-block-paragraph">Meu trabalho é focado em <strong>reabilitação cardíaca e pulmonar</strong>, oferecendo tratamento especializado para condições como infarto, pré e pós cirurgia cardíaca,  DPOC, fibrose pulmonar, pneumonias entre outros no público adulto. Além disso,   distúrbios respiratórios do sono, como a apneia do sono e ronco. Busco, através de um atendimento personalizado, <strong>otimizar a sua capacidade funcional respiratória e cardiovascular</strong>, promovendo qualidade de vida e bem-estar.<br><br><strong>Na área de Fisioterapia Cardiorrespiratória, ofereço:</strong></p>
+<p class="has-text-align-justify has-theme-11-color has-text-color wp-block-paragraph">Meu trabalho é focado em <strong>reabilitação cardíaca e pulmonar</strong>, oferecendo tratamento especializado para condições como infarto, pré e pós cirurgia cardíaca,  DPOC, fibrose pulmonar, pneumonias entre outros no público adulto. Além disso,   distúrbios respiratórios do sono, como a apneia do sono e ronco. Busco, através de um atendimento personalizado, <strong>otimizar a sua capacidade funcional respiratória e cardiovascular</strong>, promovendo qualidade de vida e bem-estar.</p>
+
+<h3 class="has-theme-11-color has-text-color wp-block-heading">Na área de Fisioterapia Cardiorrespiratória, ofereço:</h3>
 
 
 
@@ -213,7 +215,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-<p class="has-theme-11-color has-text-color wp-block-paragraph"><strong>Como Fisioterapeuta do Sono, atuo com:</strong></p>
+<h3 class="has-theme-11-color has-text-color wp-block-heading">Como Fisioterapeuta do Sono, atuo com:</h3>
 
 
 
