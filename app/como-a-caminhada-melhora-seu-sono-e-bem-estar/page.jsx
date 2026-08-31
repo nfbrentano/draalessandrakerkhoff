@@ -9,6 +9,8 @@ export const metadata = {
     "atividade física e ronco",
     "fisioterapia respiratória",
     "apneia do sono",
+    "tratamento apneia lajeado",
+    "fisioterapia para ronco lajeado",
     "lajeado",
     "vale do taquari"
   ],

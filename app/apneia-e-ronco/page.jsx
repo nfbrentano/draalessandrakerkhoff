@@ -7,7 +7,11 @@ export const metadata = {
     "apneia do sono",
     "ronco",
     "tratamento apneia lajeado",
-    "cpap vale do taquari",
+    "onde alugar cpap em lajeado",
+    "adaptação cpap lajeado",
+    "fisioterapeuta do sono lajeado",
+    "aparelho para ronco lajeado",
+    "tratamento ronco vale do taquari",
     "fisioterapia do sono"
   ],
   openGraph: {

@@ -6,6 +6,8 @@ export const metadata = {
     "adaptação ao cpap lajeado",
     "tratamento apneia e ronco",
     "titulação de cpap vale do taquari",
+    "onde alugar cpap em lajeado",
+    "dificuldade para dormir com cpap lajeado",
     "dormir bem",
     "fisioterapia do sono"
   ],
