@@ -34,6 +34,11 @@ export default function ArticleClient({ params }) {
         if (urlParams.get("slug")) {
           targetSlug = urlParams.get("slug");
         }
+        
+        // Restore clean URL if redirected from GitHub Pages 404 handler
+        if (urlParams.get("ghpages") === "true" && targetSlug) {
+          window.history.replaceState(null, null, `/blog/${targetSlug}`);
+        }
       }
 
       if (!targetSlug) {
