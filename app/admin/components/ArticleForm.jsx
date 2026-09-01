@@ -217,13 +217,21 @@ export default function ArticleForm({ initialData = null, onSave, isEditing = fa
                 <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">
                   Título do Artigo (H1) <span className="text-rose-500">*</span>
                 </label>
-                <input
-                  type="text"
+                <textarea
                   required
+                  rows={1}
                   value={titulo}
-                  onChange={handleTitleChange}
+                  onChange={(e) => {
+                    handleTitleChange(e);
+                    e.target.style.height = "auto";
+                    e.target.style.height = `${e.target.scrollHeight}px`;
+                  }}
+                  onLoad={(e) => {
+                    e.target.style.height = "auto";
+                    e.target.style.height = `${e.target.scrollHeight}px`;
+                  }}
                   placeholder="Ex: Como a Fisioterapia Cardiorrespiratória Transforma a Qualidade do Sono"
-                  className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-2xl text-slate-900 text-base sm:text-lg font-bold placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-teal-600/30 focus:border-teal-600 transition-all"
+                  className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-2xl text-slate-900 text-base sm:text-lg font-bold placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-teal-600/30 focus:border-teal-600 transition-all resize-none overflow-hidden"
                 />
               </div>
 
@@ -262,9 +270,17 @@ export default function ArticleForm({ initialData = null, onSave, isEditing = fa
               <textarea
                 rows={3}
                 value={descricao}
-                onChange={(e) => setDescricao(e.target.value)}
+                onChange={(e) => {
+                  setDescricao(e.target.value);
+                  e.target.style.height = "auto";
+                  e.target.style.height = `${e.target.scrollHeight}px`;
+                }}
+                onLoad={(e) => {
+                  e.target.style.height = "auto";
+                  e.target.style.height = `${e.target.scrollHeight}px`;
+                }}
                 placeholder="Escreva uma descrição atrativa de 120 a 160 caracteres que faça os pacientes quererem clicar no seu artigo no Google..."
-                className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-2xl text-slate-800 text-sm placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-teal-600/30 focus:border-teal-600 resize-none leading-relaxed transition-all"
+                className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-2xl text-slate-800 text-sm placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-teal-600/30 focus:border-teal-600 resize-none leading-relaxed transition-all overflow-hidden"
               />
             </div>
 
