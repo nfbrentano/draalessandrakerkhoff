@@ -167,7 +167,10 @@ async function run() {
     }
 
     if (combinedCss.trim()) {
-      const purgedCss = await purgeCssForPage(cleanedHtml, combinedCss);
+      let purgedCss = await purgeCssForPage(cleanedHtml, combinedCss);
+      
+      // Fix relative font paths in the inline CSS
+      purgedCss = purgedCss.replace(/\.\.\/media\//g, '/_next/static/media/');
       
       // Inject purged CSS inside <head>
       const headCloseIdx = cleanedHtml.indexOf('</head>');
