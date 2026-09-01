@@ -387,7 +387,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-<p class="has-text-align-full is-footer-phone-email has-theme-11-color has-text-color wp-block-paragraph"><a href="tel:+5551996145583">(51) 99614-5583</a> | contato@draalessandrakerkhoff.com.br</p>
+<p class="has-text-align-full is-footer-phone-email has-theme-11-color has-text-color wp-block-paragraph"><a href="tel:+5551996145583">(51) 99614-5583</a> | ackfisioterapia@gmail.com</p>
 
 
 
