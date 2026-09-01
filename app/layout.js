@@ -189,9 +189,23 @@ export const viewport = {
   initialScale: 1,
 };
 
+const clarityScript = `
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "yb9xqjmku3");
+`;
+
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR" className={`${poppins.variable} ${manrope.variable}`}>
+      <head>
+        <script
+          id="clarity-script"
+          dangerouslySetInnerHTML={{ __html: clarityScript }}
+        />
+      </head>
       <body suppressHydrationWarning className="wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1">
         {children}
         <Footer />
