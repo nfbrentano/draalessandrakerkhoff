@@ -166,6 +166,11 @@ export const metadata = {
     title: "Dra. Alessandra Kerkhoff",
     description: "Fisioterapeuta Cardiorrespiratória e do Sono",
   },
+  verification: {
+    other: {
+      "msvalidate.01": "9AF6A4F501D2F9B5C0C03FF820F56BED"
+    }
+  },
   icons: {
     icon: [
       { url: '/wp-content/uploads/2025/08/cropped-ALESSANDRA_SIMBOLO-2-1-1-scaled-1-32x32.png', sizes: '32x32', type: 'image/png' },
