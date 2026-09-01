@@ -200,18 +200,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 <style>
+/* Mobile: Horizontal scroll snapping carousel */
 #gallery-section {
-  display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 32px;
+  display: flex !important;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  gap: 16px;
   width: 100%;
   max-width: 1200px;
   margin: 4rem auto;
-  padding: 0 1rem;
+  padding: 0 1rem 1.5rem 1rem; /* Extra bottom padding for shadow/scroll */
   box-sizing: border-box;
+  scrollbar-width: none; /* Firefox */
+}
+#gallery-section::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
 }
 
 #gallery-section .wp-block-image {
+  flex: 0 0 85% !important; /* Shows a peek of the next image */
+  scroll-snap-align: center;
   margin: 0 !important;
   width: 100% !important;
   max-width: none !important;
@@ -223,6 +232,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   background: #f8f9fa;
   cursor: pointer;
   aspect-ratio: 4 / 5;
+}
+
+/* Desktop: Grid Layout */
+@media (min-width: 768px) {
+  #gallery-section {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    overflow-x: visible;
+    gap: 32px;
+    padding-bottom: 0;
+  }
+  
+  #gallery-section .wp-block-image {
+    flex: auto !important;
+    scroll-snap-align: none;
+  }
 }
 
 #gallery-section .wp-block-image:hover {
