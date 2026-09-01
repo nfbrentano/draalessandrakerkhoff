@@ -6,6 +6,7 @@ import { db } from "@/app/lib/firebase";
 import Link from "next/link";
 import { AlertCircle, ArrowLeft } from "lucide-react";
 import { formatGoogleDriveImageUrl } from "@/app/utils/googleDrive";
+import Header from "@/app/components/Header";
 
 export default function ArticleClient({ params }) {
   let resolvedSlug = "";
@@ -130,31 +131,7 @@ export default function ArticleClient({ params }) {
   return (
     <div className="wp-site-blocks">
       {/* Header oficial do site */}
-      <header className="wp-block-template-part">
-        <div className="wp-block-group alignfull is-style-undefined has-theme-11-color has-theme-10-background-color has-text-color has-background has-global-padding is-layout-constrained" id="header-section" style={{ marginTop: 0, marginBottom: 0, paddingTop: "var(--wp--preset--spacing--20)", paddingBottom: "var(--wp--preset--spacing--20)" }}>
-          <header className="wp-block-group alignwide is-content-justification-center is-nowrap is-layout-flex" style={{ marginTop: 0, marginBottom: 0 }}>
-            <div className="wp-block-group is-content-justification-center is-nowrap is-layout-flex">
-              <div className="wp-block-group order-1 is-nowrap is-layout-flex">
-                <div className="aligncenter is-style-default wp-block-site-logo">
-                  <a href="/" className="custom-logo-link" rel="home">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img width="48" height="48" src="/wp-content/uploads/2025/08/cropped-ALESSANDRA_SIMBOLO-2-1-1-scaled-1.png" className="custom-logo" alt="Logotipo da Clínica Dra. Alessandra Kerkhoff." />
-                  </a>
-                </div>
-              </div>
-              <nav className="is-responsive items-justified-right wp-block-navigation is-horizontal is-content-justification-right is-layout-flex" aria-label="Menu">
-                <ul className="wp-block-navigation__container is-responsive items-justified-right wp-block-navigation">
-                  <li className="wp-block-navigation-item wp-block-navigation-link"><a className="wp-block-navigation-item__content" href="/"><span className="wp-block-navigation-item__label">Home</span></a></li>
-                  <li className="wp-block-navigation-item wp-block-navigation-link"><a className="wp-block-navigation-item__content" href="/fisioterapia-cardiorrespiratoria"><span className="wp-block-navigation-item__label">Fisioterapia Cardiorrespiratória</span></a></li>
-                  <li className="wp-block-navigation-item wp-block-navigation-link"><a className="wp-block-navigation-item__content" href="/apneia-e-ronco"><span className="wp-block-navigation-item__label">Apneia e Ronco</span></a></li>
-                  <li className="wp-block-navigation-item wp-block-navigation-link"><a className="wp-block-navigation-item__content" href="/sobre"><span className="wp-block-navigation-item__label">Sobre</span></a></li>
-                  <li className="wp-block-navigation-item current-menu-item wp-block-navigation-link"><a className="wp-block-navigation-item__content" href="/blog" aria-current="page"><span className="wp-block-navigation-item__label">Blog</span></a></li>
-                </ul>
-              </nav>
-            </div>
-          </header>
-        </div>
-      </header>
+      <Header currentPath="/blog" />
 
       {/* Main Post Section (Exatamente no mesmo formato do post anterior) */}
       <main id="wp--skip-link--target" className="wp-block-group is-layout-flow wp-block-group-is-layout-flow">
