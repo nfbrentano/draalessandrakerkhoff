@@ -3,6 +3,7 @@ import "./styles/inline-styles.css";
 import "./styles/style-0.css";
 import "./styles/style-1.css";
 import localFont from 'next/font/local';
+import Footer from "./components/Footer";
 
 const poppins = localFont({
   src: [
@@ -188,6 +189,7 @@ export default function RootLayout({ children }) {
     <html lang="pt-BR" className={`${poppins.variable} ${manrope.variable}`}>
       <body suppressHydrationWarning className="wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1">
         {children}
+        <Footer />
         <script
           id="menu-script"
           dangerouslySetInnerHTML={{ __html: deferredMenuScript }}
