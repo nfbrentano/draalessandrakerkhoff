@@ -3,6 +3,8 @@ name: Deploy static content to Pages
 on:
   push:
     branches: ["main"]
+  schedule:
+    - cron: '0 0 * * 0' # Todo domingo à meia-noite (UTC)
 
 permissions:
   contents: read
