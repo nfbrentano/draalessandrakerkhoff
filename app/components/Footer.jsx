@@ -14,7 +14,7 @@ export default function Footer() {
 
 
 
-<p class="has-text-align-full is-footer-phone-email has-theme-11-color has-text-color wp-block-paragraph"><a href="tel:+5551996145583">(51) 99614-5583</a> | <a href="mailto:ackfisioterapia@gmail.com">ackfisioterapia@gmail.com</a></p>
+<p class="has-text-align-full is-footer-phone-email has-theme-11-color has-text-color wp-block-paragraph"><a href="tel:+5551996145583">(51) 99614-5583</a> | <a href="mailto:ackvalecor@gmail.com">ackvalecor@gmail.com</a></p>
 
 
 
