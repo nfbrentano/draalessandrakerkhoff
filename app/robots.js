@@ -7,6 +7,7 @@ export default function robots() {
         userAgent: '*',
         allow: '/',
         disallow: [
+          '/admin/',
           '/wp-admin/',
           '/wp-includes/',
           '/wp-content/plugins/',

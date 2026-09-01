@@ -1,8 +1,7 @@
-// Service Worker para caching de ativos estáticos
-const CACHE_NAME = 'site-static-v1';
-const RUNTIME_CACHE = 'runtime-cache';
+// Service Worker para caching de ativos estáticos em produção
+const CACHE_NAME = 'site-static-v2';
+const RUNTIME_CACHE = 'runtime-cache-v2';
 
-// Extensões e caminhos que queremos cachear com estratégia cache-first
 const STATIC_ASSET_EXTENSIONS = [
   '.js',
   '.css',
@@ -17,8 +16,7 @@ const STATIC_ASSET_EXTENSIONS = [
   '.ico'
 ];
 
-self.addEventListener('install', (event) => {
-  // Não pré-cachear muitos arquivos — deixamos o cache ser preenchido sob demanda
+self.addEventListener('install', () => {
   self.skipWaiting();
 });
 
@@ -35,70 +33,71 @@ self.addEventListener('activate', (event) => {
   self.clients.claim();
 });
 
-// Estrategias de fetch:
-// - HTML: network-first (garante conteúdo atualizado)
-// - JS/CSS/Images/Chunks: cache-first com fallback de rede e revalidação em background
-
 function isStaticAsset(url) {
-  return STATIC_ASSET_EXTENSIONS.some((ext) => url.pathname.endsWith(ext)) || /chunks|wp-content|_next|static|assets/.test(url.pathname);
+  return (
+    STATIC_ASSET_EXTENSIONS.some((ext) => url.pathname.endsWith(ext)) ||
+    /wp-content|\/static\/|\/fonts\//.test(url.pathname)
+  );
 }
 
 self.addEventListener('fetch', (event) => {
   const request = event.request;
   const url = new URL(request.url);
 
-  // Ignore non-GET
-  if (request.method !== 'GET') return;
+  // Ignorar métodos não-GET e extensões de navegador
+  if (request.method !== 'GET' || url.protocol.startsWith('chrome-extension')) {
+    return;
+  }
 
-  // Ignore requests to other origins (optional: allow CDNs)
-  if (url.origin !== self.location.origin) return;
+  // Ignorar localhost, HMR do Turbopack/Next.js, painel admin e APIs externas
+  if (
+    url.hostname === 'localhost' ||
+    url.hostname === '127.0.0.1' ||
+    url.pathname.includes('/_next/webpack-hmr') ||
+    url.pathname.startsWith('/admin') ||
+    url.origin !== self.location.origin
+  ) {
+    return;
+  }
 
   if (request.headers.get('Accept')?.includes('text/html')) {
-    // Network-first for HTML
+    // Network-first para páginas HTML
     event.respondWith(
       fetch(request)
         .then((response) => {
-          // Atualiza cache de runtime com a última versão do HTML
-          const copy = response.clone();
-          caches.open(RUNTIME_CACHE).then((cache) => cache.put(request, copy));
+          if (response && response.status === 200 && !response.bodyUsed) {
+            try {
+              const copy = response.clone();
+              caches.open(RUNTIME_CACHE).then((cache) => cache.put(request, copy)).catch(() => {});
+            } catch {}
+          }
           return response;
         })
-        .catch(() => caches.match(request).then((r) => r || caches.match('/index.html'))
-        )
+        .catch(() => caches.match(request).then((r) => r || caches.match('/index.html')))
     );
     return;
   }
 
   if (isStaticAsset(url)) {
-    // Cache-first para ativos estáticos
+    // Cache-first para ativos estáticos com fallback de rede
     event.respondWith(
       caches.match(request).then((cached) => {
         if (cached) {
-          // Revalida em segundo plano
-          event.waitUntil(
-            fetch(request)
-              .then((response) => {
-                if (response && response.status === 200) {
-                  caches.open(CACHE_NAME).then((cache) => cache.put(request, response.clone()));
-                }
-              })
-              .catch(() => {})
-          );
           return cached;
         }
 
         return fetch(request)
           .then((response) => {
-            if (response && response.status === 200) {
-              caches.open(CACHE_NAME).then((cache) => cache.put(request, response.clone()));
+            if (response && response.status === 200 && !response.bodyUsed) {
+              try {
+                const copy = response.clone();
+                caches.open(CACHE_NAME).then((cache) => cache.put(request, copy)).catch(() => {});
+              } catch {}
             }
             return response;
           })
           .catch(() => caches.match('/offline.html'));
       })
     );
-    return;
   }
-
-  // Default: fallback to network
 });

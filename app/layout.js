@@ -4,6 +4,7 @@ import "./styles/style-0.css";
 import "./styles/style-1.css";
 import localFont from 'next/font/local';
 import Footer from "./components/Footer";
+import Script from "next/script";
 
 const poppins = localFont({
   src: [
@@ -27,6 +28,7 @@ const manrope = localFont({
 const bodyClassByPath = {
   "/": "home blog wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1",
   "/servicos": "wp-singular page-template-default page page-id-14 page-parent wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1",
+  "/sobre": "wp-singular page-template-default page page-id-15 page-child parent-pageid-14 wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1",
   "/servicos/sobre": "wp-singular page-template-default page page-id-15 page-child parent-pageid-14 wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1",
   "/blog": "wp-singular page-template-default page page-id-232 wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1",
   "/apneia-e-ronco": "wp-singular page-template-default page page-id-384 wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1",
@@ -118,7 +120,7 @@ const deferredMenuScript = `
 `;
 
 const registerSWScript = `
-  if ('serviceWorker' in navigator && window.location.protocol !== 'file:') {
+  if ('serviceWorker' in navigator && window.location.protocol !== 'file:' && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
     navigator.serviceWorker
       .register('/sw.js')
       .then(function(reg) {
@@ -201,20 +203,23 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR" className={`${poppins.variable} ${manrope.variable}`}>
       <head>
-        <script
+        <Script
           id="clarity-script"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{ __html: clarityScript }}
         />
       </head>
       <body suppressHydrationWarning className="wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1">
         {children}
         <Footer />
-        <script
+        <Script
           id="menu-script"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{ __html: deferredMenuScript }}
         />
-        <script
+        <Script
           id="register-sw"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{ __html: registerSWScript }}
         />
       </body>
