@@ -4,7 +4,6 @@ import "./styles/style-0.css";
 import "./styles/style-1.css";
 import localFont from 'next/font/local';
 import Footer from "./components/Footer";
-import Script from "next/script";
 
 const poppins = localFont({
   src: [
@@ -203,23 +202,32 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR" className={`${poppins.variable} ${manrope.variable}`}>
       <head>
-        <Script
-          id="clarity-script"
-          strategy="afterInteractive"
+        {/* Google tag (gtag.js) */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-GZ2G0JYD7F"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-GZ2G0JYD7F');
+            `,
+          }}
+        />
+        <script
           dangerouslySetInnerHTML={{ __html: clarityScript }}
         />
       </head>
       <body suppressHydrationWarning className="wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1">
         {children}
         <Footer />
-        <Script
-          id="menu-script"
-          strategy="lazyOnload"
+        <script
           dangerouslySetInnerHTML={{ __html: deferredMenuScript }}
         />
-        <Script
-          id="register-sw"
-          strategy="lazyOnload"
+        <script
           dangerouslySetInnerHTML={{ __html: registerSWScript }}
         />
       </body>
