@@ -138,7 +138,8 @@ async function run() {
 
   const htmlFiles = [];
   walk(outDir, (filepath) => {
-    if (filepath.endsWith('.html')) {
+    const filename = path.basename(filepath);
+    if (filepath.endsWith('.html') && !filename.startsWith('google')) {
       htmlFiles.push(filepath);
     }
   });
