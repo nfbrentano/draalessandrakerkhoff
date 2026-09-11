@@ -198,6 +198,44 @@ const clarityScript = `
     })(window, document, "clarity", "script", "yb9xqjmku3");
 `;
 
+const analyticsEventsScript = `
+  document.addEventListener('click', function(e) {
+    if (!window.gtag) return;
+    
+    var target = e.target.closest('a');
+    if (!target) return;
+    
+    var href = target.getAttribute('href') || '';
+    
+    if (href.includes('wa.me') || href.includes('api.whatsapp.com')) {
+      window.gtag('event', 'click_whatsapp', {
+        event_category: 'Contato',
+        event_label: href
+      });
+    } else if (href.includes('instagram.com')) {
+      window.gtag('event', 'click_instagram', {
+        event_category: 'Social',
+        event_label: 'Instagram'
+      });
+    } else if (href.includes('linkedin.com')) {
+      window.gtag('event', 'click_linkedin', {
+        event_category: 'Social',
+        event_label: 'LinkedIn'
+      });
+    } else if (href.startsWith('tel:')) {
+      window.gtag('event', 'click_telefone', {
+        event_category: 'Contato',
+        event_label: href
+      });
+    } else if (href.startsWith('mailto:')) {
+      window.gtag('event', 'click_email', {
+        event_category: 'Contato',
+        event_label: href
+      });
+    }
+  });
+`;
+
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR" className={`${poppins.variable} ${manrope.variable}`}>
@@ -229,6 +267,9 @@ export default function RootLayout({ children }) {
         />
         <script
           dangerouslySetInnerHTML={{ __html: registerSWScript }}
+        />
+        <script
+          dangerouslySetInnerHTML={{ __html: analyticsEventsScript }}
         />
       </body>
     </html>
