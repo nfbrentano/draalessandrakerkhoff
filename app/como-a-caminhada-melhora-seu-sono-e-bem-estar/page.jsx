@@ -4,6 +4,7 @@ export const metadata = {
   title: "Como a Caminhada Melhora Seu Sono e Bem-Estar",
   description: "Descubra como a prática regular da caminhada melhora a qualidade do seu sono, reduz o estresse e contribui para o seu bem-estar geral.",
   keywords: [
+    "ronco lajeado",
     "caminhada e sono",
     "qualidade do sono",
     "bem-estar",

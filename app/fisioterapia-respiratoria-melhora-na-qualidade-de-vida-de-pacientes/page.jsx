@@ -4,6 +4,7 @@ export const metadata = {
   title: "Fisioterapia Respiratória e Qualidade de Vida | Tratamento de Apneia",
   description: "Descubra como a fisioterapia respiratória melhora a qualidade de vida de pacientes com doenças pulmonares e apneia do sono em Lajeado.",
   keywords: [
+    "ronco lajeado",
     "fisioterapia respiratória lajeado",
     "qualidade de vida",
     "tratamento apneia e ronco",

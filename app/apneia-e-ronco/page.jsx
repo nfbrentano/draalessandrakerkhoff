@@ -5,6 +5,7 @@ export const metadata = {
   title: "Apneia e Ronco | Tratamento Especializado em Lajeado e Vale do Taquari",
   description: "Supere o ronco e a apneia em Lajeado e no Vale do Taquari! Oferecemos tratamento especializado com CPAP e fisioterapia do sono.",
   keywords: [
+    "ronco lajeado",
     "apneia do sono",
     "ronco",
     "tratamento apneia lajeado",

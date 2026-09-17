@@ -4,6 +4,7 @@ export const metadata = {
   title: "Cuidados com o CPAP | Dicas para noites mais tranquilas",
   description: "Aprenda passos fáceis para cuidar do seu CPAP e ter noites de sono tranquilas. Tratamento de apneia e ronco no Vale do Taquari.",
   keywords: [
+    "ronco lajeado",
     "cuidados com cpap",
     "limpeza de cpap",
     "apneia e ronco lajeado",

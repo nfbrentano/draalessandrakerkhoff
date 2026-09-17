@@ -4,6 +4,7 @@ export const metadata = {
   title: "Fisioterapia Cardiorrespiratória em Lajeado e Vale do Taquari | Dra. Alessandra",
   description: "Reabilitação cardíaca e pulmonar em Lajeado com a Dra. Alessandra. Atendimento especializado pós-cirurgia cardíaca, infarto, DPOC e pneumonias no Vale do Taquari.",
   keywords: [
+    "ronco lajeado",
     "fisioterapia cardiorrespiratória",
     "reabilitação pulmonar lajeado",
     "apneia e ronco",

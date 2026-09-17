@@ -43,7 +43,7 @@ export default function AdminNav() {
               <img
                 src="/wp-content/uploads/2025/08/cropped-ALESSANDRA_SIMBOLO-2-1-1-scaled-1.png"
                 alt="Dra. Alessandra Kerkhoff"
-                className="admin-logo-img w-10 h-10 object-contain flex-shrink-0"
+                className="admin-logo-img w-10 h-10 object-contain shrink-0"
                 style={{ width: '40px', height: '40px', maxWidth: '40px', maxHeight: '40px', objectFit: 'contain' }}
               />
               <div>
@@ -95,7 +95,7 @@ export default function AdminNav() {
               <div className="flex items-center space-x-2 pl-2 border-l border-slate-200">
                 <div className="flex items-center space-x-1.5 text-xs text-slate-600 bg-slate-100 px-2.5 py-1 rounded-full border border-slate-200">
                   <ShieldCheck className="w-3.5 h-3.5 text-teal-600" />
-                  <span className="max-w-[140px] truncate font-medium">{user.email}</span>
+                  <span className="max-w-35 truncate font-medium">{user.email}</span>
                 </div>
                 <button
                   onClick={signOut}
@@ -144,7 +144,7 @@ export default function AdminNav() {
           })}
 
           <div className="pt-3 border-t border-slate-200 flex items-center justify-between">
-            <div className="text-xs text-slate-600 truncate max-w-[180px] font-medium">
+            <div className="text-xs text-slate-600 truncate max-w-45 font-medium">
               {user?.email}
             </div>
             <div className="flex items-center space-x-2">

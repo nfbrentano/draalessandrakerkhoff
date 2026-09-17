@@ -4,6 +4,7 @@ export const metadata = {
   title: "Sobre a Dra. Alessandra Kerkhoff | Fisioterapia em Lajeado",
   description: "Conheça a Dra. Alessandra Cristina Kerkhoff, fisioterapeuta especialista em Fisioterapia Cardiorrespiratória e do Sono, atuando em Lajeado e Vale do Taquari.",
   keywords: [
+    "ronco lajeado",
     "dra alessandra kerkhoff",
     "fisioterapia do sono lajeado",
     "tratamento de apneia e ronco",

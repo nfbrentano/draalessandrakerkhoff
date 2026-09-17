@@ -5,6 +5,7 @@ export const metadata = {
   title: "Tratamento de Ronco e Apneia do Sono em Lajeado",
   description: "Sofre com ronco ou apneia? Dra. Alessandra Kerkhoff é referência em fisioterapia respiratória e do sono em Lajeado.",
   keywords: [
+    "ronco lajeado",
     "tratamento de ronco",
     "apneia do sono",
     "cpap lajeado",

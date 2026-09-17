@@ -77,14 +77,14 @@ export default function ConfiguracoesPage() {
 
       {success && (
         <div className="p-4 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs sm:text-sm flex items-center space-x-3">
-          <CheckCircle2 className="w-5 h-5 flex-shrink-0 text-emerald-600" />
+          <CheckCircle2 className="w-5 h-5 shrink-0 text-emerald-600" />
           <span>Configurações salvas com sucesso! A IA está pronta para uso no editor de artigos.</span>
         </div>
       )}
 
       {error && (
         <div className="p-4 rounded-2xl bg-rose-50 border border-rose-200 text-rose-800 text-xs sm:text-sm flex items-center space-x-3">
-          <AlertCircle className="w-5 h-5 flex-shrink-0 text-rose-600" />
+          <AlertCircle className="w-5 h-5 shrink-0 text-rose-600" />
           <span>{error}</span>
         </div>
       )}
@@ -127,7 +127,7 @@ export default function ConfiguracoesPage() {
                 className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-teal-600/30 focus:border-teal-600 text-sm font-mono transition-all"
               />
               <p className="text-xs text-slate-500 mt-2 flex items-start sm:items-center space-x-1.5">
-                <HelpCircle className="w-4 h-4 text-slate-400 flex-shrink-0 mt-0.5 sm:mt-0" />
+                <HelpCircle className="w-4 h-4 text-slate-400 shrink-0 mt-0.5 sm:mt-0" />
                 <span>
                   Você pode gerar essa chave gratuitamente em 1 minuto no Google AI Studio (permite milhares de consultas grátis por mês).
                 </span>

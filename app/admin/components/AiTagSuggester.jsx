@@ -103,7 +103,7 @@ export default function AiTagSuggester({
       {/* Error Alert */}
       {error && (
         <div className="p-3.5 rounded-2xl bg-rose-50 border border-rose-200 text-rose-800 text-xs flex items-start space-x-2.5">
-          <AlertCircle className="w-4 h-4 flex-shrink-0 text-rose-600 mt-0.5" />
+          <AlertCircle className="w-4 h-4 shrink-0 text-rose-600 mt-0.5" />
           <div className="flex-1">
             <p>{error}</p>
             {error.includes("Chave") && (
@@ -189,7 +189,7 @@ export default function AiTagSuggester({
                         setCopiedIndex(idx);
                         setTimeout(() => setCopiedIndex(null), 2000);
                       }}
-                      className="px-2.5 py-1 rounded-lg bg-teal-100 hover:bg-teal-200 text-teal-900 text-[10px] font-bold flex-shrink-0 transition-colors shadow-2xs"
+                      className="px-2.5 py-1 rounded-lg bg-teal-100 hover:bg-teal-200 text-teal-900 text-[10px] font-bold shrink-0 transition-colors shadow-2xs"
                     >
                       {copiedIndex === idx ? "Aplicado!" : "Usar"}
                     </button>

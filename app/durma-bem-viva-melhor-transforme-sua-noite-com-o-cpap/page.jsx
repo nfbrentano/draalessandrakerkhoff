@@ -4,6 +4,7 @@ export const metadata = {
   title: "Adaptação ao CPAP: Transforme sua noite | Lajeado",
   description: "Dificuldades com o CPAP? A Dra. Alessandra Kerkhoff ajuda você na adaptação para noites de sono perfeitas no Vale do Taquari.",
   keywords: [
+    "ronco lajeado",
     "adaptação ao cpap lajeado",
     "tratamento apneia e ronco",
     "titulação de cpap vale do taquari",

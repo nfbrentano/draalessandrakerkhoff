@@ -149,7 +149,7 @@ export default function SeoAnalyzer({
               key={item.id}
               className="p-2.5 rounded-2xl bg-slate-50 border border-slate-200/80 flex items-start space-x-2.5"
             >
-              <div className="mt-0.5 flex-shrink-0">
+              <div className="mt-0.5 shrink-0">
                 {item.status === "good" ? (
                   <CheckCircle2 className="w-4 h-4 text-emerald-600" />
                 ) : item.status === "warning" ? (

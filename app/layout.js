@@ -145,6 +145,7 @@ const registerSWScript = `
 `;
 
 export const metadata = {
+  keywords: ["ronco lajeado"],
   metadataBase: new URL('https://draalessandrakerkhoff.com.br'),
   title: "Dra. Alessandra Kerkhoff",
   description: "Fisioterapeuta Cardiorrespiratória e do Sono",

@@ -40,7 +40,7 @@ export default function PostLivePreviewModal({
       <div className="relative w-full max-w-5xl h-[92vh] bg-white rounded-3xl shadow-2xl border border-slate-200 flex flex-col overflow-hidden">
         
         {/* Top Control Bar */}
-        <div className="flex items-center justify-between px-4 sm:px-6 py-3.5 border-b border-slate-200 bg-[#f8fafc] text-slate-800 flex-shrink-0">
+        <div className="flex items-center justify-between px-4 sm:px-6 py-3.5 border-b border-slate-200 bg-[#f8fafc] text-slate-800 shrink-0">
           <div className="flex items-center space-x-3">
             <span className="w-2.5 h-2.5 rounded-full bg-teal-600 animate-ping" />
             <div>
@@ -99,7 +99,7 @@ export default function PostLivePreviewModal({
           <div
             className={`bg-white transition-all duration-300 shadow-xl border border-slate-200 ${
               device === "mobile"
-                ? "w-[390px] rounded-[36px] p-4 border-[10px] border-slate-800"
+                ? "w-97.5 rounded-[36px] p-4 border-10 border-slate-800"
                 : "w-full max-w-4xl rounded-2xl p-6 sm:p-10"
             }`}
           >
@@ -131,12 +131,12 @@ export default function PostLivePreviewModal({
               {/* Imagem de Destaque */}
               {directImageUrl ? (
                 <div className="flex justify-center mb-6">
-                  <div className="max-w-[620px] w-full rounded-2xl overflow-hidden shadow-md border border-slate-200">
+                  <div className="max-w-155 w-full rounded-2xl overflow-hidden shadow-md border border-slate-200">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={directImageUrl}
                       alt={altImagem || titulo}
-                      className="w-full h-auto object-cover max-h-[460px]"
+                      className="w-full h-auto object-cover max-h-115"
                       onError={(e) => {
                         e.currentTarget.src = "/wp-content/uploads/2025/09/Cuide-CPAP-1-819x1024.avif";
                       }}

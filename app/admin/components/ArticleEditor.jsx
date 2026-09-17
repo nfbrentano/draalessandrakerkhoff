@@ -226,7 +226,7 @@ export default function ArticleEditor({ content, onChange }) {
       </div>
 
       {/* Editor Content Area */}
-      <div className="bg-white min-h-[380px]">
+      <div className="bg-white min-h-95">
         <EditorContent editor={editor} />
       </div>
       

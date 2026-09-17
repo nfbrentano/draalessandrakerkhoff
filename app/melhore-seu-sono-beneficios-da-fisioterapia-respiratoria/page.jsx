@@ -4,6 +4,7 @@ export const metadata = {
   title: "Benefícios da Fisioterapia na Apneia do Sono | Lajeado",
   description: "Veja como a fisioterapia especializada reduz a apneia do sono e melhora sua adaptação ao CPAP, trazendo mais saúde no Vale do Taquari.",
   keywords: [
+    "ronco lajeado",
     "fisioterapia e apneia do sono",
     "tratamento do ronco lajeado",
     "cpap vale do taquari",

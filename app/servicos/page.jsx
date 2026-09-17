@@ -4,6 +4,7 @@ export const metadata = {
   title: "Serviços | Fisioterapia Cardiorrespiratória e do Sono em Lajeado",
   description: "Fisioterapia completa e personalizada focando em distúrbios do sono, ronco, apneia e reabilitação cardiovascular em Lajeado e Vale do Taquari.",
   keywords: [
+    "ronco lajeado",
     "tratamento de apneia do sono lajeado",
     "ronco",
     "cpap vale do taquari",

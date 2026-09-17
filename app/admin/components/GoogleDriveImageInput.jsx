@@ -14,7 +14,7 @@ export default function GoogleDriveImageInput({ value, onChange, altValue, onAlt
   return (
     <div className="space-y-4 bg-white p-5 sm:p-6 rounded-3xl border border-slate-200 shadow-xs">
       <div>
-        <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5 flex items-center justify-between">
+        <label className="text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5 flex items-center justify-between">
           <span className="flex items-center space-x-1.5">
             <ImageIcon className="w-4 h-4 text-teal-700" />
             <span>Imagem de Destaque (Google Drive ou URL)</span>
@@ -72,7 +72,7 @@ export default function GoogleDriveImageInput({ value, onChange, altValue, onAlt
       ) : (
         <div className="p-4 rounded-2xl bg-teal-50/60 border border-teal-100 text-xs text-slate-600 space-y-1.5">
           <div className="font-bold text-teal-900 flex items-center space-x-1.5">
-            <HelpCircle className="w-4 h-4 text-teal-700 flex-shrink-0" />
+            <HelpCircle className="w-4 h-4 text-teal-700 shrink-0" />
             <span>Como usar imagens do seu Google Drive sem custo:</span>
           </div>
           <ol className="list-decimal list-inside space-y-1 pl-1 text-[11px] text-slate-600">

@@ -7,6 +7,7 @@ export const metadata = {
   title: "Blog | Dicas sobre Ronco, Apneia e Fisioterapia no Vale do Taquari",
   description: "Acompanhe nosso blog e saiba tudo sobre tratamentos para ronco, apneia do sono e dicas de fisioterapia cardiorrespiratória em Lajeado e Vale do Taquari.",
   keywords: [
+    "ronco lajeado",
     "blog fisioterapia do sono",
     "dicas apneia e ronco lajeado",
     "tratamento de ronco",

@@ -192,7 +192,7 @@ export default function ArticleForm({ initialData = null, onSave, isEditing = fa
         {/* Success Alert */}
         {success && (
           <div className="p-4 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs sm:text-sm flex items-center space-x-3 animate-pulse">
-            <CheckCircle2 className="w-5 h-5 flex-shrink-0 text-emerald-600" />
+            <CheckCircle2 className="w-5 h-5 shrink-0 text-emerald-600" />
             <span>Artigo salvo com sucesso no Firestore! Redirecionando...</span>
           </div>
         )}
@@ -200,7 +200,7 @@ export default function ArticleForm({ initialData = null, onSave, isEditing = fa
         {/* Error Alert */}
         {error && (
           <div className="p-4 rounded-2xl bg-rose-50 border border-rose-200 text-rose-800 text-xs sm:text-sm flex items-center space-x-3">
-            <AlertCircle className="w-5 h-5 flex-shrink-0 text-rose-600" />
+            <AlertCircle className="w-5 h-5 shrink-0 text-rose-600" />
             <span>{error}</span>
           </div>
         )}
@@ -237,7 +237,7 @@ export default function ArticleForm({ initialData = null, onSave, isEditing = fa
 
               {/* Slug / URL */}
               <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5 flex items-center justify-between">
+                <label className="text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5 flex items-center justify-between">
                   <span>URL Amigável (Slug)</span>
                   <span className="text-[11px] text-slate-400 font-normal">Ex: /blog/como-a-fisioterapia...</span>
                 </label>
@@ -371,13 +371,13 @@ export default function ArticleForm({ initialData = null, onSave, isEditing = fa
 
             {/* Tags Box */}
             <div className="bg-white border border-slate-200 rounded-3xl p-5 sm:p-6 space-y-3 shadow-xs">
-              <label className="block text-xs font-bold uppercase tracking-wider text-slate-800 flex items-center space-x-2">
+              <label className="text-xs font-bold uppercase tracking-wider text-slate-800 flex items-center space-x-2">
                 <TagIcon className="w-4 h-4 text-teal-700" />
                 <span>Tags do Artigo ({tags.length})</span>
               </label>
 
               {/* Tags Badges */}
-              <div className="flex flex-wrap gap-1.5 min-h-[36px]">
+              <div className="flex flex-wrap gap-1.5 min-h-9">
                 {tags.map((tag) => (
                   <span
                     key={tag}

@@ -121,7 +121,7 @@ export default function LoginPage() {
         {/* Success Alert */}
         {successMessage && (
           <div className="mb-6 p-4 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs flex items-start space-x-2.5">
-            <CheckCircle2 className="w-4 h-4 flex-shrink-0 text-emerald-600 mt-0.5" />
+            <CheckCircle2 className="w-4 h-4 shrink-0 text-emerald-600 mt-0.5" />
             <div>{successMessage}</div>
           </div>
         )}
@@ -129,7 +129,7 @@ export default function LoginPage() {
         {/* Error Alert */}
         {error && (
           <div className="mb-6 p-4 rounded-2xl bg-rose-50 border border-rose-200 text-rose-800 text-xs flex items-start space-x-2.5">
-            <AlertCircle className="w-4 h-4 flex-shrink-0 text-rose-600 mt-0.5" />
+            <AlertCircle className="w-4 h-4 shrink-0 text-rose-600 mt-0.5" />
             <div>{error}</div>
           </div>
         )}
