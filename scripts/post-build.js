@@ -128,6 +128,19 @@ async function purgeCssForPage(pageHtml, rawCss) {
   return purgeResult[0] ? purgeResult[0].css : rawCss;
 }
 
+// Páginas que dependem do JavaScript do Next no navegador e por isso ficam intactas
+// (sem remover scripts nem purgar CSS: o Tailwind delas é renderizado no cliente):
+// - admin/: painel (login Firebase, editor, gravação no Firestore)
+// - blog/: listagem e artigos carregados do Firestore
+// - 404.html e _not-found/: redirecionam /blog/<slug>/ para /blog/artigo/?slug=
+const CLIENT_JS_PREFIXES = ['admin/', 'blog/', '_not-found/'];
+const CLIENT_JS_FILES = ['404.html', '404/index.html'];
+
+function needsClientJs(filepath) {
+  const rel = path.relative(outDir, filepath).split(path.sep).join('/');
+  return CLIENT_JS_FILES.includes(rel) || CLIENT_JS_PREFIXES.some((prefix) => rel.startsWith(prefix));
+}
+
 async function run() {
   if (!fs.existsSync(outDir)) {
     console.error('Post-build error: "out" directory not found.');
@@ -139,7 +152,7 @@ async function run() {
   const htmlFiles = [];
   walk(outDir, (filepath) => {
     const filename = path.basename(filepath);
-    if (filepath.endsWith('.html') && !filename.startsWith('google')) {
+    if (filepath.endsWith('.html') && !filename.startsWith('google') && !needsClientJs(filepath)) {
       htmlFiles.push(filepath);
     }
   });
