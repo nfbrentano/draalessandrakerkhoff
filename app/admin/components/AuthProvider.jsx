@@ -4,7 +4,6 @@ import React, { createContext, useContext, useEffect, useState } from "react";
 import { 
   onAuthStateChanged, 
   signInWithEmailAndPassword, 
-  createUserWithEmailAndPassword,
   sendPasswordResetEmail,
   signOut as firebaseSignOut 
 } from "firebase/auth";
@@ -16,7 +15,6 @@ const AuthContext = createContext({
   loading: true,
   isAuthorized: false,
   signIn: async () => {},
-  signUp: async () => {},
   resetPassword: async () => {},
   signOut: async () => {},
 });
@@ -58,15 +56,6 @@ export function AuthProvider({ children }) {
     return userCredential.user;
   };
 
-  const signUp = async (email, password) => {
-    const trimmedEmail = email.trim().toLowerCase();
-    if (!isUserAuthorized(trimmedEmail)) {
-      throw new Error(`O e-mail ${trimmedEmail} não tem permissão para cadastrar como administrador.`);
-    }
-    const userCredential = await createUserWithEmailAndPassword(auth, trimmedEmail, password);
-    return userCredential.user;
-  };
-
   const resetPassword = async (email) => {
     const trimmedEmail = email.trim().toLowerCase();
     if (!isUserAuthorized(trimmedEmail)) {
@@ -86,7 +75,6 @@ export function AuthProvider({ children }) {
       loading, 
       isAuthorized, 
       signIn, 
-      signUp,
       resetPassword,
       signOut, 
       AUTHORIZED_EMAILS 

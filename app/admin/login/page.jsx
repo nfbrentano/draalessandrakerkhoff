@@ -3,19 +3,18 @@
 import { useState } from "react";
 import { useAuth } from "../components/AuthProvider";
 import { useRouter } from "next/navigation";
-import { Lock, Mail, Eye, EyeOff, AlertCircle, CheckCircle2, KeyRound, UserPlus } from "lucide-react";
+import { Lock, Mail, Eye, EyeOff, AlertCircle, CheckCircle2, KeyRound } from "lucide-react";
 
 export default function LoginPage() {
-  const [mode, setMode] = useState("login"); // "login" | "signup" | "reset"
+  const [mode, setMode] = useState("login"); // "login" | "reset"
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const { signIn, signUp, resetPassword } = useAuth();
+  const { signIn, resetPassword } = useAuth();
   const router = useRouter();
 
   const handleSubmit = async (e) => {
@@ -28,19 +27,6 @@ export default function LoginPage() {
       if (mode === "login") {
         await signIn(email, password);
         router.push("/admin");
-      } else if (mode === "signup") {
-        if (password.length < 6) {
-          setError("A senha deve ter pelo menos 6 caracteres.");
-          setLoading(false);
-          return;
-        }
-        if (password !== confirmPassword) {
-          setError("As senhas digitadas não coincidem.");
-          setLoading(false);
-          return;
-        }
-        await signUp(email, password);
-        router.push("/admin");
       } else if (mode === "reset") {
         await resetPassword(email);
         setSuccessMessage("E-mail de recuperação de senha enviado! Verifique sua caixa de entrada.");
@@ -51,13 +37,9 @@ export default function LoginPage() {
       let message = "Ocorreu um erro. Verifique os dados.";
 
       if (err.code === "auth/invalid-credential" || err.code === "auth/wrong-password" || err.code === "auth/user-not-found") {
-        message = "E-mail ou senha incorretos. Se for seu primeiro acesso, clique na aba 'Primeiro Acesso' para cadastrar sua senha.";
-      } else if (err.code === "auth/email-already-in-use") {
-        message = "Este e-mail já possui uma conta criada. Use a aba 'Entrar' ou recupere sua senha.";
+        message = "E-mail ou senha incorretos.";
       } else if (err.code === "auth/operation-not-allowed") {
         message = "O login por 'Email/Senha' precisa ser ativado no Firebase Console (Authentication > Sign-in method > Email/Password).";
-      } else if (err.code === "auth/weak-password") {
-        message = "A senha deve ter pelo menos 6 caracteres.";
       } else if (err.code === "auth/too-many-requests") {
         message = "Muitas tentativas sem sucesso. Aguarde alguns instantes e tente novamente.";
       } else if (err.message) {
@@ -90,32 +72,6 @@ export default function LoginPage() {
           <p className="text-slate-500 text-xs mt-1 font-medium">
             Dra. Alessandra Kerkhoff — Gestão de Conteúdo & SEO
           </p>
-        </div>
-
-        {/* Tabs: Login vs Primeiro Acesso */}
-        <div className="flex rounded-2xl bg-slate-100 p-1 border border-slate-200 mb-6">
-          <button
-            type="button"
-            onClick={() => { setMode("login"); setError(""); setSuccessMessage(""); }}
-            className={`flex-1 py-2.5 text-xs font-semibold rounded-xl transition-all ${
-              mode === "login"
-                ? "bg-white text-teal-800 shadow-sm"
-                : "text-slate-500 hover:text-slate-800"
-            }`}
-          >
-            Entrar
-          </button>
-          <button
-            type="button"
-            onClick={() => { setMode("signup"); setError(""); setSuccessMessage(""); }}
-            className={`flex-1 py-2.5 text-xs font-semibold rounded-xl transition-all ${
-              mode === "signup"
-                ? "bg-white text-teal-800 shadow-sm"
-                : "text-slate-500 hover:text-slate-800"
-            }`}
-          >
-            Primeiro Acesso
-          </button>
         </div>
 
         {/* Success Alert */}
@@ -159,7 +115,7 @@ export default function LoginPage() {
             <div>
               <div className="flex items-center justify-between mb-1.5">
                 <label className="block text-xs font-semibold uppercase tracking-wider text-slate-600">
-                  {mode === "signup" ? "Criar Senha (mínimo 6 dígitos)" : "Senha"}
+                  Senha
                 </label>
                 {mode === "login" && (
                   <button
@@ -194,27 +150,6 @@ export default function LoginPage() {
             </div>
           )}
 
-          {mode === "signup" && (
-            <div>
-              <label className="block text-xs font-semibold uppercase tracking-wider text-slate-600 mb-1.5">
-                Confirmar Senha
-              </label>
-              <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
-                  <Lock className="w-4 h-4" />
-                </div>
-                <input
-                  type={showPassword ? "text" : "password"}
-                  required
-                  value={confirmPassword}
-                  onChange={(e) => setConfirmPassword(e.target.value)}
-                  placeholder="••••••••"
-                  className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-teal-600/30 focus:border-teal-600 text-sm transition-all"
-                />
-              </div>
-            </div>
-          )}
-
           <button
             type="submit"
             disabled={loading}
@@ -222,11 +157,6 @@ export default function LoginPage() {
           >
             {loading ? (
               <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-            ) : mode === "signup" ? (
-              <>
-                <UserPlus className="w-4 h-4" />
-                <span>Criar Senha e Entrar</span>
-              </>
             ) : mode === "reset" ? (
               <>
                 <KeyRound className="w-4 h-4" />
