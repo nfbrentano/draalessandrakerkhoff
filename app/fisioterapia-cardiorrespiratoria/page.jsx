@@ -1,29 +1,45 @@
 import { fixPaths } from "@/app/utils/fixPaths";
 import Header from "@/app/components/Header";
+import JsonLd from "@/app/components/JsonLd";
+import { graph, serviceSchema, breadcrumbSchema } from "@/app/utils/schema";
 export const metadata = {
-  title: "Fisioterapia Cardiorrespiratória em Lajeado e Vale do Taquari | Dra. Alessandra",
-  description: "Reabilitação cardíaca e pulmonar em Lajeado com a Dra. Alessandra. Atendimento especializado pós-cirurgia cardíaca, infarto, DPOC e pneumonias no Vale do Taquari.",
+  title: "Fisioterapia Cardiorrespiratória em Lajeado",
+  description: "Reabilitação cardíaca e pulmonar em Lajeado com a fisioterapeuta Dra. Alessandra Kerkhoff: pós-infarto, pós-cirurgia cardíaca, DPOC, asma e pós-COVID.",
   keywords: [
-    "ronco lajeado",
-    "fisioterapia cardiorrespiratória",
+    "fisioterapia cardiorrespiratória lajeado",
+    "reabilitação cardíaca lajeado",
     "reabilitação pulmonar lajeado",
-    "apneia e ronco",
-    "vale do taquari",
-    "fisioterapia respiratória"
+    "fisioterapia respiratória lajeado",
+    "dpoc"
   ],
   openGraph: {
-    title: "Fisioterapia Cardiorrespiratória no Vale do Taquari",
-    description: "Atendimento especializado em reabilitação cardíaca e pulmonar em Lajeado.",
-    url: "https://draalessandrakerkhoff.com.br/fisioterapia-cardiorrespiratoria",
+    title: "Fisioterapia Cardiorrespiratória em Lajeado",
+    description: "Reabilitação cardíaca e pulmonar em Lajeado com a fisioterapeuta Dra. Alessandra Kerkhoff: pós-infarto, pós-cirurgia cardíaca, DPOC, asma e pós-COVID.",
+    url: "https://draalessandrakerkhoff.com.br/fisioterapia-cardiorrespiratoria/",
     siteName: "Dra. Alessandra Kerkhoff",
     locale: "pt_BR",
-    type: "article",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Fisioterapia Cardiorrespiratória em Lajeado",
+    description: "Reabilitação cardíaca e pulmonar em Lajeado com a fisioterapeuta Dra. Alessandra Kerkhoff: pós-infarto, pós-cirurgia cardíaca, DPOC, asma e pós-COVID.",
   },
 };
 
+const pageSchema = graph(
+  serviceSchema({
+    name: "Fisioterapia cardiorrespiratória: reabilitação cardíaca e pulmonar",
+    serviceType: "Fisioterapia cardiorrespiratória",
+    path: "/fisioterapia-cardiorrespiratoria/",
+    description: "Reabilitação cardíaca (pós-infarto, pós-cirurgia cardíaca, angioplastia, insuficiência cardíaca) e pulmonar (DPOC, asma, fibrose, bronquiectasias, pós-COVID).",
+  }),
+  breadcrumbSchema([{ name: "Fisioterapia Cardiorrespiratória", path: "/fisioterapia-cardiorrespiratoria/" }])
+);
+
 export default function Page() {
   return (
-    <>      <Header currentPath="/fisioterapia-cardiorrespiratoria" />
+    <>      <JsonLd data={pageSchema} />      <Header currentPath="/fisioterapia-cardiorrespiratoria" />
       <div dangerouslySetInnerHTML={{ __html: fixPaths(`
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFHZBLMD"
@@ -116,7 +132,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 <div class="wp-block-column is-vertically-aligned-center is-layout-flow wp-block-column-is-layout-flow">
-<figure class="wp-block-image alignfull size-full"><img data-od-unknown-tag data-od-xpath="/HTML/BODY/DIV[@class=&apos;wp-site-blocks&apos;]/*[2][self::MAIN]/*[1][self::DIV]/*[1][self::DIV]/*[2][self::DIV]/*[1][self::FIGURE]/*[1][self::IMG]" data-dominant-color="bcaca7" data-has-transparency="false" style="--dominant-color: #bcaca7;" fetchpriority="high" decoding="async" width="1440" height="2560" sizes="(max-width: 720px) 100vw, 720px" src="/wp-content/uploads/2025/08/DSC_4783-1-edited-scaled.avif" alt="DSC 4783 1 edited scaled - Tratamento de Ronco e Apneia do Sono | CPAP – Lajeado e Vale do Taquari" class="wp-image-99 not-transparent" title="Fisioterapia Cardiorrespiratória 1" srcset="/wp-content/uploads/2025/08/DSC_4783-1-edited-scaled.avif 1440w, /wp-content/uploads/2025/08/DSC_4783-1-edited-169x300.avif 169w, /wp-content/uploads/2025/08/DSC_4783-1-edited-576x1024.avif 576w, /wp-content/uploads/2025/08/DSC_4783-1-edited-768x1365.avif 768w, /wp-content/uploads/2025/08/DSC_4783-1-edited-864x1536.avif 864w, /wp-content/uploads/2025/08/DSC_4783-1-edited-1152x2048.avif 1152w" /></figure>
+<figure class="wp-block-image alignfull size-full"><img data-od-unknown-tag data-od-xpath="/HTML/BODY/DIV[@class=&apos;wp-site-blocks&apos;]/*[2][self::MAIN]/*[1][self::DIV]/*[1][self::DIV]/*[2][self::DIV]/*[1][self::FIGURE]/*[1][self::IMG]" data-dominant-color="bcaca7" data-has-transparency="false" style="--dominant-color: #bcaca7;" fetchpriority="high" decoding="async" width="1440" height="2560" sizes="(max-width: 720px) 100vw, 720px" src="/wp-content/uploads/2025/08/DSC_4783-1-edited-scaled.avif" alt="Dra. Alessandra Kerkhoff auscultando paciente com estetoscópio durante avaliação de fisioterapia cardiorrespiratória" class="wp-image-99 not-transparent" title="Fisioterapia Cardiorrespiratória 1" srcset="/wp-content/uploads/2025/08/DSC_4783-1-edited-scaled.avif 1440w, /wp-content/uploads/2025/08/DSC_4783-1-edited-169x300.avif 169w, /wp-content/uploads/2025/08/DSC_4783-1-edited-576x1024.avif 576w, /wp-content/uploads/2025/08/DSC_4783-1-edited-768x1365.avif 768w, /wp-content/uploads/2025/08/DSC_4783-1-edited-864x1536.avif 864w, /wp-content/uploads/2025/08/DSC_4783-1-edited-1152x2048.avif 1152w" /></figure>
 </div>
 </div>
 </div>

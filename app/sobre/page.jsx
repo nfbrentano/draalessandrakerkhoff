@@ -1,29 +1,39 @@
 import { fixPaths } from "@/app/utils/fixPaths";
 import Header from "@/app/components/Header";
+import JsonLd from "@/app/components/JsonLd";
+import { graph, profilePageSchema, breadcrumbSchema } from "@/app/utils/schema";
 export const metadata = {
-  title: "Sobre a Dra. Alessandra Kerkhoff | Fisioterapia em Lajeado",
-  description: "Conheça a Dra. Alessandra Cristina Kerkhoff, fisioterapeuta especialista em Fisioterapia Cardiorrespiratória e do Sono, atuando em Lajeado e Vale do Taquari.",
+  title: "Dra. Alessandra Kerkhoff — Fisioterapeuta em Lajeado",
+  description: "Fisioterapeuta (CREFITO-5 116016-F) com mais de 17 anos de experiência e Doutorado pela UFRGS, especialista em fisioterapia cardiorrespiratória e do sono.",
   keywords: [
-    "ronco lajeado",
+    "fisioterapeuta lajeado",
     "dra alessandra kerkhoff",
     "fisioterapia do sono lajeado",
-    "tratamento de apneia e ronco",
-    "vale do taquari",
-    "cpap"
+    "fisioterapia cardiorrespiratória lajeado"
   ],
   openGraph: {
-    title: "Sobre a Dra. Alessandra Kerkhoff",
-    description: "Especialista em fisioterapia do sono e cardiorrespiratória no Vale do Taquari.",
-    url: "https://draalessandrakerkhoff.com.br/sobre",
+    title: "Dra. Alessandra Kerkhoff — Fisioterapeuta em Lajeado",
+    description: "Fisioterapeuta (CREFITO-5 116016-F) com mais de 17 anos de experiência e Doutorado pela UFRGS, especialista em fisioterapia cardiorrespiratória e do sono.",
+    url: "https://draalessandrakerkhoff.com.br/sobre/",
     siteName: "Dra. Alessandra Kerkhoff",
     locale: "pt_BR",
-    type: "article",
+    type: "profile",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dra. Alessandra Kerkhoff — Fisioterapeuta em Lajeado",
+    description: "Fisioterapeuta (CREFITO-5 116016-F) com mais de 17 anos de experiência e Doutorado pela UFRGS, especialista em fisioterapia cardiorrespiratória e do sono.",
   },
 };
 
+const pageSchema = graph(
+  profilePageSchema("/sobre/"),
+  breadcrumbSchema([{ name: "Sobre", path: "/sobre/" }])
+);
+
 export default function Page() {
   return (
-    <>      <Header currentPath="/sobre" />
+    <>      <JsonLd data={pageSchema} />      <Header currentPath="/sobre" />
       <div dangerouslySetInnerHTML={{ __html: fixPaths(`
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFHZBLMD"
@@ -37,7 +47,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="wp-block-group alignfull has-global-padding is-content-justification-center is-layout-constrained wp-block-group-is-layout-constrained" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40)">
 <div class="wp-block-columns alignwide is-layout-flex wp-container-core-columns-is-layout-a2e1813e wp-block-columns-is-layout-flex">
 <div class="wp-block-column is-vertically-aligned-bottom is-layout-flow wp-block-column-is-layout-flow">
-<figure class="wp-block-image size-full"><img data-od-unknown-tag data-od-xpath="/HTML/BODY/DIV[@class=&apos;wp-site-blocks&apos;]/*[2][self::MAIN]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::FIGURE]/*[1][self::IMG]" data-dominant-color="685755" data-has-transparency="false" fetchpriority="high" decoding="async" width="1920" height="2560" sizes="(max-width: 310px) 100vw, 310px" src="/wp-content/uploads/2025/08/DSC_5074-edited-scaled.avif" alt="DSC 5074 edited scaled - Tratamento de Ronco e Apneia do Sono | CPAP – Lajeado e Vale do Taquari" class="wp-image-103 not-transparent" style="--dominant-color: #685755; aspect-ratio:3/4;object-fit:cover" title="Fisioterapia Cardiorrespiratória e do Sono: Transforme Sua Saúde 1" srcset="/wp-content/uploads/2025/08/DSC_5074-edited-scaled.avif 1920w, /wp-content/uploads/2025/08/DSC_5074-edited-225x300.avif 225w, /wp-content/uploads/2025/08/DSC_5074-edited-768x1024.avif 768w, /wp-content/uploads/2025/08/DSC_5074-edited-1152x1536.avif 1152w, /wp-content/uploads/2025/08/DSC_5074-edited-1536x2048.avif 1536w" /></figure>
+<figure class="wp-block-image size-full"><img data-od-unknown-tag data-od-xpath="/HTML/BODY/DIV[@class=&apos;wp-site-blocks&apos;]/*[2][self::MAIN]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::FIGURE]/*[1][self::IMG]" data-dominant-color="685755" data-has-transparency="false" fetchpriority="high" decoding="async" width="1920" height="2560" sizes="(max-width: 310px) 100vw, 310px" src="/wp-content/uploads/2025/08/DSC_5074-edited-scaled.avif" alt="Dra. Alessandra Kerkhoff em teleconsulta de fisioterapia pelo notebook" class="wp-image-103 not-transparent" style="--dominant-color: #685755; aspect-ratio:3/4;object-fit:cover" title="Fisioterapia Cardiorrespiratória e do Sono: Transforme Sua Saúde 1" srcset="/wp-content/uploads/2025/08/DSC_5074-edited-scaled.avif 1920w, /wp-content/uploads/2025/08/DSC_5074-edited-225x300.avif 225w, /wp-content/uploads/2025/08/DSC_5074-edited-768x1024.avif 768w, /wp-content/uploads/2025/08/DSC_5074-edited-1152x1536.avif 1152w, /wp-content/uploads/2025/08/DSC_5074-edited-1536x2048.avif 1536w" /></figure>
 </div>
 
 
@@ -118,7 +128,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 <div class="wp-block-column is-vertically-aligned-bottom is-layout-flow wp-block-column-is-layout-flow">
-<figure class="wp-block-image size-full"><img data-od-unknown-tag data-od-xpath="/HTML/BODY/DIV[@class=&apos;wp-site-blocks&apos;]/*[2][self::MAIN]/*[1][self::DIV]/*[2][self::DIV]/*[2][self::DIV]/*[1][self::DIV]/*[2][self::DIV]/*[1][self::FIGURE]/*[1][self::IMG]" data-dominant-color="a8968a" data-has-transparency="false" decoding="async" width="1920" height="2560" sizes="(max-width: 310px) 100vw, 310px" src="/wp-content/uploads/2025/08/DSC_4920-edited-scaled.avif" alt="DSC 4920 edited scaled - Tratamento de Ronco e Apneia do Sono | CPAP – Lajeado e Vale do Taquari" class="wp-image-106 not-transparent" style="--dominant-color: #a8968a; aspect-ratio:1;object-fit:cover" title="Fisioterapia Cardiorrespiratória e do Sono: Transforme Sua Saúde 2" srcset="/wp-content/uploads/2025/08/DSC_4920-edited-scaled.avif 1920w, /wp-content/uploads/2025/08/DSC_4920-edited-225x300.avif 225w, /wp-content/uploads/2025/08/DSC_4920-edited-768x1024.avif 768w, /wp-content/uploads/2025/08/DSC_4920-edited-1152x1536.avif 1152w, /wp-content/uploads/2025/08/DSC_4920-edited-1536x2048.avif 1536w" /></figure>
+<figure class="wp-block-image size-full"><img data-od-unknown-tag data-od-xpath="/HTML/BODY/DIV[@class=&apos;wp-site-blocks&apos;]/*[2][self::MAIN]/*[1][self::DIV]/*[2][self::DIV]/*[2][self::DIV]/*[1][self::DIV]/*[2][self::DIV]/*[1][self::FIGURE]/*[1][self::IMG]" data-dominant-color="a8968a" data-has-transparency="false" decoding="async" width="1920" height="2560" sizes="(max-width: 310px) 100vw, 310px" src="/wp-content/uploads/2025/08/DSC_4920-edited-scaled.avif" alt="Retrato da fisioterapeuta Dra. Alessandra Kerkhoff no consultório em Lajeado" class="wp-image-106 not-transparent" style="--dominant-color: #a8968a; aspect-ratio:1;object-fit:cover" title="Fisioterapia Cardiorrespiratória e do Sono: Transforme Sua Saúde 2" srcset="/wp-content/uploads/2025/08/DSC_4920-edited-scaled.avif 1920w, /wp-content/uploads/2025/08/DSC_4920-edited-225x300.avif 225w, /wp-content/uploads/2025/08/DSC_4920-edited-768x1024.avif 768w, /wp-content/uploads/2025/08/DSC_4920-edited-1152x1536.avif 1152w, /wp-content/uploads/2025/08/DSC_4920-edited-1536x2048.avif 1536w" /></figure>
 </div>
 </div>
 </div>
@@ -128,7 +138,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="wp-block-group alignfull has-global-padding is-content-justification-center is-layout-constrained wp-block-group-is-layout-constrained" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40)">
 <div class="wp-block-columns alignwide is-layout-flex wp-container-core-columns-is-layout-3b811c60 wp-block-columns-is-layout-flex">
 <div class="wp-block-column is-vertically-aligned-bottom is-layout-flow wp-block-column-is-layout-flow">
-<figure class="wp-block-image size-full"><img data-od-unknown-tag data-od-xpath="/HTML/BODY/DIV[@class=&apos;wp-site-blocks&apos;]/*[2][self::MAIN]/*[1][self::DIV]/*[2][self::DIV]/*[3][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::FIGURE]/*[1][self::IMG]" data-dominant-color="ac9787" data-has-transparency="false" decoding="async" width="1920" height="2560" sizes="(max-width: 310px) 100vw, 310px" src="/wp-content/uploads/2025/08/DSC_4910-edited-scaled.avif" alt="DSC 4910 edited scaled - Tratamento de Ronco e Apneia do Sono | CPAP – Lajeado e Vale do Taquari" class="wp-image-108 not-transparent" style="--dominant-color: #ac9787; aspect-ratio:1;object-fit:cover" title="Fisioterapia Cardiorrespiratória e do Sono: Transforme Sua Saúde 3" srcset="/wp-content/uploads/2025/08/DSC_4910-edited-scaled.avif 1920w, /wp-content/uploads/2025/08/DSC_4910-edited-225x300.avif 225w, /wp-content/uploads/2025/08/DSC_4910-edited-768x1024.avif 768w, /wp-content/uploads/2025/08/DSC_4910-edited-1152x1536.avif 1152w, /wp-content/uploads/2025/08/DSC_4910-edited-1536x2048.avif 1536w" /></figure>
+<figure class="wp-block-image size-full"><img data-od-unknown-tag data-od-xpath="/HTML/BODY/DIV[@class=&apos;wp-site-blocks&apos;]/*[2][self::MAIN]/*[1][self::DIV]/*[2][self::DIV]/*[3][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::FIGURE]/*[1][self::IMG]" data-dominant-color="ac9787" data-has-transparency="false" decoding="async" width="1920" height="2560" sizes="(max-width: 310px) 100vw, 310px" src="/wp-content/uploads/2025/08/DSC_4910-edited-scaled.avif" alt="Dra. Alessandra Kerkhoff, fisioterapeuta, sentada à mesa do consultório" class="wp-image-108 not-transparent" style="--dominant-color: #ac9787; aspect-ratio:1;object-fit:cover" title="Fisioterapia Cardiorrespiratória e do Sono: Transforme Sua Saúde 3" srcset="/wp-content/uploads/2025/08/DSC_4910-edited-scaled.avif 1920w, /wp-content/uploads/2025/08/DSC_4910-edited-225x300.avif 225w, /wp-content/uploads/2025/08/DSC_4910-edited-768x1024.avif 768w, /wp-content/uploads/2025/08/DSC_4910-edited-1152x1536.avif 1152w, /wp-content/uploads/2025/08/DSC_4910-edited-1536x2048.avif 1536w" /></figure>
 </div>
 
 
@@ -266,7 +276,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 }
 </style>
 <div class="wp-block-group alignwide custom-gallery-grid" id="gallery-section">
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6a5b764bb896c&quot;}" data-wp-interactive="core/image" data-wp-key="6a5b764bb896c" class="wp-block-image wp-lightbox-container"><img data-od-unknown-tag data-od-xpath="/HTML/BODY/DIV[@class=&apos;wp-site-blocks&apos;]/*[2][self::MAIN]/*[1][self::DIV]/*[3][self::DIV]/*[1][self::FIGURE]/*[1][self::IMG]" data-dominant-color="60615a" data-has-transparency="false" loading="lazy" decoding="async" width="1080" height="1350" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on--pointerdown="actions.preloadImage" data-wp-on--pointerenter="actions.preloadImageWithDelay" data-wp-on--pointerleave="actions.cancelPreload" data-wp-on-window--resize="callbacks.setButtonStyles" sizes="auto, (max-width: 620px) 100vw, 620px" src="/wp-content/uploads/2025/09/2.avif" alt="2 - Tratamento de Ronco e Apneia do Sono | CPAP – Lajeado e Vale do Taquari" class="wp-image-267 not-transparent" style="--dominant-color: #60615a;" title="Fisioterapia Cardiorrespiratória e do Sono: Transforme Sua Saúde 4" srcset="/wp-content/uploads/2025/09/2.avif 1080w, /wp-content/uploads/2025/09/2-240x300.avif 240w, /wp-content/uploads/2025/09/2-819x1024.avif 819w, /wp-content/uploads/2025/09/2-768x960.avif 768w" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a5b764bb896c&quot;}" data-wp-interactive="core/image" data-wp-key="6a5b764bb896c" class="wp-block-image wp-lightbox-container"><img data-od-unknown-tag data-od-xpath="/HTML/BODY/DIV[@class=&apos;wp-site-blocks&apos;]/*[2][self::MAIN]/*[1][self::DIV]/*[3][self::DIV]/*[1][self::FIGURE]/*[1][self::IMG]" data-dominant-color="60615a" data-has-transparency="false" loading="lazy" decoding="async" width="1080" height="1350" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on--pointerdown="actions.preloadImage" data-wp-on--pointerenter="actions.preloadImageWithDelay" data-wp-on--pointerleave="actions.cancelPreload" data-wp-on-window--resize="callbacks.setButtonStyles" sizes="auto, (max-width: 620px) 100vw, 620px" src="/wp-content/uploads/2025/09/2.avif" alt="Post: insônia pode estar ligada à tensão e à má respiração" class="wp-image-267 not-transparent" style="--dominant-color: #60615a;" title="Fisioterapia Cardiorrespiratória e do Sono: Transforme Sua Saúde 4" srcset="/wp-content/uploads/2025/09/2.avif 1080w, /wp-content/uploads/2025/09/2-240x300.avif 240w, /wp-content/uploads/2025/09/2-819x1024.avif 819w, /wp-content/uploads/2025/09/2-768x960.avif 768w" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -281,7 +291,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			</svg>
 		</button></figure>
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6a5b764bb9547&quot;}" data-wp-interactive="core/image" data-wp-key="6a5b764bb9547" class="wp-block-image wp-lightbox-container"><img data-od-unknown-tag data-od-xpath="/HTML/BODY/DIV[@class=&apos;wp-site-blocks&apos;]/*[2][self::MAIN]/*[1][self::DIV]/*[3][self::DIV]/*[2][self::FIGURE]/*[1][self::IMG]" data-dominant-color="a5d8d3" data-has-transparency="false" loading="lazy" decoding="async" width="1080" height="1350" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on--pointerdown="actions.preloadImage" data-wp-on--pointerenter="actions.preloadImageWithDelay" data-wp-on--pointerleave="actions.cancelPreload" data-wp-on-window--resize="callbacks.setButtonStyles" sizes="auto, (max-width: 620px) 100vw, 620px" src="/wp-content/uploads/2025/09/POST-2-1.avif" alt="POST 2 1 - Tratamento de Ronco e Apneia do Sono | CPAP – Lajeado e Vale do Taquari" class="wp-image-287 not-transparent" style="--dominant-color: #a5d8d3;" title="Fisioterapia Cardiorrespiratória e do Sono: Transforme Sua Saúde 5" srcset="/wp-content/uploads/2025/09/POST-2-1.avif 1080w, /wp-content/uploads/2025/09/POST-2-1-240x300.avif 240w, /wp-content/uploads/2025/09/POST-2-1-819x1024.avif 819w, /wp-content/uploads/2025/09/POST-2-1-768x960.avif 768w" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a5b764bb9547&quot;}" data-wp-interactive="core/image" data-wp-key="6a5b764bb9547" class="wp-block-image wp-lightbox-container"><img data-od-unknown-tag data-od-xpath="/HTML/BODY/DIV[@class=&apos;wp-site-blocks&apos;]/*[2][self::MAIN]/*[1][self::DIV]/*[3][self::DIV]/*[2][self::FIGURE]/*[1][self::IMG]" data-dominant-color="a5d8d3" data-has-transparency="false" loading="lazy" decoding="async" width="1080" height="1350" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on--pointerdown="actions.preloadImage" data-wp-on--pointerenter="actions.preloadImageWithDelay" data-wp-on--pointerleave="actions.cancelPreload" data-wp-on-window--resize="callbacks.setButtonStyles" sizes="auto, (max-width: 620px) 100vw, 620px" src="/wp-content/uploads/2025/09/POST-2-1.avif" alt="Post: a fisioterapia pode ajudar no tratamento da apneia do sono" class="wp-image-287 not-transparent" style="--dominant-color: #a5d8d3;" title="Fisioterapia Cardiorrespiratória e do Sono: Transforme Sua Saúde 5" srcset="/wp-content/uploads/2025/09/POST-2-1.avif 1080w, /wp-content/uploads/2025/09/POST-2-1-240x300.avif 240w, /wp-content/uploads/2025/09/POST-2-1-819x1024.avif 819w, /wp-content/uploads/2025/09/POST-2-1-768x960.avif 768w" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -296,7 +306,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			</svg>
 		</button></figure>
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6a5b764bb9fec&quot;}" data-wp-interactive="core/image" data-wp-key="6a5b764bb9fec" class="wp-block-image wp-lightbox-container"><img data-od-unknown-tag data-od-xpath="/HTML/BODY/DIV[@class=&apos;wp-site-blocks&apos;]/*[2][self::MAIN]/*[1][self::DIV]/*[3][self::DIV]/*[3][self::FIGURE]/*[1][self::IMG]" data-dominant-color="b3ece7" data-has-transparency="false" loading="lazy" decoding="async" width="1080" height="1350" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on--pointerdown="actions.preloadImage" data-wp-on--pointerenter="actions.preloadImageWithDelay" data-wp-on--pointerleave="actions.cancelPreload" data-wp-on-window--resize="callbacks.setButtonStyles" sizes="auto, (max-width: 620px) 100vw, 620px" src="/wp-content/uploads/2025/09/3.avif" alt="3 - Tratamento de Ronco e Apneia do Sono | CPAP – Lajeado e Vale do Taquari" class="wp-image-258 not-transparent" style="--dominant-color: #b3ece7;" title="Fisioterapia Cardiorrespiratória e do Sono: Transforme Sua Saúde 6" srcset="/wp-content/uploads/2025/09/3.avif 1080w, /wp-content/uploads/2025/09/3-240x300.avif 240w, /wp-content/uploads/2025/09/3-819x1024.avif 819w, /wp-content/uploads/2025/09/3-768x960.avif 768w" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a5b764bb9fec&quot;}" data-wp-interactive="core/image" data-wp-key="6a5b764bb9fec" class="wp-block-image wp-lightbox-container"><img data-od-unknown-tag data-od-xpath="/HTML/BODY/DIV[@class=&apos;wp-site-blocks&apos;]/*[2][self::MAIN]/*[1][self::DIV]/*[3][self::DIV]/*[3][self::FIGURE]/*[1][self::IMG]" data-dominant-color="b3ece7" data-has-transparency="false" loading="lazy" decoding="async" width="1080" height="1350" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on--pointerdown="actions.preloadImage" data-wp-on--pointerenter="actions.preloadImageWithDelay" data-wp-on--pointerleave="actions.cancelPreload" data-wp-on-window--resize="callbacks.setButtonStyles" sizes="auto, (max-width: 620px) 100vw, 620px" src="/wp-content/uploads/2025/09/3.avif" alt="Post: 3 dicas para melhorar sua noite de sono" class="wp-image-258 not-transparent" style="--dominant-color: #b3ece7;" title="Fisioterapia Cardiorrespiratória e do Sono: Transforme Sua Saúde 6" srcset="/wp-content/uploads/2025/09/3.avif 1080w, /wp-content/uploads/2025/09/3-240x300.avif 240w, /wp-content/uploads/2025/09/3-819x1024.avif 819w, /wp-content/uploads/2025/09/3-768x960.avif 768w" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -311,7 +321,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			</svg>
 		</button></figure>
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6a5b764bbaa95&quot;}" data-wp-interactive="core/image" data-wp-key="6a5b764bbaa95" class="wp-block-image wp-lightbox-container"><img data-od-unknown-tag data-od-xpath="/HTML/BODY/DIV[@class=&apos;wp-site-blocks&apos;]/*[2][self::MAIN]/*[1][self::DIV]/*[3][self::DIV]/*[4][self::FIGURE]/*[1][self::IMG]" data-dominant-color="616967" data-has-transparency="false" loading="lazy" decoding="async" width="1080" height="1350" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on--pointerdown="actions.preloadImage" data-wp-on--pointerenter="actions.preloadImageWithDelay" data-wp-on--pointerleave="actions.cancelPreload" data-wp-on-window--resize="callbacks.setButtonStyles" sizes="auto, (max-width: 620px) 100vw, 620px" src="/wp-content/uploads/2025/09/6-2.avif" alt="6 2 - Tratamento de Ronco e Apneia do Sono | CPAP – Lajeado e Vale do Taquari" class="wp-image-288 not-transparent" style="--dominant-color: #616967;" title="Fisioterapia Cardiorrespiratória e do Sono: Transforme Sua Saúde 7" srcset="/wp-content/uploads/2025/09/6-2.avif 1080w, /wp-content/uploads/2025/09/6-2-240x300.avif 240w, /wp-content/uploads/2025/09/6-2-819x1024.avif 819w, /wp-content/uploads/2025/09/6-2-768x960.avif 768w" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a5b764bbaa95&quot;}" data-wp-interactive="core/image" data-wp-key="6a5b764bbaa95" class="wp-block-image wp-lightbox-container"><img data-od-unknown-tag data-od-xpath="/HTML/BODY/DIV[@class=&apos;wp-site-blocks&apos;]/*[2][self::MAIN]/*[1][self::DIV]/*[3][self::DIV]/*[4][self::FIGURE]/*[1][self::IMG]" data-dominant-color="616967" data-has-transparency="false" loading="lazy" decoding="async" width="1080" height="1350" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on--pointerdown="actions.preloadImage" data-wp-on--pointerenter="actions.preloadImageWithDelay" data-wp-on--pointerleave="actions.cancelPreload" data-wp-on-window--resize="callbacks.setButtonStyles" sizes="auto, (max-width: 620px) 100vw, 620px" src="/wp-content/uploads/2025/09/6-2.avif" alt="Post com frase da Dra. Alessandra Kerkhoff sobre reabilitação na fisioterapia" class="wp-image-288 not-transparent" style="--dominant-color: #616967;" title="Fisioterapia Cardiorrespiratória e do Sono: Transforme Sua Saúde 7" srcset="/wp-content/uploads/2025/09/6-2.avif 1080w, /wp-content/uploads/2025/09/6-2-240x300.avif 240w, /wp-content/uploads/2025/09/6-2-819x1024.avif 819w, /wp-content/uploads/2025/09/6-2-768x960.avif 768w" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"

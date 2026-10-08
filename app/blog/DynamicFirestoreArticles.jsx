@@ -80,7 +80,7 @@ export default function DynamicFirestoreArticles({ initialArticles = [] }) {
       <div className="blog-grid" style={{ marginBottom: "1.5rem" }}>
         {articles.map((article) => {
           const img = formatGoogleDriveImageUrl(article.imagemDestaque) || "/wp-content/uploads/2025/09/cuide-cpap.avif";
-          const linkHref = `/blog/${article.slug || "artigo"}`;
+          const linkHref = `/blog/${(article.slug || "artigo").replace(/^\/|\/$/g, "")}/`;
 
           const catName = article.categoria
             ? article.categoria.replace(/-/g, " ")

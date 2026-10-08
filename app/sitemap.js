@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import { execFileSync } from 'child_process';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '@/app/lib/firebase';
 
@@ -37,7 +38,9 @@ function getStaticRoutes(dir, basePath = '') {
         }
         routes = routes.concat(getStaticRoutes(fullPath, `${basePath}/${file}`));
       } else if (file === 'page.js' || file === 'page.jsx') {
-        routes.push(basePath === '' ? '/' : `${basePath}/`);
+        // Ignora páginas marcadas como noindex (ex.: redirects)
+        if (/index:\s*false/.test(fs.readFileSync(fullPath, 'utf8'))) continue;
+        routes.push({ route: basePath === '' ? '/' : `${basePath}/`, file: fullPath });
       }
     }
   } catch (err) {
@@ -45,6 +48,18 @@ function getStaticRoutes(dir, basePath = '') {
   }
 
   return routes;
+}
+
+/**
+ * Data do último commit que alterou o arquivo (requer histórico completo no CI).
+ */
+function getLastCommitDate(file) {
+  try {
+    const iso = execFileSync('git', ['log', '-1', '--format=%cI', '--', file], { encoding: 'utf8' }).trim();
+    return iso ? new Date(iso) : null;
+  } catch {
+    return null;
+  }
 }
 
 export default async function sitemap() {
@@ -57,16 +72,16 @@ export default async function sitemap() {
 
   // Filtra rotas indesejadas (admin, api, colchetes)
   staticRoutes = staticRoutes.filter(
-    (route) =>
+    ({ route }) =>
       !route.includes('/admin') &&
       !route.includes('/api') &&
       !route.includes('[') &&
       !route.includes('(')
   );
 
-  const staticEntries = staticRoutes.map((route) => ({
-    url: `${baseUrl}${route === '/' ? '' : route}`,
-    lastModified: now,
+  const staticEntries = staticRoutes.map(({ route, file }) => ({
+    url: `${baseUrl}${route}`,
+    lastModified: getLastCommitDate(file) || now,
     changeFrequency: route === '/' ? 'daily' : 'weekly',
     priority: route === '/' ? 1.0 : 0.8,
   }));

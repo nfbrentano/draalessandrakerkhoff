@@ -1,14 +1,15 @@
 import { fixPaths } from "@/app/utils/fixPaths";
 import Header from "@/app/components/Header";
+import JsonLd from "@/app/components/JsonLd";
+import { graph, blogPostingSchema, breadcrumbSchema } from "@/app/utils/schema";
 export const metadata = {
   title: "Cuidados com o CPAP | Dicas para noites mais tranquilas",
   description: "Aprenda passos fáceis para cuidar do seu CPAP e ter noites de sono tranquilas. Tratamento de apneia e ronco no Vale do Taquari.",
   keywords: [
-    "ronco lajeado",
     "cuidados com cpap",
     "limpeza de cpap",
-    "apneia e ronco lajeado",
-    "tratamento cpap vale do taquari",
+    "higienização cpap",
+    "cpap lajeado",
     "fisioterapia do sono"
   ],
   openGraph: {
@@ -21,9 +22,23 @@ export const metadata = {
   },
 };
 
+const pageSchema = graph(
+  blogPostingSchema({
+    title: "Cuide do Seu CPAP com Simplicidade: Passos Fáceis para Noites Mais Tranquilas",
+    description: "Aprenda passos fáceis para cuidar do seu CPAP e ter noites de sono tranquilas. Tratamento de apneia e ronco no Vale do Taquari.",
+    path: "/cuide-do-seu-cpap-com-simplicidade-passos-faceis-para-noites-mais-tranquilas/",
+    image: "/wp-content/uploads/2025/09/Cuide-CPAP-1-819x1024.avif",
+  }),
+  breadcrumbSchema([
+    { name: "Blog", path: "/blog/" },
+    { name: "Cuide do Seu CPAP com Simplicidade: Passos Fáceis para Noites Mais Tranquilas", path: "/cuide-do-seu-cpap-com-simplicidade-passos-faceis-para-noites-mais-tranquilas/" },
+  ])
+);
+
 export default function Page() {
   return (
-    <>      <Header currentPath="/cuide-do-seu-cpap-com-simplicidade-passos-faceis-para-noites-mais-tranquilas" />
+    <>      <JsonLd data={pageSchema} />
+      <Header currentPath="/cuide-do-seu-cpap-com-simplicidade-passos-faceis-para-noites-mais-tranquilas" />
       <div dangerouslySetInnerHTML={{ __html: fixPaths(`
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFHZBLMD"
@@ -44,7 +59,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="entry-content wp-block-post-content has-global-padding is-layout-constrained wp-block-post-content-is-layout-constrained">
 <figure class="wp-block-gallery has-nested-images columns-default is-cropped wp-block-gallery-2 is-layout-flex wp-block-gallery-is-layout-flex">
-<figure class="wp-block-image size-large"><img data-od-unknown-tag data-od-xpath="/HTML/BODY/DIV[@class=&apos;wp-site-blocks&apos;]/*[2][self::MAIN]/*[3][self::DIV]/*[1][self::FIGURE]/*[1][self::FIGURE]/*[1][self::IMG]" data-dominant-color="449a8c" data-has-transparency="false" style="--dominant-color: #449a8c;" fetchpriority="high" decoding="async" width="819" height="1024" sizes="(max-width: 620px) 100vw, 620px" data-id="281" src="/wp-content/uploads/2025/09/Cuide-CPAP-1-819x1024.avif" alt="Cuide CPAP 1 - Tratamento de Ronco e Apneia do Sono | CPAP – Lajeado e Vale do Taquari" class="wp-image-281 not-transparent" title="Cuide do Seu CPAP com Simplicidade: Passos Fáceis para Noites Mais Tranquilas 1" srcset="/wp-content/uploads/2025/09/Cuide-CPAP-1-819x1024.avif 819w, /wp-content/uploads/2025/09/Cuide-CPAP-1-240x300.avif 240w, /wp-content/uploads/2025/09/Cuide-CPAP-1-768x960.avif 768w, /wp-content/uploads/2025/09/Cuide-CPAP-1.avif 1080w" /></figure>
+<figure class="wp-block-image size-large"><img data-od-unknown-tag data-od-xpath="/HTML/BODY/DIV[@class=&apos;wp-site-blocks&apos;]/*[2][self::MAIN]/*[3][self::DIV]/*[1][self::FIGURE]/*[1][self::FIGURE]/*[1][self::IMG]" data-dominant-color="449a8c" data-has-transparency="false" style="--dominant-color: #449a8c;" fetchpriority="high" decoding="async" width="819" height="1024" sizes="(max-width: 620px) 100vw, 620px" data-id="281" src="/wp-content/uploads/2025/09/Cuide-CPAP-1-819x1024.avif" alt="Homem higienizando a máscara do CPAP em casa" class="wp-image-281 not-transparent" title="Cuide do Seu CPAP com Simplicidade: Passos Fáceis para Noites Mais Tranquilas 1" srcset="/wp-content/uploads/2025/09/Cuide-CPAP-1-819x1024.avif 819w, /wp-content/uploads/2025/09/Cuide-CPAP-1-240x300.avif 240w, /wp-content/uploads/2025/09/Cuide-CPAP-1-768x960.avif 768w, /wp-content/uploads/2025/09/Cuide-CPAP-1.avif 1080w" /></figure>
 </figure>
 
 

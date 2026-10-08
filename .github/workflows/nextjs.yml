@@ -31,6 +31,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # histórico completo: o sitemap usa a data do último commit de cada página
       - name: Detect package manager
         id: detect-package-manager
         run: |

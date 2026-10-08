@@ -1,15 +1,16 @@
 import { fixPaths } from "@/app/utils/fixPaths";
 import Header from "@/app/components/Header";
+import JsonLd from "@/app/components/JsonLd";
+import { graph, blogPostingSchema, breadcrumbSchema } from "@/app/utils/schema";
 export const metadata = {
   title: "Fisioterapia Respiratória e Qualidade de Vida | Tratamento de Apneia",
   description: "Descubra como a fisioterapia respiratória melhora a qualidade de vida de pacientes com doenças pulmonares e apneia do sono em Lajeado.",
   keywords: [
-    "ronco lajeado",
     "fisioterapia respiratória lajeado",
+    "reabilitação pulmonar",
     "qualidade de vida",
-    "tratamento apneia e ronco",
-    "cpap vale do taquari",
-    "dra alessandra kerkhoff"
+    "dpoc",
+    "fisioterapia cardiorrespiratória"
   ],
   openGraph: {
     title: "Fisioterapia Respiratória melhora a Qualidade de Vida",
@@ -21,9 +22,23 @@ export const metadata = {
   },
 };
 
+const pageSchema = graph(
+  blogPostingSchema({
+    title: "Fisioterapia Respiratória: Melhora na Qualidade de Vida de Pacientes",
+    description: "Descubra como a fisioterapia respiratória melhora a qualidade de vida de pacientes com doenças pulmonares e apneia do sono em Lajeado.",
+    path: "/fisioterapia-respiratoria-melhora-na-qualidade-de-vida-de-pacientes/",
+    image: "/wp-content/uploads/2025/11/Post-fisio-respiratoria-819x1024.avif",
+  }),
+  breadcrumbSchema([
+    { name: "Blog", path: "/blog/" },
+    { name: "Fisioterapia Respiratória: Melhora na Qualidade de Vida de Pacientes", path: "/fisioterapia-respiratoria-melhora-na-qualidade-de-vida-de-pacientes/" },
+  ])
+);
+
 export default function Page() {
   return (
-    <>      <Header currentPath="/fisioterapia-respiratoria-melhora-na-qualidade-de-vida-de-pacientes" />
+    <>      <JsonLd data={pageSchema} />
+      <Header currentPath="/fisioterapia-respiratoria-melhora-na-qualidade-de-vida-de-pacientes" />
       <div dangerouslySetInnerHTML={{ __html: fixPaths(`
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFHZBLMD"
@@ -55,7 +70,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2 class="wp-block-heading">Atendimento Especializado em Lajeado e Vale do Taquari</h2>
 <p class="wp-block-paragraph">Se você ou algum familiar convive com diagnósticos de DPOC, asma, sequelas respiratórias ou dificuldades no sono, o acompanhamento especializado faz toda a diferença. Atendemos com planos terapêuticos individualizados baseados na mais atual medicina baseada em evidências.</p>
 
-<p class="wp-block-paragraph">Saiba mais sobre nossa <a href="/fisioterapia-cardiorrespiratoria/">Fisioterapia Cardiorrespiratória</a> e explore também nossas soluções para <a href="/apneia-e-ronco/">Tratamento de Apneia do Sono e CPAP</a>.</p>
+<p class="wp-block-paragraph">Saiba mais sobre nossa <a href="/fisioterapia-cardiorrespiratoria/">Fisioterapia Cardiorrespiratória</a> e explore também nossas soluções para <a href="/fisioterapia-do-sono/">Tratamento de Apneia do Sono e CPAP</a>.</p>
 
 <h3 class="wp-block-heading"><strong>Referências científicas:</strong></h3>
 

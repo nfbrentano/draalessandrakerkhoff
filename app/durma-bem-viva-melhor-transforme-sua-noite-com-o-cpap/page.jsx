@@ -1,16 +1,15 @@
 import { fixPaths } from "@/app/utils/fixPaths";
 import Header from "@/app/components/Header";
+import JsonLd from "@/app/components/JsonLd";
+import { graph, blogPostingSchema, breadcrumbSchema } from "@/app/utils/schema";
 export const metadata = {
   title: "Adaptação ao CPAP: Transforme sua noite | Lajeado",
   description: "Dificuldades com o CPAP? A Dra. Alessandra Kerkhoff ajuda você na adaptação para noites de sono perfeitas no Vale do Taquari.",
   keywords: [
-    "ronco lajeado",
     "adaptação ao cpap lajeado",
-    "tratamento apneia e ronco",
-    "titulação de cpap vale do taquari",
-    "onde alugar cpap em lajeado",
-    "dificuldade para dormir com cpap lajeado",
-    "dormir bem",
+    "titulação de cpap",
+    "dificuldade para dormir com cpap",
+    "aluguel de cpap lajeado",
     "fisioterapia do sono"
   ],
   openGraph: {
@@ -23,9 +22,23 @@ export const metadata = {
   },
 };
 
+const pageSchema = graph(
+  blogPostingSchema({
+    title: "Durma Bem, Viva Melhor: Transforme Sua Noite com o CPAP",
+    description: "Dificuldades com o CPAP? A Dra. Alessandra Kerkhoff ajuda você na adaptação para noites de sono perfeitas no Vale do Taquari.",
+    path: "/durma-bem-viva-melhor-transforme-sua-noite-com-o-cpap/",
+    image: "/wp-content/uploads/2025/09/Post-Durma-bem-819x1024.avif",
+  }),
+  breadcrumbSchema([
+    { name: "Blog", path: "/blog/" },
+    { name: "Durma Bem, Viva Melhor: Transforme Sua Noite com o CPAP", path: "/durma-bem-viva-melhor-transforme-sua-noite-com-o-cpap/" },
+  ])
+);
+
 export default function Page() {
   return (
-    <>      <Header currentPath="/durma-bem-viva-melhor-transforme-sua-noite-com-o-cpap" />
+    <>      <JsonLd data={pageSchema} />
+      <Header currentPath="/durma-bem-viva-melhor-transforme-sua-noite-com-o-cpap" />
       <div dangerouslySetInnerHTML={{ __html: fixPaths(`
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFHZBLMD"
@@ -64,7 +77,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2 class="wp-block-heading">Benefícios a Curto e Longo Prazo</h2>
 <p class="wp-block-paragraph">Com o uso consistente, o paciente rapidamente experimenta a eliminação dos roncados noturnos, redução do risco de eventos cardiovasculares (hipertensão e arritmias) e um aumento visível na disposição, foco e humor ao longo do dia.</p>
 
-<p class="wp-block-paragraph">Quer saber mais sobre o tratamento da apneia em Lajeado e Vale do Taquari? Confira nossa página dedicada ao <a href="/apneia-e-ronco/">Tratamento de Ronco e Apneia do Sono</a>.</p>
+<p class="wp-block-paragraph">Quer saber mais sobre o tratamento da apneia em Lajeado e Vale do Taquari? Confira nossa página dedicada ao <a href="/fisioterapia-do-sono/">Tratamento de Ronco e Apneia do Sono</a>.</p>
 
 <h3 class="wp-block-heading"><strong>Referências:</strong></h3>
 <ul class="wp-block-list">

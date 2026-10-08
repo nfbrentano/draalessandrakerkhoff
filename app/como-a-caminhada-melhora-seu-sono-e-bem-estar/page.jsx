@@ -1,20 +1,16 @@
 import { fixPaths } from "@/app/utils/fixPaths";
 import Header from "@/app/components/Header";
+import JsonLd from "@/app/components/JsonLd";
+import { graph, blogPostingSchema, breadcrumbSchema } from "@/app/utils/schema";
 export const metadata = {
   title: "Como a Caminhada Melhora Seu Sono e Bem-Estar",
   description: "Descubra como a prática regular da caminhada melhora a qualidade do seu sono, reduz o estresse e contribui para o seu bem-estar geral.",
   keywords: [
-    "ronco lajeado",
     "caminhada e sono",
     "qualidade do sono",
-    "bem-estar",
     "atividade física e ronco",
     "fisioterapia respiratória",
-    "apneia do sono",
-    "tratamento apneia lajeado",
-    "fisioterapia para ronco lajeado",
-    "lajeado",
-    "vale do taquari"
+    "bem-estar"
   ],
   openGraph: {
     title: "Como a Caminhada Melhora Seu Sono e Bem-Estar",
@@ -40,9 +36,23 @@ export const metadata = {
   },
 };
 
+const pageSchema = graph(
+  blogPostingSchema({
+    title: "Como a Caminhada Melhora Seu Sono e Bem-Estar",
+    description: "Descubra como a prática regular da caminhada melhora a qualidade do seu sono, reduz o estresse e contribui para o seu bem-estar geral.",
+    path: "/como-a-caminhada-melhora-seu-sono-e-bem-estar/",
+    image: "/wp-content/uploads/2025/11/caminhada-819x1024.avif",
+  }),
+  breadcrumbSchema([
+    { name: "Blog", path: "/blog/" },
+    { name: "Como a Caminhada Melhora Seu Sono e Bem-Estar", path: "/como-a-caminhada-melhora-seu-sono-e-bem-estar/" },
+  ])
+);
+
 export default function Page() {
   return (
-    <>      <Header currentPath="/como-a-caminhada-melhora-seu-sono-e-bem-estar" />
+    <>      <JsonLd data={pageSchema} />
+      <Header currentPath="/como-a-caminhada-melhora-seu-sono-e-bem-estar" />
       <div dangerouslySetInnerHTML={{ __html: fixPaths(`
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFHZBLMD"
@@ -63,7 +73,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="entry-content wp-block-post-content has-global-padding is-layout-constrained wp-block-post-content-is-layout-constrained">
 <figure class="wp-block-gallery has-nested-images columns-default is-cropped wp-block-gallery-2 is-layout-flex wp-block-gallery-is-layout-flex">
-<figure class="wp-block-image size-large"><img data-od-unknown-tag data-od-xpath="/HTML/BODY/DIV[@class=&apos;wp-site-blocks&apos;]/*[2][self::MAIN]/*[3][self::DIV]/*[1][self::FIGURE]/*[1][self::FIGURE]/*[1][self::IMG]" data-dominant-color="2c3d3d" data-has-transparency="false" style="--dominant-color: #2c3d3d;" fetchpriority="high" decoding="async" width="819" height="1024" sizes="(max-width: 620px) 100vw, 620px" data-id="345" src="/wp-content/uploads/2025/11/caminhada-819x1024.avif" alt="caminhada - Tratamento de Ronco e Apneia do Sono | CPAP – Lajeado e Vale do Taquari" class="wp-image-345 not-transparent" title="Como a Caminhada Melhora Seu Sono e Bem-Estar 1" srcset="/wp-content/uploads/2025/11/caminhada-819x1024.avif 819w, /wp-content/uploads/2025/11/caminhada-240x300.avif 240w, /wp-content/uploads/2025/11/caminhada-768x960.avif 768w, /wp-content/uploads/2025/11/caminhada.avif 1080w" /></figure>
+<figure class="wp-block-image size-large"><img data-od-unknown-tag data-od-xpath="/HTML/BODY/DIV[@class=&apos;wp-site-blocks&apos;]/*[2][self::MAIN]/*[3][self::DIV]/*[1][self::FIGURE]/*[1][self::FIGURE]/*[1][self::IMG]" data-dominant-color="2c3d3d" data-has-transparency="false" style="--dominant-color: #2c3d3d;" fetchpriority="high" decoding="async" width="819" height="1024" sizes="(max-width: 620px) 100vw, 620px" data-id="345" src="/wp-content/uploads/2025/11/caminhada-819x1024.avif" alt="Casal de idosos caminhando no parque, ilustrando como a caminhada melhora o sono" class="wp-image-345 not-transparent" title="Como a Caminhada Melhora Seu Sono e Bem-Estar 1" srcset="/wp-content/uploads/2025/11/caminhada-819x1024.avif 819w, /wp-content/uploads/2025/11/caminhada-240x300.avif 240w, /wp-content/uploads/2025/11/caminhada-768x960.avif 768w, /wp-content/uploads/2025/11/caminhada.avif 1080w" /></figure>
 </figure>
 
 

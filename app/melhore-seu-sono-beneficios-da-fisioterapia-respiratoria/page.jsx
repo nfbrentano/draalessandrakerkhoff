@@ -1,15 +1,16 @@
 import { fixPaths } from "@/app/utils/fixPaths";
 import Header from "@/app/components/Header";
+import JsonLd from "@/app/components/JsonLd";
+import { graph, blogPostingSchema, breadcrumbSchema } from "@/app/utils/schema";
 export const metadata = {
   title: "Benefícios da Fisioterapia na Apneia do Sono | Lajeado",
   description: "Veja como a fisioterapia especializada reduz a apneia do sono e melhora sua adaptação ao CPAP, trazendo mais saúde no Vale do Taquari.",
   keywords: [
-    "ronco lajeado",
     "fisioterapia e apneia do sono",
     "tratamento do ronco lajeado",
-    "cpap vale do taquari",
-    "melhorar qualidade do sono",
-    "saúde respiratória"
+    "adaptação ao cpap",
+    "qualidade do sono",
+    "fisioterapia do sono lajeado"
   ],
   openGraph: {
     title: "Melhore seu sono com a Fisioterapia Respiratória",
@@ -21,9 +22,23 @@ export const metadata = {
   },
 };
 
+const pageSchema = graph(
+  blogPostingSchema({
+    title: "Melhore Seu Sono: Fisioterapia e Apneia do Sono",
+    description: "Veja como a fisioterapia especializada reduz a apneia do sono e melhora sua adaptação ao CPAP, trazendo mais saúde no Vale do Taquari.",
+    path: "/melhore-seu-sono-beneficios-da-fisioterapia-respiratoria/",
+    image: "/wp-content/uploads/2025/08/1-1-819x1024.avif",
+  }),
+  breadcrumbSchema([
+    { name: "Blog", path: "/blog/" },
+    { name: "Melhore Seu Sono: Fisioterapia e Apneia do Sono", path: "/melhore-seu-sono-beneficios-da-fisioterapia-respiratoria/" },
+  ])
+);
+
 export default function Page() {
   return (
-    <>      <Header currentPath="/melhore-seu-sono-beneficios-da-fisioterapia-respiratoria" />
+    <>      <JsonLd data={pageSchema} />
+      <Header currentPath="/melhore-seu-sono-beneficios-da-fisioterapia-respiratoria" />
       <div dangerouslySetInnerHTML={{ __html: fixPaths(`
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFHZBLMD"
@@ -60,7 +75,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <li><strong>Melhora da Capacidade Funcional:</strong> Redução do cansaço crônico e aumento da energia e disposição nas atividades diárias.</li>
 </ul>
 
-<p class="wp-block-paragraph">Se você sofre com ronco, acorda com sensação de sufocamento ou sente cansaço excessivo mesmo após horas na cama, conheça mais sobre o <a href="/apneia-e-ronco/">tratamento de apneia e ronco</a> e nossa <a href="/fisioterapia-cardiorrespiratoria/">fisioterapia cardiorrespiratória</a> em Lajeado e Vale do Taquari.</p>
+<p class="wp-block-paragraph">Se você sofre com ronco, acorda com sensação de sufocamento ou sente cansaço excessivo mesmo após horas na cama, conheça mais sobre o <a href="/fisioterapia-do-sono/">tratamento de apneia e ronco</a> e nossa <a href="/fisioterapia-cardiorrespiratoria/">fisioterapia cardiorrespiratória</a> em Lajeado e Vale do Taquari.</p>
 
 <p class="wp-block-paragraph"><em>Referência científica: Duan et al., BMC Pulm Med, 2022. doi:10.1186/s12890-021-01818-7</em></p>
 

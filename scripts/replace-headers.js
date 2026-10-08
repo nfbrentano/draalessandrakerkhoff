@@ -8,7 +8,7 @@ const filesToProcess = [
   'sobre/page.jsx',
   'servicos/page.jsx',
   'fisioterapia-cardiorrespiratoria/page.jsx',
-  'apneia-e-ronco/page.jsx',
+  'fisioterapia-do-sono/page.jsx',
   'como-a-caminhada-melhora-seu-sono-e-bem-estar/page.jsx',
   'cuide-do-seu-cpap-com-simplicidade-passos-faceis-para-noites-mais-tranquilas/page.jsx',
   'durma-bem-viva-melhor-transforme-sua-noite-com-o-cpap/page.jsx',

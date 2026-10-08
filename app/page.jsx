@@ -2,77 +2,33 @@ import { fixPaths } from "@/app/utils/fixPaths";
 import Header from "@/app/components/Header";
 
 export const metadata = {
-  title: "Tratamento de Ronco e Apneia do Sono em Lajeado",
-  description: "Sofre com ronco ou apneia? Dra. Alessandra Kerkhoff é referência em fisioterapia respiratória e do sono em Lajeado.",
+  title: "Fisioterapeuta em Lajeado: Ronco, Apneia e CPAP",
+  description: "Dra. Alessandra Kerkhoff, fisioterapeuta em Lajeado: tratamento de ronco e apneia, adaptação e titulação de CPAP e fisioterapia cardiorrespiratória.",
   keywords: [
-    "ronco lajeado",
-    "tratamento de ronco",
-    "apneia do sono",
+    "fisioterapeuta lajeado",
+    "tratamento de ronco lajeado",
+    "apneia do sono lajeado",
     "cpap lajeado",
-    "vale do taquari",
-    "fisioterapia do sono",
-    "dra alessandra kerkhoff"
+    "fisioterapia cardiorrespiratória lajeado"
   ],
   openGraph: {
-    title: "Tratamento de Ronco e Apneia do Sono em Lajeado",
-    description: "Referência em fisioterapia cardiorrespiratória e do sono no Vale do Taquari.",
-    url: "https://draalessandrakerkhoff.com.br",
+    title: "Fisioterapeuta em Lajeado: Ronco, Apneia e CPAP",
+    description: "Dra. Alessandra Kerkhoff, fisioterapeuta em Lajeado: tratamento de ronco e apneia, adaptação e titulação de CPAP e fisioterapia cardiorrespiratória.",
+    url: "https://draalessandrakerkhoff.com.br/",
     siteName: "Dra. Alessandra Kerkhoff",
     locale: "pt_BR",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tratamento de Ronco e Apneia do Sono em Lajeado",
-    description: "Referência em fisioterapia cardiorrespiratória e do sono no Vale do Taquari.",
+    title: "Fisioterapeuta em Lajeado: Ronco, Apneia e CPAP",
+    description: "Dra. Alessandra Kerkhoff, fisioterapeuta em Lajeado: tratamento de ronco e apneia, adaptação e titulação de CPAP e fisioterapia cardiorrespiratória.",
   },
 };
 
 export default function Page() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Physician",
-    "name": "Dra. Alessandra Kerkhoff",
-    "image": "https://draalessandrakerkhoff.com.br/wp-content/uploads/2025/08/DSC_4875-scaled.avif",
-    "@id": "https://draalessandrakerkhoff.com.br/#physician",
-    "url": "https://draalessandrakerkhoff.com.br",
-    "telephone": "+55 51 99614-5583",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Rua João Abott, 1234, Centro",
-      "addressLocality": "Lajeado",
-      "addressRegion": "RS",
-      "postalCode": "95900-080",
-      "addressCountry": "BR"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": -29.4673,
-      "longitude": -51.9613
-    },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday"
-      ],
-      "opens": "14:00",
-      "closes": "18:00"
-    },
-    "sameAs": [
-      "https://www.instagram.com/draalessandrakerkhoff/"
-    ]
-  };
-
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
       <Header currentPath="/" />
       <div dangerouslySetInnerHTML={{ __html: fixPaths(`
 <a class="skip-link screen-reader-text" id="wp-skip-link" href="#wp--skip-link--target">Pular para o conteúdo</a><div class="wp-site-blocks">
@@ -125,7 +81,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 <div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/sobre">Saiba Mais</a></div>
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/sobre/">Saiba Mais</a></div>
 </div>
 </div>
 </div>
@@ -167,7 +123,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 <div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
-<div class="wp-block-button is-service-link"><a class="wp-block-button__link has-theme-13-color has-theme-12-background-color has-text-color has-background wp-element-button" href="/fisioterapia-cardiorrespiratoria">Saiba Mais</a></div>
+<div class="wp-block-button is-service-link"><a class="wp-block-button__link has-theme-13-color has-theme-12-background-color has-text-color has-background wp-element-button" href="/fisioterapia-cardiorrespiratoria/">Saiba Mais</a></div>
 </div>
 
 
@@ -203,7 +159,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 <div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
-<div class="wp-block-button is-service-link"><a class="wp-block-button__link has-theme-13-color has-theme-12-background-color has-text-color has-background wp-element-button" href="/apneia-e-ronco">Saiba Mais</a></div>
+<div class="wp-block-button is-service-link"><a class="wp-block-button__link has-theme-13-color has-theme-12-background-color has-text-color has-background wp-element-button" href="/fisioterapia-do-sono/">Saiba Mais</a></div>
 </div>
 </div>
 </div>

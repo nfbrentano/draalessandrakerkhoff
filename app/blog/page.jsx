@@ -1,17 +1,18 @@
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "@/app/lib/firebase";
 import Header from "@/app/components/Header";
+import JsonLd from "@/app/components/JsonLd";
+import { graph, breadcrumbSchema } from "@/app/utils/schema";
 import BlogArticleList from "./BlogArticleList";
 
 export const metadata = {
   title: "Blog | Dicas sobre Ronco, Apneia e Fisioterapia no Vale do Taquari",
   description: "Acompanhe nosso blog e saiba tudo sobre tratamentos para ronco, apneia do sono e dicas de fisioterapia cardiorrespiratória em Lajeado e Vale do Taquari.",
   keywords: [
-    "ronco lajeado",
     "blog fisioterapia do sono",
-    "dicas apneia e ronco lajeado",
+    "dicas apneia e ronco",
     "tratamento de ronco",
-    "cpap vale do taquari",
+    "cpap",
     "fisioterapia cardiorrespiratória"
   ],
   openGraph: {
@@ -36,6 +37,7 @@ export default async function Page() {
   return (
     <div className="wp-site-blocks">
       {/* Header do Site */}
+      <JsonLd data={graph(breadcrumbSchema([{ name: "Blog", path: "/blog/" }]))} />
       <Header currentPath="/blog" />
 
       {/* Main Content */}

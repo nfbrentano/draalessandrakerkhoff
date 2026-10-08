@@ -1,29 +1,51 @@
 import { fixPaths } from "@/app/utils/fixPaths";
 import Header from "@/app/components/Header";
+import JsonLd from "@/app/components/JsonLd";
+import { graph, serviceSchema, breadcrumbSchema } from "@/app/utils/schema";
 export const metadata = {
-  title: "Serviços | Fisioterapia Cardiorrespiratória e do Sono em Lajeado",
-  description: "Fisioterapia completa e personalizada focando em distúrbios do sono, ronco, apneia e reabilitação cardiovascular em Lajeado e Vale do Taquari.",
+  title: "Fisioterapia do Sono e CPAP em Lajeado | Serviços",
+  description: "Adaptação e titulação de CPAP/BiPAP, teste de máscaras, aluguel de CPAP, tratamento de ronco e apneia e reabilitação cardiopulmonar em Lajeado.",
   keywords: [
-    "ronco lajeado",
-    "tratamento de apneia do sono lajeado",
-    "ronco",
-    "cpap vale do taquari",
-    "serviços de fisioterapia",
-    "reabilitação cardiovascular"
+    "titulação de cpap lajeado",
+    "adaptação cpap lajeado",
+    "aluguel de cpap lajeado",
+    "máscara cpap lajeado",
+    "reabilitação cardiopulmonar lajeado"
   ],
   openGraph: {
-    title: "Serviços de Fisioterapia em Lajeado e Vale do Taquari",
-    description: "Tratamento de apneia, ronco e reabilitação cardiovascular.",
-    url: "https://draalessandrakerkhoff.com.br/servicos",
+    title: "Fisioterapia do Sono e CPAP em Lajeado | Serviços",
+    description: "Adaptação e titulação de CPAP/BiPAP, teste de máscaras, aluguel de CPAP, tratamento de ronco e apneia e reabilitação cardiopulmonar em Lajeado.",
+    url: "https://draalessandrakerkhoff.com.br/servicos/",
     siteName: "Dra. Alessandra Kerkhoff",
     locale: "pt_BR",
-    type: "article",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Fisioterapia do Sono e CPAP em Lajeado | Serviços",
+    description: "Adaptação e titulação de CPAP/BiPAP, teste de máscaras, aluguel de CPAP, tratamento de ronco e apneia e reabilitação cardiopulmonar em Lajeado.",
   },
 };
 
+const pageSchema = graph(
+  serviceSchema({
+    name: "Adaptação e titulação de CPAP e BiPAP",
+    serviceType: "Titulação de CPAP",
+    path: "/servicos/",
+    description: "Acompanhamento para ajuste da pressão, orientação de uso, teste e ajuste de máscaras e análise dos dados do equipamento.",
+  }),
+  serviceSchema({
+    name: "Aluguel de CPAP e reposição de insumos",
+    serviceType: "Aluguel de CPAP",
+    path: "/servicos/#aluguel",
+    description: "Locação de CPAP para teste terapêutico e fornecimento de insumos como filtros, tubos e umidificadores.",
+  }),
+  breadcrumbSchema([{ name: "Serviços", path: "/servicos/" }])
+);
+
 export default function Page() {
   return (
-    <>      <Header currentPath="/servicos" />
+    <>      <JsonLd data={pageSchema} />      <Header currentPath="/servicos" />
       <div dangerouslySetInnerHTML={{ __html: fixPaths(`
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFHZBLMD"
@@ -60,8 +82,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <li><span>✓</span> Aluguel de CPAP para teste terapêutico e reposição de insumos</li>
                             <li><span>✓</span> Monitoramento contínuo da eficácia e adesão ao tratamento</li>
                         </ul>
-                        <a class="services-card-btn" href="/apneia-e-ronco">
-                            Saiba Mais sobre Apneia e Ronco ➔
+                        <a class="services-card-btn" href="/fisioterapia-do-sono/">
+                            Saiba Mais sobre Fisioterapia do Sono ➔
                         </a>
                     </div>
                 </article>
@@ -81,7 +103,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <li><span>✓</span> Manejo de doenças respiratórias crônicas (DPOC, asma, fibrose)</li>
                             <li><span>✓</span> Exercícios respiratórios guiados para maior disposição e energia</li>
                         </ul>
-                        <a class="services-card-btn" href="/fisioterapia-cardiorrespiratoria">
+                        <a class="services-card-btn" href="/fisioterapia-cardiorrespiratoria/">
                             Saiba Mais sobre Fisioterapia Cardiorrespiratória ➔
                         </a>
                     </div>

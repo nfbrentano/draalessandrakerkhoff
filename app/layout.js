@@ -4,6 +4,8 @@ import "./styles/style-0.css";
 import "./styles/style-1.css";
 import localFont from 'next/font/local';
 import Footer from "./components/Footer";
+import JsonLd from "./components/JsonLd";
+import { siteGraph } from "./utils/schema";
 
 const poppins = localFont({
   src: [
@@ -30,7 +32,7 @@ const bodyClassByPath = {
   "/sobre": "wp-singular page-template-default page page-id-15 page-child parent-pageid-14 wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1",
   "/servicos/sobre": "wp-singular page-template-default page page-id-15 page-child parent-pageid-14 wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1",
   "/blog": "wp-singular page-template-default page page-id-232 wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1",
-  "/apneia-e-ronco": "wp-singular page-template-default page page-id-384 wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1",
+  "/fisioterapia-do-sono": "wp-singular page-template-default page page-id-384 wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1",
   "/fisioterapia-cardiorrespiratoria": "wp-singular page-template-default page page-id-390 wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1",
   "/como-a-caminhada-melhora-seu-sono-e-bem-estar": "wp-singular post-template-default single single-post postid-320 single-format-standard wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1",
   "/melhore-seu-sono-beneficios-da-fisioterapia-respiratoria": "wp-singular post-template-default single single-post postid-154 single-format-standard wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1",
@@ -145,19 +147,16 @@ const registerSWScript = `
 `;
 
 export const metadata = {
-  keywords: ["ronco lajeado"],
+  keywords: ["fisioterapeuta lajeado", "fisioterapia do sono", "fisioterapia cardiorrespiratória"],
   metadataBase: new URL('https://draalessandrakerkhoff.com.br'),
-  title: "Dra. Alessandra Kerkhoff",
-  description: "Fisioterapeuta Cardiorrespiratória e do Sono",
+  title: "Dra. Alessandra Kerkhoff — Fisioterapeuta em Lajeado",
+  description: "Fisioterapeuta em Lajeado especialista em fisioterapia do sono (ronco, apneia, CPAP) e fisioterapia cardiorrespiratória no Vale do Taquari.",
   alternates: {
     canonical: './',
-    languages: {
-      'pt-BR': 'https://draalessandrakerkhoff.com.br',
-    },
   },
   openGraph: {
-    title: "Dra. Alessandra Kerkhoff",
-    description: "Fisioterapeuta Cardiorrespiratória e do Sono",
+    title: "Dra. Alessandra Kerkhoff — Fisioterapeuta em Lajeado",
+    description: "Fisioterapeuta em Lajeado especialista em fisioterapia do sono (ronco, apneia, CPAP) e fisioterapia cardiorrespiratória no Vale do Taquari.",
     url: "https://draalessandrakerkhoff.com.br",
     siteName: "Dra. Alessandra Kerkhoff",
     locale: "pt_BR",
@@ -165,8 +164,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dra. Alessandra Kerkhoff",
-    description: "Fisioterapeuta Cardiorrespiratória e do Sono",
+    title: "Dra. Alessandra Kerkhoff — Fisioterapeuta em Lajeado",
+    description: "Fisioterapeuta em Lajeado especialista em fisioterapia do sono (ronco, apneia, CPAP) e fisioterapia cardiorrespiratória no Vale do Taquari.",
   },
   verification: {
     other: {
@@ -259,6 +258,7 @@ export default function RootLayout({ children }) {
         <script
           dangerouslySetInnerHTML={{ __html: clarityScript }}
         />
+        <JsonLd data={siteGraph()} />
       </head>
       <body suppressHydrationWarning className="wp-custom-logo wp-embed-responsive wp-theme-site-export-1 jps-theme-site-export-1">
         {children}

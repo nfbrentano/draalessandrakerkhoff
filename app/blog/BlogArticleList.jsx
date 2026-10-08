@@ -116,7 +116,7 @@ export default function BlogArticleList({ initialFirestoreArticles = [] }) {
         const img = formatGoogleDriveImageUrl(rawImg) || rawImg;
         
         // Link para artigo base do site ou rota dinâmica do blog
-        const linkHref = article.isBase ? `/${article.slug}` : `/blog/${article.slug || "artigo"}`;
+        const linkHref = article.isBase ? `/${article.slug}/` : `/blog/${(article.slug || "artigo").replace(/^\/|\/$/g, "")}/`;
 
         const catName = (article.categoria || "fisioterapia-do-sono").replace(/-/g, " ");
 
