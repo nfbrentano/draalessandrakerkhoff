@@ -5,6 +5,7 @@ on:
     branches: ["main"]
   schedule:
     - cron: '0 0 * * 0' # Todo domingo à meia-noite (UTC)
+  workflow_dispatch: # permite rodar manualmente (Actions › Run workflow ou `gh workflow run deploy.yml`)
 
 permissions:
   contents: read
