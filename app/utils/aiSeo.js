@@ -2,21 +2,10 @@ import { doc, getDoc, setDoc } from "firebase/firestore";
 import { db } from "@/app/lib/firebase";
 
 /**
- * Obtém as configurações de IA (chaves de API) do Firestore ou LocalStorage.
+ * Obtém as configurações de IA (chaves de API) do Firestore.
  */
 export async function getAiConfig() {
   try {
-    if (typeof window !== "undefined") {
-      const localKey = localStorage.getItem("ale_gemini_api_key");
-      if (localKey) {
-        return {
-          geminiApiKey: localKey,
-          provider: "gemini",
-          model: "gemini-1.5-flash"
-        };
-      }
-    }
-
     const configDoc = await getDoc(doc(db, "configuracoes", "geral"));
     if (configDoc.exists()) {
       return configDoc.data();
@@ -25,39 +14,29 @@ export async function getAiConfig() {
     console.warn("Não foi possível carregar configurações de IA do Firestore:", err);
   }
 
-  // Fallback para localStorage
-  if (typeof window !== "undefined") {
-    return {
-      geminiApiKey: localStorage.getItem("ale_gemini_api_key") || "",
-      openaiApiKey: localStorage.getItem("ale_openai_api_key") || "",
-      provider: localStorage.getItem("ale_ai_provider") || "gemini",
-      model: "gemini-1.5-flash"
-    };
-  }
-
-  return { geminiApiKey: "", openaiApiKey: "", provider: "gemini" };
+  return { geminiApiKey: "", openaiApiKey: "", provider: "gemini", model: "gemini-1.5-flash" };
 }
 
 /**
- * Salva as configurações de IA tanto no Firestore quanto no LocalStorage.
+ * Salva as configurações de IA no Firestore de forma segura.
  */
 export async function saveAiConfig(config) {
+  // Limpa chaves legadas salvas em texto claro no localStorage
   if (typeof window !== "undefined") {
-    if (config.geminiApiKey) localStorage.setItem("ale_gemini_api_key", config.geminiApiKey);
-    if (config.openaiApiKey) localStorage.setItem("ale_openai_api_key", config.openaiApiKey);
-    if (config.provider) localStorage.setItem("ale_ai_provider", config.provider);
+    try {
+      localStorage.removeItem("ale_gemini_api_key");
+      localStorage.removeItem("ale_openai_api_key");
+      localStorage.removeItem("ale_ai_provider");
+    } catch {
+      // Ignora erro de acesso ao storage caso bloqueado
+    }
   }
 
-  try {
-    await setDoc(doc(db, "configuracoes", "geral"), {
-      ...config,
-      ultimaAtualizacao: new Date().toISOString()
-    }, { merge: true });
-    return true;
-  } catch (err) {
-    console.warn("Erro ao salvar no Firestore (salvo apenas localmente):", err);
-    return true;
-  }
+  await setDoc(doc(db, "configuracoes", "geral"), {
+    ...config,
+    ultimaAtualizacao: new Date().toISOString()
+  }, { merge: true });
+  return true;
 }
 
 /**
